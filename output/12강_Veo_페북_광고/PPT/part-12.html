@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Part 12 · Veo 페북 광고 — 힉스필드 풀코스</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css">
+<link rel="stylesheet" href="../../assets/common.css">
+</head>
+<body class="teacher-view" data-bg-mode="NETWORK">
+
+<canvas id="bgcanvas"></canvas>
+<div class="dot-grid"></div>
+<div class="vignette"></div>
+<div class="cursor-dot" id="cursorDot"></div>
+<div class="cursor-ring" id="cursorRing"></div>
+
+<div class="topbar">
+  <div class="brand">HIGGSFIELD · 풀코스</div>
+  <div class="topbar-center">PART 12 · Veo 페북 광고</div>
+  <div class="topbar-right">
+    <button id="projectorBtn" type="button" onclick="window.openProjectorWindow()" style="display:none;" title="프로젝터용 수강생 창 새로 열기">📺 프로젝터</button>
+    <a class="nav-arrow" href="../../11강_Sora_2_유튜브_쇼츠/PPT/part-11.html" title="이전 회차">◀ PART 11</a>
+    <a class="nav-arrow" href="../../index.html">INDEX</a>
+    <a class="nav-arrow" href="../../13강_Cinema_Studio_시네마틱/PPT/part-13.html" title="다음 회차">PART 13 ▶</a>
+  </div>
+</div>
+
+<div class="progress" id="progress"></div>
+
+<main class="deck" id="deck">
+    <section class="slide slide-cover" data-slide="0" data-duration="60">
+      <div class="cover-bg-shapes">
+        <svg class="float-shape fs1" viewBox="0 0 100 100"><polygon points="50,10 90,90 10,90" fill="none" stroke="#e2c793" stroke-width="1"/></svg>
+        <svg class="float-shape fs2" viewBox="0 0 100 100"><circle cx="50" cy="50" r="40" fill="none" stroke="#e2c793" stroke-width="1"/></svg>
+        <svg class="float-shape fs3" viewBox="0 0 100 100"><rect x="10" y="10" width="80" height="80" fill="none" stroke="#e2c793" stroke-width="1" transform="rotate(15 50 50)"/></svg>
+        <svg class="float-shape fs4" viewBox="0 0 100 100"><polygon points="50,5 95,30 95,70 50,95 5,70 5,30" fill="none" stroke="#e2c793" stroke-width="1"/></svg>
+      </div>
+      <div class="cover-kicker reveal">ACT 3 · 영상</div>
+      <div class="cover-number reveal" style="transition-delay:0.1s">PART 12</div>
+      <h1 class="cover-title typewriter-target" data-text="Veo 페북 광고">&nbsp;</h1>
+      <div class="cover-sub reveal" style="transition-delay:0.6s">Veo 3.1 · 페북 광고 영상 6초</div>
+      <div class="cover-meta reveal" style="transition-delay:0.8s">
+        <span class="meta-dot"></span>
+        <span>인터랙티브 슬라이드 · 마우스·키보드로 조작</span>
+      </div>
+      <div class="cover-hint reveal" style="transition-delay:1s">⌨ <kbd>←</kbd><kbd>→</kbd> 슬라이드 · <kbd>Space</kbd>/<kbd>Backspace</kbd> 문장 다음/이전 · <kbd>F</kbd> 전체화면 · <kbd>N</kbd> 노트</div>
+    </section>
+    <section class="slide slide-section" data-slide="1" data-diagram="meta" data-duration="120">
+      <div class="section-head">
+        <div class="section-kicker reveal">META · 파트 메타</div>
+        <div class="section-counter reveal">01 / 05</div>
+      </div>
+      <div class="section-grid">
+        <h2 class="section-title"></h2>
+        <div class="section-visual reveal" style="transition-delay:0.3s"><svg viewBox="0 0 400 260" class="infographic">
+  <defs>
+    <radialGradient id="g1" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#e2c793" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#e2c793" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <circle cx="200" cy="130" r="80" fill="url(#g1)" stroke="#3a3730" stroke-width="1"/>
+  <circle cx="200" cy="130" r="50" fill="none" stroke="#e2c793" stroke-width="1.5"/>
+  <text x="200" y="138" text-anchor="middle" font-size="28" font-weight="900" fill="#e2c793">2/5</text>
+  <text x="200" y="220" text-anchor="middle" font-size="11" fill="#7a7666">META · </text>
+  <line x1="60" y1="240" x2="340" y2="240" stroke="#3a3730" stroke-width="1"/>
+</svg></div>
+        <ul class="bullet-list"><li class="tilt-card reveal" style="transition-delay:0.00s" onclick="event.stopPropagation();"><span class="bullet-num">01</span><span class="bullet-text">🎬 파트 메타 · 이번 파트는 힉스필드 풀코스 12강.</span><span class="bullet-arrow">→</span><div class="bullet-detail">이번 파트는 힉스필드 풀코스 12강.</div></li><li class="tilt-card reveal" style="transition-delay:0.12s" onclick="event.stopPropagation();"><span class="bullet-num">02</span><span class="bullet-text">🎯 핵심 비유 · 30분 동안 진행해요.</span><span class="bullet-arrow">→</span><div class="bullet-detail">30분 동안 진행해요.</div></li><li class="tilt-card reveal" style="transition-delay:0.24s" onclick="event.stopPropagation();"><span class="bullet-num">03</span><span class="bullet-text">⏱️ 오늘의 목표 · 핵심 비유는 광고 영상 셰프(Veo 3.1).</span><span class="bullet-arrow">→</span><div class="bullet-detail">핵심 비유는 &quot;광고 영상 셰프&quot;(Veo 3.1).</div></li></ul>
+      </div>
+      <div class="section-foot">
+        <div class="audio-bars"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
+        <div class="foot-tag">META</div>
+      </div>
+          <details class="teacher-note" open>
+        <summary>📝 강사 노트</summary>
+        <div class="note-body">
+          <div class="note-script">
+            <div class="note-script-text">이번 파트는 힉스필드 풀코스 12강. 30분 동안 진행해요. 핵심 비유는 "광고 영상 셰프"(Veo 3.1). 가상 클라이언트는 C 식당 사장님이에요. 7강에서 Nano Banana Pro로 4K 음식 사진 만들었던 그 페르소나 다시 돌아와요. 오늘은 그 음식을 페북 광고용 6초 영상으로 임팩트 있게 만드는 미션이에요. 시작합니다.</div>
+          </div>
+        </div>
+      </details>
+    </section>
+    <section class="slide slide-section" data-slide="2" data-diagram="overview" data-duration="120">
+      <div class="section-head">
+        <div class="section-kicker reveal">OVERVIEW · 한눈 요약</div>
+        <div class="section-counter reveal">00 / 00</div>
+      </div>
+      <div class="section-grid">
+        <h2 class="section-title"></h2>
+        <div class="section-visual reveal" style="transition-delay:0.3s"><svg viewBox="0 0 400 260" class="infographic">
+  <defs>
+    <radialGradient id="g2" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#e2c793" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#e2c793" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <circle cx="200" cy="130" r="80" fill="url(#g2)" stroke="#3a3730" stroke-width="1"/>
+  <circle cx="200" cy="130" r="50" fill="none" stroke="#e2c793" stroke-width="1.5"/>
+  <text x="200" y="138" text-anchor="middle" font-size="28" font-weight="900" fill="#e2c793">3/5</text>
+  <text x="200" y="220" text-anchor="middle" font-size="11" fill="#7a7666">OVERVIEW · </text>
+  <line x1="60" y1="240" x2="340" y2="240" stroke="#3a3730" stroke-width="1"/>
+</svg></div>
+        <ul class="bullet-list"><li class="tilt-card reveal" style="transition-delay:0.00s" onclick="event.stopPropagation();"><span class="bullet-num">01</span><span class="bullet-text">📋 수업 흐름 · 오늘 만들 것 3가지예요.</span><span class="bullet-arrow">→</span><div class="bullet-detail">오늘 만들 것 3가지예요.</div></li><li class="tilt-card reveal" style="transition-delay:0.12s" onclick="event.stopPropagation();"><span class="bullet-num">02</span><span class="bullet-text">🎤 핵심 비유 · 첫째, Veo 3.1(베오 3.1 · Google 영상</span><span class="bullet-arrow">→</span><div class="bullet-detail">첫째, Veo 3.1(베오 3.1 · Google 영상 모델)이 왜 페북 광고 영상에 강한 셰프인지 짚을 거예요.</div></li><li class="tilt-card reveal" style="transition-delay:0.24s" onclick="event.stopPropagation();"><span class="bullet-num">03</span><span class="bullet-text">🚀 결과물 목표 · 둘째, 페북 광고 표준 액자가 왜 4:5(세로 살짝 긴</span><span class="bullet-arrow">→</span><div class="bullet-detail">둘째, 페북 광고 표준 액자가 왜 4:5(세로 살짝 긴)인지, 인스타 피드 1:1과 어떻게 다른지 알아볼 거예요.</div></li></ul>
+      </div>
+      <div class="section-foot">
+        <div class="audio-bars"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
+        <div class="foot-tag">OVERVIEW</div>
+      </div>
+          <details class="teacher-note" open>
+        <summary>📝 강사 노트</summary>
+        <div class="note-body">
+          <div class="note-script">
+            <div class="note-script-text">오늘 만들 것 3가지예요. 첫째, Veo 3.1(베오 3.1 · Google 영상 모델)이 왜 페북 광고 영상에 강한 셰프인지 짚을 거예요. 둘째, 페북 광고 표준 액자가 왜 4:5(세로 살짝 긴)인지, 인스타 피드 1:1과 어떻게 다른지 알아볼 거예요. 셋째, C 식당 사장 페르소나로 6초 임팩트 페북 광고 영상 1편을 받고, Veo 3.1 Lite(라이트 · 저렴 버전)로 비용 절약하는 법까지 익혀요.</div>
+          </div>
+        </div>
+      </details>
+    </section>
+    <section class="slide slide-section" data-slide="3" data-diagram="hook" data-duration="120">
+      <div class="section-head">
+        <div class="section-kicker reveal">HOOK · 오프닝 훅</div>
+        <div class="section-counter reveal">03 / 05</div>
+      </div>
+      <div class="section-grid">
+        <h2 class="section-title"></h2>
+        <div class="section-visual reveal" style="transition-delay:0.3s"><svg viewBox="0 0 400 260" class="infographic">
+  <defs>
+    <radialGradient id="g3" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#e2c793" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#e2c793" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <circle cx="200" cy="130" r="80" fill="url(#g3)" stroke="#3a3730" stroke-width="1"/>
+  <circle cx="200" cy="130" r="50" fill="none" stroke="#e2c793" stroke-width="1.5"/>
+  <text x="200" y="138" text-anchor="middle" font-size="28" font-weight="900" fill="#e2c793">4/5</text>
+  <text x="200" y="220" text-anchor="middle" font-size="11" fill="#7a7666">HOOK · </text>
+  <line x1="60" y1="240" x2="340" y2="240" stroke="#3a3730" stroke-width="1"/>
+</svg></div>
+        <ul class="bullet-list"><li class="tilt-card reveal" style="transition-delay:0.00s" onclick="event.stopPropagation();"><span class="bullet-num">01</span><span class="bullet-text">💡 솔직히 · C 식당 사장님이 7강에서 4K 음식 사진 만들고 이런</span><span class="bullet-arrow">→</span><div class="bullet-detail">C 식당 사장님이 7강에서 4K 음식 사진 만들고 이런 생각 하셨을 수 있어요.</div></li><li class="tilt-card reveal" style="transition-delay:0.12s" onclick="event.stopPropagation();"><span class="bullet-num">02</span><span class="bullet-text">⚡ 오늘의 시도 · 페북에 사진 올리는 건 잘 알겠는데, 페북 광고는 영</span><span class="bullet-arrow">→</span><div class="bullet-detail">&quot;페북에 사진 올리는 건 잘 알겠는데, 페북 광고는 영상이 더 효과 좋다더라고요.&quot; &quot;근데 광고 영상은 짧아야 한다는데, 5초·6초만 만들 수 있어요?&quot; &quot;그 짧은 시간에 음식 임팩트 보여주는 영상, 우리도 만들 수 있을까요?&quot; 이 고민, 오늘 한 방에 풀려요.</div></li><li class="tilt-card reveal" style="transition-delay:0.24s" onclick="event.stopPropagation();"><span class="bullet-num">03</span><span class="bullet-text">🌿 부담 제로 · 힉스필드에 Veo 3.1(베오 3.1)이라는 셰프가 있</span><span class="bullet-arrow">→</span><div class="bullet-detail">힉스필드에 Veo 3.1(베오 3.1)이라는 셰프가 있어요.</div></li></ul>
+      </div>
+      <div class="section-foot">
+        <div class="audio-bars"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
+        <div class="foot-tag">HOOK</div>
+      </div>
+          <details class="teacher-note" open>
+        <summary>📝 강사 노트</summary>
+        <div class="note-body">
+          <div class="note-script">
+            <div class="note-script-text">C 식당 사장님이 7강에서 4K 음식 사진 만들고 이런 생각 하셨을 수 있어요. "페북에 사진 올리는 건 잘 알겠는데, 페북 광고는 영상이 더 효과 좋다더라고요." "근데 광고 영상은 짧아야 한다는데, 5초·6초만 만들 수 있어요?" "그 짧은 시간에 음식 임팩트 보여주는 영상, 우리도 만들 수 있을까요?" 이 고민, 오늘 한 방에 풀려요. 힉스필드에 Veo 3.1(베오 3.1)이라는 셰프가 있어요. Google(구글)이 만든 영상 셰프예요. 광고 영상 만드는 게 특기예요. "6초 안에 임팩트 한 방"이 페북·인스타 광고 표준 길이인데요. Veo 3.1이 그 짧은 시간에 보는 사람 시선 잡는 영상을 잘 만들어요. 11강 Sora 2(40~70크레딧)보다 좀 저렴한 셰프예요. 한 편에 약 30~50크레딧 정도예요. 더 저렴한 Veo 3.1 Lite(라이트 · 저렴 버전)도 있어요. 약 10~20크레딧 정도예요. 페북 광고 영상 만들기에 딱 맞는 셰프예요. [CONCEPT 1] Veo 3.1(베오 3.1 · Google 영상 모델)부터 짚을게요. Veo 3.1은요. Google(구글)이 만든 영상 셰프예요. 5강·6강에서 만난 Soul ID 셰프와는 다른 회사이고, Google이라 Nano Banana Pro(7강) 셰프와 같은 가족이에요. 힉스필드가 Google과 손잡고 자기 주방에 모셔놨어요. 이 셰프 특기 두 가지 있어요. 첫째, 광고 영상에 강해요. 짧은 시간에 핵심 임팩트 전달하는 영상이 특기예요. 시네마틱(11강 Sora)보다는 광고 톤에 가까워요. 둘째, 사실적인 영상이에요. 음식·제품 사진을 광고 영상으로 만들 때 진짜 같은 디테일까지 살려줘요. 손님이 영상 보고 "저 음식 먹고 싶다" 자극하는 화질이에요. C 식당 사장님처럼 "메뉴 페북 광고 영상" 만들어야 한다면 정답이 Veo 3.1이에요. [CONCEPT 2] 4:5 액자 = 페북 광고 표준을 짚을게요. 지금까지 액자 4종류 만났어요. 1:1(인스타 피드)·9:16(인스타 릴스·틱톡·쇼츠)·16:9(X 헤더·페북 일반)·이번 회차 4:5(페북 광고). 4:5는 정사각보다 세로가 살짝 긴 액자예요. 1:1과 9:16의 중간이에요. 페북·인스타 광고 표준이 왜 4:5냐면요. 사람들이 폰을 세로로 잡고 페북·인스타 보거든요. 세로로 길수록 화면을 더 차지해요. 1:1(정사각)보다 4:5가 화면을 약 25% 더 차지해서 광고 임팩트가 더 커요. 9:16(완전 세로)은 광고 안에 들어가는 영역에 비해 너무 긴 모양이라 페북·인스타 광고 시스템이 4:5를 표준으로 추천해요. 같은 영상도 4:5 액자로 만들면 페북 광고 효과가 1:1보다 1.5배 정도 높다는 광고 데이터가 있어요. 출처: 페이스북 광고 가이드. [CONCEPT 3] 6초 임팩트 광고 프롬프트 작성을 짚을게요. 6초는 정말 짧아요. 한국어로 말하면 약 12~18 단어예요. 6초 광고 영상 프롬프트는 4가지 원칙이에요. 첫째, 한 가지 동작만. 여러 동작 묶으면 6초 안에 다 못 보여줘요. "음식이 화면에 등장" 또는 "김이 모락모락 피어오르는 모습" 한 가지에 집중해요. 둘째, 화면 가운데 음식·제품. 6초 동안 시선이 이동할 시간 없어요. 음식이 화면 가운데에 떡 자리잡는 게 좋아요. 셋째, 강한 색감 대비. 어두운 배경에 밝은 음식, 또는 단색 배경에 화려한 음식. 시선 한 번에 잡혀야 해요. 넷째, 클로즈업 또는 짧은 줌인. 광고 영상은 디테일이 임팩트예요. 멀리서 본 음식보다 가까이서 본 음식이 광고에 더 잘 어울려요. 예시: "검은 배경 위에 한국식 비빔밥, 흰 도자기 그릇에 담긴 모습, 카메라가 천천히 클로즈업, 따뜻한 자연광, 김이 모락모락 피어오르는 디테일, 광고 영상 분위기, 6초" [CONCEPT 4] Veo 3.1 Pro vs Lite를 짚을게요. Veo 3.1에는 두 가지 버전 있어요. Veo 3.1 (Pro) — 약 30~50크레딧/편. 4K 화질·디테일·자연스러운 움직임. Veo 3.1 Lite — 약 10~20크레딧/편. 화질·디테일이 살짝 떨어지지만 광고 효과는 거의 동일. 어떤 차이? Pro는 큰 스크린(노트북·TV)에서 봐도 디테일이 또렷해요. Lite는 폰 화면에서 보는 페북·인스타 광고용으로는 차이가 거의 안 나요. 페북 광고는 어차피 폰 화면에서 보는 거니까 Lite로 충분해요. 첫 시도는 Lite로 가볍게, 마음에 들면 Pro로 한 번 더 만드는 게 절약 패턴이에요. 3강 크레딧 가계부 다시 떠올려봐요. 정기권 1,000크레딧으로 Lite는 50~100편, Pro는 20~30편 만들 수 있어요. Lite 활용이 두 배 가성비예요. [CONCEPT 5] 이미지 → 영상 변환 옵션을 짚을게요. Veo 3.1에는 흥미로운 옵션이 있어요. 이미지(사진) 한 장 업로드하면 그 이미지를 시작 프레임으로 영상을 만들어줘요. "Reference Image"·"Image to Video"·"이미지 첨부" 같은 메뉴가 있을 거예요. 이게 왜 특별하냐면요. 7강에서 만든 4K 비빔밥 사진을 Veo 3.1에 업로드하면, 그 사진이 시작 프레임이 되고 거기서 김이 피어오르거나 그릇 위 디테일이 살아나는 영상으로 변환돼요. "있는 사진을 영상으로" — 새로 영상 처음부터 만드는 것보다 사진 활용이 결과 일관성도 좋고 크레딧도 절약돼요. 오늘은 가볍게 글 프롬프트로 시작하고, 이미지→영상 변환은 나중에 본인 페이스로 시도해보세요. 17강 TV Spot에서 더 다뤄요.</div>
+          </div>
+        </div>
+      </details>
+    </section>
+    <section class="slide slide-section" data-slide="4" data-diagram="recap" data-duration="120">
+      <div class="section-head">
+        <div class="section-kicker reveal">RECAP · 복습</div>
+        <div class="section-counter reveal">04 / 05</div>
+      </div>
+      <div class="section-grid">
+        <h2 class="section-title"></h2>
+        <div class="section-visual reveal" style="transition-delay:0.3s"><svg viewBox="0 0 400 260" class="infographic">
+  <defs>
+    <radialGradient id="g4" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#e2c793" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#e2c793" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <circle cx="200" cy="130" r="80" fill="url(#g4)" stroke="#3a3730" stroke-width="1"/>
+  <circle cx="200" cy="130" r="50" fill="none" stroke="#e2c793" stroke-width="1.5"/>
+  <text x="200" y="138" text-anchor="middle" font-size="28" font-weight="900" fill="#e2c793">5/5</text>
+  <text x="200" y="220" text-anchor="middle" font-size="11" fill="#7a7666">RECAP · </text>
+  <line x1="60" y1="240" x2="340" y2="240" stroke="#3a3730" stroke-width="1"/>
+</svg></div>
+        <ul class="bullet-list"><li class="tilt-card reveal" style="transition-delay:0.00s" onclick="event.stopPropagation();"><span class="bullet-num">01</span><span class="bullet-text">✅ 오늘 배운 것 · 오늘 한 일 정리할게요.</span><span class="bullet-arrow">→</span><div class="bullet-detail">오늘 한 일 정리할게요.</div></li><li class="tilt-card reveal" style="transition-delay:0.12s" onclick="event.stopPropagation();"><span class="bullet-num">02</span><span class="bullet-text">📌 체크포인트 · Veo 3.1(베오 3.1)은 Google(구글)이 만</span><span class="bullet-arrow">→</span><div class="bullet-detail">Veo 3.1(베오 3.1)은 Google(구글)이 만든 광고 영상 전문 셰프예요.</div></li><li class="tilt-card reveal" style="transition-delay:0.24s" onclick="event.stopPropagation();"><span class="bullet-num">03</span><span class="bullet-text">💾 저장 포인트 · 7강 Nano Banana Pro와 같은 Google </span><span class="bullet-arrow">→</span><div class="bullet-detail">7강 Nano Banana Pro와 같은 Google 가족이에요.</div></li></ul>
+      </div>
+      <div class="section-foot">
+        <div class="audio-bars"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
+        <div class="foot-tag">RECAP</div>
+      </div>
+          <details class="teacher-note" open>
+        <summary>📝 강사 노트</summary>
+        <div class="note-body">
+          <div class="note-script">
+            <div class="note-script-text">오늘 한 일 정리할게요. 첫째. Veo 3.1(베오 3.1)은 Google(구글)이 만든 광고 영상 전문 셰프예요. 7강 Nano Banana Pro와 같은 Google 가족이에요. 6초 안에 임팩트 한 방 전달하는 광고 영상이 특기예요. Pro($30~50/편)와 Lite($10~20/편) 두 버전이 있어요. 둘째. 페북·인스타 광고 표준 액자는 4:5(세로 살짝 긴) 액자예요. 1:1보다 화면 25% 더 차지해서 광고 효과 약 1.5배 높아요. 9:16은 너무 길어서 광고 시스템 추천이 4:5예요. 셋째. C 식당 사장 페르소나로 한국어 프롬프트 + 4:5 + 6초 = 첫 페북 광고 영상 1편 받았어요. 결과물 누적 9번 ✓ (영상 ACT 4번째 영상). Veo 3.1 Lite로 만들면 Pro의 1/3 비용으로 비슷한 광고 효과가 나와요. 페북 광고는 Lite 활용이 정답이에요.</div>
+          </div>
+        </div>
+      </details>
+    </section>
+    <section class="slide slide-section" data-slide="5" data-diagram="bridge" data-duration="120">
+      <div class="section-head">
+        <div class="section-kicker reveal">BRIDGE · 다음 악장</div>
+        <div class="section-counter reveal">05 / 05</div>
+      </div>
+      <div class="section-grid">
+        <h2 class="section-title"></h2>
+        <div class="section-visual reveal" style="transition-delay:0.3s"><svg viewBox="0 0 400 260" class="infographic">
+  <defs>
+    <radialGradient id="g5" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#e2c793" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#e2c793" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <circle cx="200" cy="130" r="80" fill="url(#g5)" stroke="#3a3730" stroke-width="1"/>
+  <circle cx="200" cy="130" r="50" fill="none" stroke="#e2c793" stroke-width="1.5"/>
+  <text x="200" y="138" text-anchor="middle" font-size="28" font-weight="900" fill="#e2c793">6/5</text>
+  <text x="200" y="220" text-anchor="middle" font-size="11" fill="#7a7666">BRIDGE · </text>
+  <line x1="60" y1="240" x2="340" y2="240" stroke="#3a3730" stroke-width="1"/>
+</svg></div>
+        <ul class="bullet-list"><li class="tilt-card reveal" style="transition-delay:0.00s" onclick="event.stopPropagation();"><span class="bullet-num">01</span><span class="bullet-text">🚪 다음 회차 예고 · 다음 시간엔 진짜 영화 카메라처럼 줌·드론·로우앵글 직</span><span class="bullet-arrow">→</span><div class="bullet-detail">다음 시간엔 진짜 영화 카메라처럼 줌·드론·로우앵글 직접 지정해보는 회차예요.</div></li><li class="tilt-card reveal" style="transition-delay:0.12s" onclick="event.stopPropagation();"><span class="bullet-num">02</span><span class="bullet-text">🔜 연결 고리 · B 옷가게 셀러 페르소나로 다시 돌아가요.</span><span class="bullet-arrow">→</span><div class="bullet-detail">B 옷가게 셀러 페르소나로 다시 돌아가요.</div></li><li class="tilt-card reveal" style="transition-delay:0.24s" onclick="event.stopPropagation();"><span class="bullet-num">03</span><span class="bullet-text">🎁 미리 준비 · 6강에서 Soul Reference 시리즈, 9강에서 </span><span class="bullet-arrow">→</span><div class="bullet-detail">6강에서 Soul Reference 시리즈, 9강에서 Kling 첫 영상 만들었던 그 페르소나예요.</div></li></ul>
+      </div>
+      <div class="section-foot">
+        <div class="audio-bars"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
+        <div class="foot-tag">BRIDGE</div>
+      </div>
+          <details class="teacher-note" open>
+        <summary>📝 강사 노트</summary>
+        <div class="note-body">
+          <div class="note-script">
+            <div class="note-script-text">다음 시간엔 진짜 영화 카메라처럼 줌·드론·로우앵글 직접 지정해보는 회차예요. B 옷가게 셀러 페르소나로 다시 돌아가요. 6강에서 Soul Reference 시리즈, 9강에서 Kling 첫 영상 만들었던 그 페르소나예요. "인스타 릴스 광고에 영화 같은 카메라 동작 넣고 싶은데" — 이 고민 다음 회차에서 풀어봐요. Cinema Studio 3.5(시네마 스튜디오 3.5)라는 메뉴를 만나볼 거예요. 힉스필드 메인 화면 7개 액션 카드 중 "Cinema Studio 3.5" 카드 봤었죠. 그 메뉴예요. 70+ 카메라 프리셋(Preset · 미리 만든 설정) 중에서 골라 쓰는 회차예요. 영상 ACT 5종 셰프 누적 점검(Kling·Seedance·Sora·Veo·Cinema Studio)도 같이 해요. 다음 회차에서 만나요.</div>
+          </div>
+        </div>
+      </details>
+    </section>
+    <section class="slide slide-outro" data-slide="6">
+      <div class="outro-radial"></div>
+      <div class="outro-kicker reveal">END OF PART 12</div>
+      <h2 class="outro-title reveal" style="transition-delay:0.15s">Veo 페북 광고 마무리</h2>
+      <div class="outro-sub reveal" style="transition-delay:0.3s">NEXT · Part 13 · Cinema Studio 시네마틱</div>
+      <div class="outro-actions reveal" style="transition-delay:0.5s">
+        <a class="btn btn-ghost" href="../index.html">← 전체 목차</a>
+        <button class="btn btn-gold" onclick="goFirst()">처음으로 ↺</button>
+        <a class="btn btn-gold" href="../../13강_Cinema_Studio_시네마틱/PPT/part-13.html">다음으로 →</a>
+      </div>
+    </section>
+</main>
+
+<div class="controls">
+  <button class="ctl-btn" onclick="prev()" title="이전 슬라이드">◀</button>
+  <div class="counter"><span id="counter">01</span> / <span id="total">7</span></div>
+  <button class="ctl-btn" onclick="next()" title="다음 슬라이드">▶</button>
+  <button class="ctl-btn" onclick="toggleThumbs()" title="썸네일 (T)">🎴</button>
+  <button class="ctl-btn" onclick="toggleHelp()" title="도움말 (?)">?</button>
+  <button class="ctl-btn" onclick="toggleFullscreen()" title="전체화면 (F)">⛶</button>
+</div>
+
+<div class="thumb-strip" id="thumbStrip">
+  <div class="thumb-strip-inner" id="thumbInner">
+    <div class="thumb" data-idx="0"><span class="thumb-num">01</span><span class="thumb-label">COVER</span></div><div class="thumb" data-idx="1"><span class="thumb-num">02</span><span class="thumb-label">META</span></div><div class="thumb" data-idx="2"><span class="thumb-num">03</span><span class="thumb-label">OVERVIEW</span></div><div class="thumb" data-idx="3"><span class="thumb-num">04</span><span class="thumb-label">HOOK</span></div><div class="thumb" data-idx="4"><span class="thumb-num">05</span><span class="thumb-label">RECAP</span></div><div class="thumb" data-idx="5"><span class="thumb-num">06</span><span class="thumb-label">BRIDGE</span></div><div class="thumb" data-idx="6"><span class="thumb-num">07</span><span class="thumb-label">END</span></div>
+  </div>
+</div>
+
+<div class="help-overlay" id="helpOverlay">
+  <div class="help-card">
+    <h3>키보드 단축키</h3>
+    <ul>
+      <li><kbd>←</kbd> / <kbd>→</kbd> 슬라이드 이동</li>
+      <li><kbd>Space</kbd> / <kbd>Backspace</kbd> 문장 다음/이전</li>
+      <li><kbd>F</kbd> 전체화면</li>
+      <li><kbd>T</kbd> 썸네일</li>
+      <li><kbd>N</kbd> 강사 노트 토글</li>
+      <li><kbd>?</kbd> 도움말</li>
+    </ul>
+    <button onclick="toggleHelp()">닫기</button>
+  </div>
+</div>
+
+<footer class="page-footer">© PajamaBoss · 힉스필드 풀코스 · ACT 3 · 영상</footer>
+
+<script src="../../assets/common.js"></script>
+</body>
+</html>

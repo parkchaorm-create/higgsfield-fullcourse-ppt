@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Part 13 · Cinema Studio 시네마틱 — 힉스필드 풀코스</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css">
+<link rel="stylesheet" href="../../assets/common.css">
+</head>
+<body class="teacher-view" data-bg-mode="WAVES">
+
+<canvas id="bgcanvas"></canvas>
+<div class="dot-grid"></div>
+<div class="vignette"></div>
+<div class="cursor-dot" id="cursorDot"></div>
+<div class="cursor-ring" id="cursorRing"></div>
+
+<div class="topbar">
+  <div class="brand">HIGGSFIELD · 풀코스</div>
+  <div class="topbar-center">PART 13 · Cinema Studio 시네마틱</div>
+  <div class="topbar-right">
+    <button id="projectorBtn" type="button" onclick="window.openProjectorWindow()" style="display:none;" title="프로젝터용 수강생 창 새로 열기">📺 프로젝터</button>
+    <a class="nav-arrow" href="../../12강_Veo_페북_광고/PPT/part-12.html" title="이전 회차">◀ PART 12</a>
+    <a class="nav-arrow" href="../../index.html">INDEX</a>
+    <a class="nav-arrow" href="../../14강_Marketing_Studio_제품광고/PPT/part-14.html" title="다음 회차">PART 14 ▶</a>
+  </div>
+</div>
+
+<div class="progress" id="progress"></div>
+
+<main class="deck" id="deck">
+    <section class="slide slide-cover" data-slide="0" data-duration="60">
+      <div class="cover-bg-shapes">
+        <svg class="float-shape fs1" viewBox="0 0 100 100"><polygon points="50,10 90,90 10,90" fill="none" stroke="#e2c793" stroke-width="1"/></svg>
+        <svg class="float-shape fs2" viewBox="0 0 100 100"><circle cx="50" cy="50" r="40" fill="none" stroke="#e2c793" stroke-width="1"/></svg>
+        <svg class="float-shape fs3" viewBox="0 0 100 100"><rect x="10" y="10" width="80" height="80" fill="none" stroke="#e2c793" stroke-width="1" transform="rotate(15 50 50)"/></svg>
+        <svg class="float-shape fs4" viewBox="0 0 100 100"><polygon points="50,5 95,30 95,70 50,95 5,70 5,30" fill="none" stroke="#e2c793" stroke-width="1"/></svg>
+      </div>
+      <div class="cover-kicker reveal">ACT 3 · 영상</div>
+      <div class="cover-number reveal" style="transition-delay:0.1s">PART 13</div>
+      <h1 class="cover-title typewriter-target" data-text="Cinema Studio 시네마틱">&nbsp;</h1>
+      <div class="cover-sub reveal" style="transition-delay:0.6s">Cinema Studio 3.5 · 광고용 시네마틱</div>
+      <div class="cover-meta reveal" style="transition-delay:0.8s">
+        <span class="meta-dot"></span>
+        <span>인터랙티브 슬라이드 · 마우스·키보드로 조작</span>
+      </div>
+      <div class="cover-hint reveal" style="transition-delay:1s">⌨ <kbd>←</kbd><kbd>→</kbd> 슬라이드 · <kbd>Space</kbd>/<kbd>Backspace</kbd> 문장 다음/이전 · <kbd>F</kbd> 전체화면 · <kbd>N</kbd> 노트</div>
+    </section>
+    <section class="slide slide-section" data-slide="1" data-diagram="meta" data-duration="120">
+      <div class="section-head">
+        <div class="section-kicker reveal">META · 파트 메타</div>
+        <div class="section-counter reveal">01 / 05</div>
+      </div>
+      <div class="section-grid">
+        <h2 class="section-title"></h2>
+        <div class="section-visual reveal" style="transition-delay:0.3s"><svg viewBox="0 0 400 260" class="infographic">
+  <defs>
+    <radialGradient id="g1" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#e2c793" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#e2c793" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <circle cx="200" cy="130" r="80" fill="url(#g1)" stroke="#3a3730" stroke-width="1"/>
+  <circle cx="200" cy="130" r="50" fill="none" stroke="#e2c793" stroke-width="1.5"/>
+  <text x="200" y="138" text-anchor="middle" font-size="28" font-weight="900" fill="#e2c793">2/5</text>
+  <text x="200" y="220" text-anchor="middle" font-size="11" fill="#7a7666">META · </text>
+  <line x1="60" y1="240" x2="340" y2="240" stroke="#3a3730" stroke-width="1"/>
+</svg></div>
+        <ul class="bullet-list"><li class="tilt-card reveal" style="transition-delay:0.00s" onclick="event.stopPropagation();"><span class="bullet-num">01</span><span class="bullet-text">🎬 파트 메타 · 이번 파트는 힉스필드 풀코스 13강.</span><span class="bullet-arrow">→</span><div class="bullet-detail">이번 파트는 힉스필드 풀코스 13강.</div></li><li class="tilt-card reveal" style="transition-delay:0.12s" onclick="event.stopPropagation();"><span class="bullet-num">02</span><span class="bullet-text">🎯 핵심 비유 · 30분 동안 진행해요.</span><span class="bullet-arrow">→</span><div class="bullet-detail">30분 동안 진행해요.</div></li><li class="tilt-card reveal" style="transition-delay:0.24s" onclick="event.stopPropagation();"><span class="bullet-num">03</span><span class="bullet-text">⏱️ 오늘의 목표 · 핵심 비유는 DSLR 카메라(Cinema Studi</span><span class="bullet-arrow">→</span><div class="bullet-detail">핵심 비유는 &quot;DSLR 카메라&quot;(Cinema Studio 3.5).</div></li></ul>
+      </div>
+      <div class="section-foot">
+        <div class="audio-bars"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
+        <div class="foot-tag">META</div>
+      </div>
+          <details class="teacher-note" open>
+        <summary>📝 강사 노트</summary>
+        <div class="note-body">
+          <div class="note-script">
+            <div class="note-script-text">이번 파트는 힉스필드 풀코스 13강. 30분 동안 진행해요. 핵심 비유는 "DSLR 카메라"(Cinema Studio 3.5). 가상 클라이언트는 B 옷가게 셀러님이에요. 6강 Soul Reference·9강 Kling 첫 영상 만들었던 그 페르소나 다시 돌아와요. 오늘은 영상 ACT(9~13강) 마지막 회차예요. 영상 5종 셰프 누적 점검도 같이 해요. 시작합니다.</div>
+          </div>
+        </div>
+      </details>
+    </section>
+    <section class="slide slide-section" data-slide="2" data-diagram="overview" data-duration="120">
+      <div class="section-head">
+        <div class="section-kicker reveal">OVERVIEW · 한눈 요약</div>
+        <div class="section-counter reveal">00 / 00</div>
+      </div>
+      <div class="section-grid">
+        <h2 class="section-title"></h2>
+        <div class="section-visual reveal" style="transition-delay:0.3s"><svg viewBox="0 0 400 260" class="infographic">
+  <defs>
+    <radialGradient id="g2" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#e2c793" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#e2c793" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <circle cx="200" cy="130" r="80" fill="url(#g2)" stroke="#3a3730" stroke-width="1"/>
+  <circle cx="200" cy="130" r="50" fill="none" stroke="#e2c793" stroke-width="1.5"/>
+  <text x="200" y="138" text-anchor="middle" font-size="28" font-weight="900" fill="#e2c793">3/5</text>
+  <text x="200" y="220" text-anchor="middle" font-size="11" fill="#7a7666">OVERVIEW · </text>
+  <line x1="60" y1="240" x2="340" y2="240" stroke="#3a3730" stroke-width="1"/>
+</svg></div>
+        <ul class="bullet-list"><li class="tilt-card reveal" style="transition-delay:0.00s" onclick="event.stopPropagation();"><span class="bullet-num">01</span><span class="bullet-text">📋 수업 흐름 · 오늘 만들 것 3가지예요.</span><span class="bullet-arrow">→</span><div class="bullet-detail">오늘 만들 것 3가지예요.</div></li><li class="tilt-card reveal" style="transition-delay:0.12s" onclick="event.stopPropagation();"><span class="bullet-num">02</span><span class="bullet-text">🎤 핵심 비유 · 첫째, Cinema Studio 3.5(시네마 스튜디오</span><span class="bullet-arrow">→</span><div class="bullet-detail">첫째, Cinema Studio 3.5(시네마 스튜디오 3.5)가 일반 영상 셰프와 어떻게 다른지, 70+ 카메라 프리셋(Preset · 미리 만든 설정 모음)이 무엇인지 짚을 거예요.</div></li><li class="tilt-card reveal" style="transition-delay:0.24s" onclick="event.stopPropagation();"><span class="bullet-num">03</span><span class="bullet-text">🚀 결과물 목표 · 둘째, 줌인·드론샷·로우앵글 같은 카메라 동작을 한국어</span><span class="bullet-arrow">→</span><div class="bullet-detail">둘째, 줌인·드론샷·로우앵글 같은 카메라 동작을 한국어 프롬프트 없이 클릭만으로 골라 쓰는 법을 알아볼 거예요.</div></li></ul>
+      </div>
+      <div class="section-foot">
+        <div class="audio-bars"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
+        <div class="foot-tag">OVERVIEW</div>
+      </div>
+          <details class="teacher-note" open>
+        <summary>📝 강사 노트</summary>
+        <div class="note-body">
+          <div class="note-script">
+            <div class="note-script-text">오늘 만들 것 3가지예요. 첫째, Cinema Studio 3.5(시네마 스튜디오 3.5)가 일반 영상 셰프와 어떻게 다른지, 70+ 카메라 프리셋(Preset · 미리 만든 설정 모음)이 무엇인지 짚을 거예요. 둘째, 줌인·드론샷·로우앵글 같은 카메라 동작을 한국어 프롬프트 없이 클릭만으로 골라 쓰는 법을 알아볼 거예요. 셋째, B 옷가게 셀러 페르소나로 시네마틱 카메라 동작이 들어간 인스타 릴스 광고 영상 1편을 받고, 영상 ACT 5종 셰프(Kling·Seedance·Sora·Veo·Cinema Studio) 누적 점검까지 같이 해요.</div>
+          </div>
+        </div>
+      </details>
+    </section>
+    <section class="slide slide-section" data-slide="3" data-diagram="hook" data-duration="120">
+      <div class="section-head">
+        <div class="section-kicker reveal">HOOK · 오프닝 훅</div>
+        <div class="section-counter reveal">03 / 05</div>
+      </div>
+      <div class="section-grid">
+        <h2 class="section-title"></h2>
+        <div class="section-visual reveal" style="transition-delay:0.3s"><svg viewBox="0 0 400 260" class="infographic">
+  <defs>
+    <radialGradient id="g3" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#e2c793" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#e2c793" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <circle cx="200" cy="130" r="80" fill="url(#g3)" stroke="#3a3730" stroke-width="1"/>
+  <circle cx="200" cy="130" r="50" fill="none" stroke="#e2c793" stroke-width="1.5"/>
+  <text x="200" y="138" text-anchor="middle" font-size="28" font-weight="900" fill="#e2c793">4/5</text>
+  <text x="200" y="220" text-anchor="middle" font-size="11" fill="#7a7666">HOOK · </text>
+  <line x1="60" y1="240" x2="340" y2="240" stroke="#3a3730" stroke-width="1"/>
+</svg></div>
+        <ul class="bullet-list"><li class="tilt-card reveal" style="transition-delay:0.00s" onclick="event.stopPropagation();"><span class="bullet-num">01</span><span class="bullet-text">💡 솔직히 · B 옷가게 셀러님이 9강~12강 영상 만들어 보고 이런</span><span class="bullet-arrow">→</span><div class="bullet-detail">B 옷가게 셀러님이 9강~12강 영상 만들어 보고 이런 생각 하셨을 수 있어요.</div></li><li class="tilt-card reveal" style="transition-delay:0.12s" onclick="event.stopPropagation();"><span class="bullet-num">02</span><span class="bullet-text">⚡ 오늘의 시도 · 영상은 만들었는데 카메라 동작이 다 비슷비슷해 보여요</span><span class="bullet-arrow">→</span><div class="bullet-detail">&quot;영상은 만들었는데 카메라 동작이 다 비슷비슷해 보여요.&quot; &quot;인플루언서 옷 광고 보면 카메라가 진짜 영화처럼 움직이잖아요.&quot; &quot;드론처럼 위에서 내려오기·360도 한 바퀴·아래에서 올려다보기 — 이런 거 어떻게 만들어요?&quot; 이 고민, 오늘 한 방에 풀려요.</div></li><li class="tilt-card reveal" style="transition-delay:0.24s" onclick="event.stopPropagation();"><span class="bullet-num">03</span><span class="bullet-text">🌿 부담 제로 · 힉스필드에 Cinema Studio 3.5(시네마 스튜</span><span class="bullet-arrow">→</span><div class="bullet-detail">힉스필드에 Cinema Studio 3.5(시네마 스튜디오 3.5)라는 메뉴가 있어요.</div></li></ul>
+      </div>
+      <div class="section-foot">
+        <div class="audio-bars"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
+        <div class="foot-tag">HOOK</div>
+      </div>
+          <details class="teacher-note" open>
+        <summary>📝 강사 노트</summary>
+        <div class="note-body">
+          <div class="note-script">
+            <div class="note-script-text">B 옷가게 셀러님이 9강~12강 영상 만들어 보고 이런 생각 하셨을 수 있어요. "영상은 만들었는데 카메라 동작이 다 비슷비슷해 보여요." "인플루언서 옷 광고 보면 카메라가 진짜 영화처럼 움직이잖아요." "드론처럼 위에서 내려오기·360도 한 바퀴·아래에서 올려다보기 — 이런 거 어떻게 만들어요?" 이 고민, 오늘 한 방에 풀려요. 힉스필드에 Cinema Studio 3.5(시네마 스튜디오 3.5)라는 메뉴가 있어요. DSLR(디지털 카메라) 같은 메뉴예요. 진짜 카메라처럼 줌인·드론·로우앵글을 직접 골라 쓸 수 있어요. 70+ 카메라 프리셋이 있어서 한국어 프롬프트로 카메라 동작 일일이 설명할 필요 없어요. "드론샷" 버튼 클릭하면 끝이에요. 영화 감독이 쓰는 카메라 동작을 옷가게 광고에도 넣어요. 광고 임팩트가 한 단계 올라가요. [CONCEPT 1] Cinema Studio 3.5(시네마 스튜디오 3.5)부터 짚을게요. Cinema Studio는요. 힉스필드 자체에서 만든 카메라 컨트롤(Camera Control · 카메라 동작 지시) 메뉴예요. 힉스필드 메인 화면 7개 액션 카드 중 "Cinema Studio 3.5 · Create cinematic scenes effortlessly" 카드 봤었죠. 그 메뉴예요. 일반 영상 셰프(9강 Kling·11강 Sora)와 어떻게 다르냐면요. 일반 셰프는 한국어 프롬프트로 "카메라가 천천히 클로즈업" 같이 글로 설명해야 했어요. Cinema Studio는 카메라 동작을 메뉴에서 골라 클릭하면 돼요. 글로 설명할 필요 없어요. "DSLR 카메라 메뉴 같은 것"이라는 비유가 정확해요. 사진작가가 "줌 렌즈"·"광각 렌즈" 골라 쓰듯이, 영상에서도 "줌인 프리셋"·"드론샷 프리셋" 골라 써요. B 옷가게 셀러님처럼 "광고용 시네마틱 카메라 동작이 들어간 영상" 만들어야 한다면 정답이 Cinema Studio예요. [CONCEPT 2] 70+ 카메라 프리셋(Preset · 미리 만든 설정)을 짚을게요. 70+ 프리셋은요. 힉스필드 셰프들이 미리 만들어놓은 70가지 이상의 카메라 동작 메뉴예요. 크게 4가지 그룹으로 나눠져 있어요. 첫째, 줌(Zoom · 가까이·멀리). 줌인(가까이)·줌아웃(멀리)·도리줌(빠른 줌인) 같은 종류. 둘째, 무브먼트(Movement · 카메라 이동). 드론샷(하늘)·트래킹(따라가기)·크레인(위로 올라가기) 같은 종류. 셋째, 앵글(Angle · 각도). 로우앵글(아래에서)·하이앵글(위에서)·아이레벨(눈높이) 같은 종류. 넷째, 회전(Rotate · 회전). 360도(한 바퀴)·90도 회전 같은 종류. 70+ 다 익힐 필요 없어요. 본인 콘텐츠에 자주 쓰는 5~10개만 익혀도 충분해요. 오늘은 옷가게 광고에 자주 쓰는 3가지(줌인·트래킹·로우앵글)에 집중해요. [CONCEPT 3] 옷가게 광고에 자주 쓰는 카메라 동작 3가지를 짚을게요. B 옷가게 셀러님 같은 옷·패션 분야에서 가장 효과적인 카메라 동작 3가지가 이거예요. 첫째, 트래킹샷(Tracking Shot · 인물을 따라가는 시점). 모델이 옷 입고 걸을 때 카메라가 따라가요. 인스타 릴스 옷 광고에서 가장 많이 쓰는 카메라 동작이에요. 옷의 움직임·자연스러움 보여주기에 최고예요. 둘째, 로우앵글(Low Angle · 아래에서 위로 본 시점). 모델을 약간 아래에서 올려다본 시점이에요. 모델이 더 키 커 보이고 옷 라인이 더 길어 보여요. 패션 광고의 단골 앵글이에요. 셋째, 클로즈업(Close-Up · 옷·소품 가까이). 옷의 디테일·질감·소재를 가까이서 보여줘요. "이 옷 만져보고 싶다" 자극하는 카메라 동작이에요. 이 3가지면 옷가게 인스타 릴스 광고의 80% 표현 가능해요. [CONCEPT 4] Soul Cinema와 결합 활용을 짚을게요. Cinema Studio에는 Soul Cinema(솔 시네마 · 시네마틱 인물 스틸 셰프)와 결합하는 옵션이 있어요. 4강에서 만난 Soul 2.0이 인물 사진 셰프였고요. Soul Cinema는 같은 Soul 가족인데 시네마틱(영화 같은) 분위기 인물 사진을 만드는 셰프예요. Cinema Studio에서 영상 만들 때 "Soul Cinema 인물 사진"을 시작 프레임으로 넣으면 그 인물이 영상의 주인공이 돼요. 그 인물 + 시네마틱 카메라 동작 = 진짜 광고 영상 한 편 완성이에요. 오늘은 가볍게 시작할 거예요. 글 프롬프트로 인물 묘사하고 카메라 프리셋 클릭하는 정도까지요. Soul Cinema 직접 만나보는 건 다음 단계예요. [CONCEPT 5] 영상 ACT 5종 셰프 누적 점검을 짚을게요. 오늘 13강이 영상 ACT(9~13강) 마지막 회차예요. 그동안 만난 5종 셰프 정리해드릴게요. 9강 Kling 3.0 — 9:16 세로 인스타 릴스 셰프. 영상 1편 약 6크레딧. B 옷가게 셀러 첫 영상. 10강 Seedance 2.0 — 토킹헤드 립싱크 셰프. 영상 1편 약 8~15크레딧. D 트레이너 운동 시연 토킹헤드. 11강 Sora 2 — 시네마틱 영화 셰프. 영상 1편 약 40~70크레딧 ⚠️. A 카페 사장 시네마틱 카페 쇼츠. 12강 Veo 3.1 — 광고 영상 셰프. Pro 30~50크레딧, Lite 10~20크레딧. C 식당 사장 페북 광고. 13강 Cinema Studio 3.5 — 카메라 컨트롤 메뉴. 70+ 카메라 프리셋. B 옷가게 셀러 인스타 릴스 광고. 5종 셰프, 5종 결과물 누적 완료. 영상 ACT 졸업이에요. [CONCEPT 6] 결과물 10개 누적 갤러리 + 크레딧 결산을 짚을게요. 8강에서 결과물 5개 누적 점검 했었죠. 이미지 ACT 5종 셰프(Soul 2.0·Soul ID·Soul Reference·Nano Banana Pro·GPT Image 2)에서 5개 결과물 누적했어요. 9~13강 영상 ACT에서 5개 더 추가됐어요. 첫째 인스타 릴스 영상(9강 Kling 5초) 둘째 틱톡 토킹헤드(10강 Seedance 8초) 셋째 유튜브 쇼츠 시네마틱(11강 Sora 10초) 넷째 페북 광고 영상(12강 Veo 6초) 다섯째 인스타 릴스 광고 시네마틱(13강 Cinema Studio · 오늘) 누적 결과물 10개 ✓예요. 절반 졸업이에요. 크레딧도 점검해보세요. 정기권 1,000크레딧으로 평균 한 달에 200~400크레딧 쓰는 페이스라면 매우 안정적이에요.</div>
+          </div>
+        </div>
+      </details>
+    </section>
+    <section class="slide slide-section" data-slide="4" data-diagram="recap" data-duration="120">
+      <div class="section-head">
+        <div class="section-kicker reveal">RECAP · 복습</div>
+        <div class="section-counter reveal">04 / 05</div>
+      </div>
+      <div class="section-grid">
+        <h2 class="section-title"></h2>
+        <div class="section-visual reveal" style="transition-delay:0.3s"><svg viewBox="0 0 400 260" class="infographic">
+  <defs>
+    <radialGradient id="g4" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#e2c793" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#e2c793" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <circle cx="200" cy="130" r="80" fill="url(#g4)" stroke="#3a3730" stroke-width="1"/>
+  <circle cx="200" cy="130" r="50" fill="none" stroke="#e2c793" stroke-width="1.5"/>
+  <text x="200" y="138" text-anchor="middle" font-size="28" font-weight="900" fill="#e2c793">5/5</text>
+  <text x="200" y="220" text-anchor="middle" font-size="11" fill="#7a7666">RECAP · </text>
+  <line x1="60" y1="240" x2="340" y2="240" stroke="#3a3730" stroke-width="1"/>
+</svg></div>
+        <ul class="bullet-list"><li class="tilt-card reveal" style="transition-delay:0.00s" onclick="event.stopPropagation();"><span class="bullet-num">01</span><span class="bullet-text">✅ 오늘 배운 것 · 오늘 한 일 정리할게요.</span><span class="bullet-arrow">→</span><div class="bullet-detail">오늘 한 일 정리할게요.</div></li><li class="tilt-card reveal" style="transition-delay:0.12s" onclick="event.stopPropagation();"><span class="bullet-num">02</span><span class="bullet-text">📌 체크포인트 · Cinema Studio 3.5(시네마 스튜디오 3.5</span><span class="bullet-arrow">→</span><div class="bullet-detail">Cinema Studio 3.5(시네마 스튜디오 3.5)는 힉스필드 자체 카메라 컨트롤 메뉴예요.</div></li><li class="tilt-card reveal" style="transition-delay:0.24s" onclick="event.stopPropagation();"><span class="bullet-num">03</span><span class="bullet-text">💾 저장 포인트 · 70+ 카메라 프리셋(Preset · 미리 만든 설정)</span><span class="bullet-arrow">→</span><div class="bullet-detail">70+ 카메라 프리셋(Preset · 미리 만든 설정)으로 줌·무브먼트·앵글·회전 4그룹 카메라 동작을 클릭만으로 골라 써요.</div></li></ul>
+      </div>
+      <div class="section-foot">
+        <div class="audio-bars"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
+        <div class="foot-tag">RECAP</div>
+      </div>
+          <details class="teacher-note" open>
+        <summary>📝 강사 노트</summary>
+        <div class="note-body">
+          <div class="note-script">
+            <div class="note-script-text">오늘 한 일 정리할게요. 첫째. Cinema Studio 3.5(시네마 스튜디오 3.5)는 힉스필드 자체 카메라 컨트롤 메뉴예요. 70+ 카메라 프리셋(Preset · 미리 만든 설정)으로 줌·무브먼트·앵글·회전 4그룹 카메라 동작을 클릭만으로 골라 써요. DSLR 카메라 메뉴 같은 비유가 정확해요. 둘째. 옷·패션에 자주 쓰는 카메라 동작 3가지 — 트래킹샷(인물 따라가기)·로우앵글(아래에서)·클로즈업(가까이) — 이 3가지로 옷가게 인스타 릴스 광고의 80% 표현 가능해요. 70+ 프리셋 다 익힐 필요 없어요. 셋째. B 옷가게 셀러 페르소나로 한국어 프롬프트(인물·배경) + 트래킹샷 프리셋 + 9:16 + 8초 = 시네마틱 인스타 릴스 광고 영상 1편 받았어요. 결과물 누적 10번 ✓ (영상 ACT 5번째 영상). 영상 ACT 5종 셰프(Kling·Seedance·Sora·Veo·Cinema Studio) 누적 점검 완료. 누적 결과물 10개 = 절반 졸업이에요.</div>
+          </div>
+        </div>
+      </details>
+    </section>
+    <section class="slide slide-section" data-slide="5" data-diagram="bridge" data-duration="120">
+      <div class="section-head">
+        <div class="section-kicker reveal">BRIDGE · 다음 악장</div>
+        <div class="section-counter reveal">05 / 05</div>
+      </div>
+      <div class="section-grid">
+        <h2 class="section-title"></h2>
+        <div class="section-visual reveal" style="transition-delay:0.3s"><svg viewBox="0 0 400 260" class="infographic">
+  <defs>
+    <radialGradient id="g5" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#e2c793" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#e2c793" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <circle cx="200" cy="130" r="80" fill="url(#g5)" stroke="#3a3730" stroke-width="1"/>
+  <circle cx="200" cy="130" r="50" fill="none" stroke="#e2c793" stroke-width="1.5"/>
+  <text x="200" y="138" text-anchor="middle" font-size="28" font-weight="900" fill="#e2c793">6/5</text>
+  <text x="200" y="220" text-anchor="middle" font-size="11" fill="#7a7666">BRIDGE · </text>
+  <line x1="60" y1="240" x2="340" y2="240" stroke="#3a3730" stroke-width="1"/>
+</svg></div>
+        <ul class="bullet-list"><li class="tilt-card reveal" style="transition-delay:0.00s" onclick="event.stopPropagation();"><span class="bullet-num">01</span><span class="bullet-text">🚪 다음 회차 예고 · 다음 시간엔 진짜 광고 자동화 회차 시작이에요.</span><span class="bullet-arrow">→</span><div class="bullet-detail">다음 시간엔 진짜 광고 자동화 회차 시작이에요.</div></li><li class="tilt-card reveal" style="transition-delay:0.12s" onclick="event.stopPropagation();"><span class="bullet-num">02</span><span class="bullet-text">🔜 연결 고리 · C 식당 사장 페르소나로 다시 돌아가요.</span><span class="bullet-arrow">→</span><div class="bullet-detail">C 식당 사장 페르소나로 다시 돌아가요.</div></li><li class="tilt-card reveal" style="transition-delay:0.24s" onclick="event.stopPropagation();"><span class="bullet-num">03</span><span class="bullet-text">🎁 미리 준비 · 7강·12강에서 만난 그 페르소나예요.</span><span class="bullet-arrow">→</span><div class="bullet-detail">7강·12강에서 만난 그 페르소나예요.</div></li></ul>
+      </div>
+      <div class="section-foot">
+        <div class="audio-bars"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
+        <div class="foot-tag">BRIDGE</div>
+      </div>
+          <details class="teacher-note" open>
+        <summary>📝 강사 노트</summary>
+        <div class="note-body">
+          <div class="note-script">
+            <div class="note-script-text">다음 시간엔 진짜 광고 자동화 회차 시작이에요. C 식당 사장 페르소나로 다시 돌아가요. 7강·12강에서 만난 그 페르소나예요. "제품 URL 1개만 던지면 광고 영상 30초가 자동으로 만들어진다고요?" — 이 마법, 다음 회차에서 직접 체험해요. Marketing Studio(마케팅 스튜디오)라는 메뉴를 만나볼 거예요. 힉스필드 메인 화면 7개 액션 카드 중 "Marketing Studio · Launch full campaigns from one prompt" 카드 봤었죠. 그 메뉴예요. 글로벌 네비 9번째 메뉴이고, "New" 배지가 붙어있어요. "1인 광고 대행사" 비유가 정확한 메뉴예요. 제품 URL 1개 → 광고 영상부터 카피까지 자동 생성하는 셰프예요. 다음 회차에서 만나요.</div>
+          </div>
+        </div>
+      </details>
+    </section>
+    <section class="slide slide-outro" data-slide="6">
+      <div class="outro-radial"></div>
+      <div class="outro-kicker reveal">END OF PART 13</div>
+      <h2 class="outro-title reveal" style="transition-delay:0.15s">Cinema Studio 시네마틱 마무리</h2>
+      <div class="outro-sub reveal" style="transition-delay:0.3s">NEXT · Part 14 · Marketing Studio 제품광고</div>
+      <div class="outro-actions reveal" style="transition-delay:0.5s">
+        <a class="btn btn-ghost" href="../index.html">← 전체 목차</a>
+        <button class="btn btn-gold" onclick="goFirst()">처음으로 ↺</button>
+        <a class="btn btn-gold" href="../../14강_Marketing_Studio_제품광고/PPT/part-14.html">다음으로 →</a>
+      </div>
+    </section>
+</main>
+
+<div class="controls">
+  <button class="ctl-btn" onclick="prev()" title="이전 슬라이드">◀</button>
+  <div class="counter"><span id="counter">01</span> / <span id="total">7</span></div>
+  <button class="ctl-btn" onclick="next()" title="다음 슬라이드">▶</button>
+  <button class="ctl-btn" onclick="toggleThumbs()" title="썸네일 (T)">🎴</button>
+  <button class="ctl-btn" onclick="toggleHelp()" title="도움말 (?)">?</button>
+  <button class="ctl-btn" onclick="toggleFullscreen()" title="전체화면 (F)">⛶</button>
+</div>
+
+<div class="thumb-strip" id="thumbStrip">
+  <div class="thumb-strip-inner" id="thumbInner">
+    <div class="thumb" data-idx="0"><span class="thumb-num">01</span><span class="thumb-label">COVER</span></div><div class="thumb" data-idx="1"><span class="thumb-num">02</span><span class="thumb-label">META</span></div><div class="thumb" data-idx="2"><span class="thumb-num">03</span><span class="thumb-label">OVERVIEW</span></div><div class="thumb" data-idx="3"><span class="thumb-num">04</span><span class="thumb-label">HOOK</span></div><div class="thumb" data-idx="4"><span class="thumb-num">05</span><span class="thumb-label">RECAP</span></div><div class="thumb" data-idx="5"><span class="thumb-num">06</span><span class="thumb-label">BRIDGE</span></div><div class="thumb" data-idx="6"><span class="thumb-num">07</span><span class="thumb-label">END</span></div>
+  </div>
+</div>
+
+<div class="help-overlay" id="helpOverlay">
+  <div class="help-card">
+    <h3>키보드 단축키</h3>
+    <ul>
+      <li><kbd>←</kbd> / <kbd>→</kbd> 슬라이드 이동</li>
+      <li><kbd>Space</kbd> / <kbd>Backspace</kbd> 문장 다음/이전</li>
+      <li><kbd>F</kbd> 전체화면</li>
+      <li><kbd>T</kbd> 썸네일</li>
+      <li><kbd>N</kbd> 강사 노트 토글</li>
+      <li><kbd>?</kbd> 도움말</li>
+    </ul>
+    <button onclick="toggleHelp()">닫기</button>
+  </div>
+</div>
+
+<footer class="page-footer">© PajamaBoss · 힉스필드 풀코스 · ACT 3 · 영상</footer>
+
+<script src="../../assets/common.js"></script>
+</body>
+</html>

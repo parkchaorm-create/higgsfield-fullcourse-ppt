@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Part 09 · Kling 인스타 릴스 — 힉스필드 풀코스</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css">
+<link rel="stylesheet" href="../../assets/common.css">
+</head>
+<body class="teacher-view" data-bg-mode="CONSTELLATION">
+
+<canvas id="bgcanvas"></canvas>
+<div class="dot-grid"></div>
+<div class="vignette"></div>
+<div class="cursor-dot" id="cursorDot"></div>
+<div class="cursor-ring" id="cursorRing"></div>
+
+<div class="topbar">
+  <div class="brand">HIGGSFIELD · 풀코스</div>
+  <div class="topbar-center">PART 09 · Kling 인스타 릴스</div>
+  <div class="topbar-right">
+    <button id="projectorBtn" type="button" onclick="window.openProjectorWindow()" style="display:none;" title="프로젝터용 수강생 창 새로 열기">📺 프로젝터</button>
+    <a class="nav-arrow" href="../../08강_GPT_Image_2_포스터/PPT/part-08.html" title="이전 회차">◀ PART 08</a>
+    <a class="nav-arrow" href="../../index.html">INDEX</a>
+    <a class="nav-arrow" href="../../10강_Seedance_틱톡_립싱크/PPT/part-10.html" title="다음 회차">PART 10 ▶</a>
+  </div>
+</div>
+
+<div class="progress" id="progress"></div>
+
+<main class="deck" id="deck">
+    <section class="slide slide-cover" data-slide="0" data-duration="60">
+      <div class="cover-bg-shapes">
+        <svg class="float-shape fs1" viewBox="0 0 100 100"><polygon points="50,10 90,90 10,90" fill="none" stroke="#e2c793" stroke-width="1"/></svg>
+        <svg class="float-shape fs2" viewBox="0 0 100 100"><circle cx="50" cy="50" r="40" fill="none" stroke="#e2c793" stroke-width="1"/></svg>
+        <svg class="float-shape fs3" viewBox="0 0 100 100"><rect x="10" y="10" width="80" height="80" fill="none" stroke="#e2c793" stroke-width="1" transform="rotate(15 50 50)"/></svg>
+        <svg class="float-shape fs4" viewBox="0 0 100 100"><polygon points="50,5 95,30 95,70 50,95 5,70 5,30" fill="none" stroke="#e2c793" stroke-width="1"/></svg>
+      </div>
+      <div class="cover-kicker reveal">ACT 3 · 영상</div>
+      <div class="cover-number reveal" style="transition-delay:0.1s">PART 09</div>
+      <h1 class="cover-title typewriter-target" data-text="Kling 인스타 릴스">&nbsp;</h1>
+      <div class="cover-sub reveal" style="transition-delay:0.6s">Kling 3.0 · 인스타 릴스 9:16 첫 영상</div>
+      <div class="cover-meta reveal" style="transition-delay:0.8s">
+        <span class="meta-dot"></span>
+        <span>인터랙티브 슬라이드 · 마우스·키보드로 조작</span>
+      </div>
+      <div class="cover-hint reveal" style="transition-delay:1s">⌨ <kbd>←</kbd><kbd>→</kbd> 슬라이드 · <kbd>Space</kbd>/<kbd>Backspace</kbd> 문장 다음/이전 · <kbd>F</kbd> 전체화면 · <kbd>N</kbd> 노트</div>
+    </section>
+    <section class="slide slide-section" data-slide="1" data-diagram="meta" data-duration="120">
+      <div class="section-head">
+        <div class="section-kicker reveal">META · 파트 메타</div>
+        <div class="section-counter reveal">01 / 05</div>
+      </div>
+      <div class="section-grid">
+        <h2 class="section-title"></h2>
+        <div class="section-visual reveal" style="transition-delay:0.3s"><svg viewBox="0 0 400 260" class="infographic">
+  <defs>
+    <radialGradient id="g1" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#e2c793" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#e2c793" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <circle cx="200" cy="130" r="80" fill="url(#g1)" stroke="#3a3730" stroke-width="1"/>
+  <circle cx="200" cy="130" r="50" fill="none" stroke="#e2c793" stroke-width="1.5"/>
+  <text x="200" y="138" text-anchor="middle" font-size="28" font-weight="900" fill="#e2c793">2/5</text>
+  <text x="200" y="220" text-anchor="middle" font-size="11" fill="#7a7666">META · </text>
+  <line x1="60" y1="240" x2="340" y2="240" stroke="#3a3730" stroke-width="1"/>
+</svg></div>
+        <ul class="bullet-list"><li class="tilt-card reveal" style="transition-delay:0.00s" onclick="event.stopPropagation();"><span class="bullet-num">01</span><span class="bullet-text">🎬 파트 메타 · 이번 파트는 힉스필드 풀코스 9강.</span><span class="bullet-arrow">→</span><div class="bullet-detail">이번 파트는 힉스필드 풀코스 9강.</div></li><li class="tilt-card reveal" style="transition-delay:0.12s" onclick="event.stopPropagation();"><span class="bullet-num">02</span><span class="bullet-text">🎯 핵심 비유 · 30분 동안 진행해요.</span><span class="bullet-arrow">→</span><div class="bullet-detail">30분 동안 진행해요.</div></li><li class="tilt-card reveal" style="transition-delay:0.24s" onclick="event.stopPropagation();"><span class="bullet-num">03</span><span class="bullet-text">⏱️ 오늘의 목표 · 핵심 비유는 9:16 릴스 전문 셰프(Kling 3</span><span class="bullet-arrow">→</span><div class="bullet-detail">핵심 비유는 &quot;9:16 릴스 전문 셰프&quot;(Kling 3.0).</div></li></ul>
+      </div>
+      <div class="section-foot">
+        <div class="audio-bars"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
+        <div class="foot-tag">META</div>
+      </div>
+          <details class="teacher-note" open>
+        <summary>📝 강사 노트</summary>
+        <div class="note-body">
+          <div class="note-script">
+            <div class="note-script-text">이번 파트는 힉스필드 풀코스 9강. 30분 동안 진행해요. 핵심 비유는 "9:16 릴스 전문 셰프"(Kling 3.0). 가상 클라이언트는 B 옷가게 셀러님이에요. 영상 ACT(9~13강) 첫 회차예요. 영상 만들기 두근두근 첫 발 같이 떼볼게요. 시작합니다.</div>
+          </div>
+        </div>
+      </details>
+    </section>
+    <section class="slide slide-section" data-slide="2" data-diagram="overview" data-duration="120">
+      <div class="section-head">
+        <div class="section-kicker reveal">OVERVIEW · 한눈 요약</div>
+        <div class="section-counter reveal">00 / 00</div>
+      </div>
+      <div class="section-grid">
+        <h2 class="section-title"></h2>
+        <div class="section-visual reveal" style="transition-delay:0.3s"><svg viewBox="0 0 400 260" class="infographic">
+  <defs>
+    <radialGradient id="g2" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#e2c793" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#e2c793" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <circle cx="200" cy="130" r="80" fill="url(#g2)" stroke="#3a3730" stroke-width="1"/>
+  <circle cx="200" cy="130" r="50" fill="none" stroke="#e2c793" stroke-width="1.5"/>
+  <text x="200" y="138" text-anchor="middle" font-size="28" font-weight="900" fill="#e2c793">3/5</text>
+  <text x="200" y="220" text-anchor="middle" font-size="11" fill="#7a7666">OVERVIEW · </text>
+  <line x1="60" y1="240" x2="340" y2="240" stroke="#3a3730" stroke-width="1"/>
+</svg></div>
+        <ul class="bullet-list"><li class="tilt-card reveal" style="transition-delay:0.00s" onclick="event.stopPropagation();"><span class="bullet-num">01</span><span class="bullet-text">📋 수업 흐름 · 오늘 만들 것 3가지예요.</span><span class="bullet-arrow">→</span><div class="bullet-detail">오늘 만들 것 3가지예요.</div></li><li class="tilt-card reveal" style="transition-delay:0.12s" onclick="event.stopPropagation();"><span class="bullet-num">02</span><span class="bullet-text">🎤 핵심 비유 · 첫째, Kling 3.0(클링 3.0 · Kling 영</span><span class="bullet-arrow">→</span><div class="bullet-detail">첫째, Kling 3.0(클링 3.0 · Kling 영상 모델)이 왜 9:16 세로 릴스에 강한 셰프인지 짚을 거예요.</div></li><li class="tilt-card reveal" style="transition-delay:0.24s" onclick="event.stopPropagation();"><span class="bullet-num">03</span><span class="bullet-text">🚀 결과물 목표 · 둘째, Video(비디오) 메뉴에 처음 들어가서 Kli</span><span class="bullet-arrow">→</span><div class="bullet-detail">둘째, Video(비디오) 메뉴에 처음 들어가서 Kling 3.0 선택하고 한국어 프롬프트로 첫 영상 주문할 거예요.</div></li></ul>
+      </div>
+      <div class="section-foot">
+        <div class="audio-bars"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
+        <div class="foot-tag">OVERVIEW</div>
+      </div>
+          <details class="teacher-note" open>
+        <summary>📝 강사 노트</summary>
+        <div class="note-body">
+          <div class="note-script">
+            <div class="note-script-text">오늘 만들 것 3가지예요. 첫째, Kling 3.0(클링 3.0 · Kling 영상 모델)이 왜 9:16 세로 릴스에 강한 셰프인지 짚을 거예요. 둘째, Video(비디오) 메뉴에 처음 들어가서 Kling 3.0 선택하고 한국어 프롬프트로 첫 영상 주문할 거예요. 셋째, 영상 1편 = 약 6크레딧이라는 가벼운 비용으로 5초짜리 인스타 릴스를 받을 거예요.</div>
+          </div>
+        </div>
+      </details>
+    </section>
+    <section class="slide slide-section" data-slide="3" data-diagram="hook" data-duration="120">
+      <div class="section-head">
+        <div class="section-kicker reveal">HOOK · 오프닝 훅</div>
+        <div class="section-counter reveal">03 / 05</div>
+      </div>
+      <div class="section-grid">
+        <h2 class="section-title"></h2>
+        <div class="section-visual reveal" style="transition-delay:0.3s"><svg viewBox="0 0 400 260" class="infographic">
+  <defs>
+    <radialGradient id="g3" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#e2c793" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#e2c793" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <circle cx="200" cy="130" r="80" fill="url(#g3)" stroke="#3a3730" stroke-width="1"/>
+  <circle cx="200" cy="130" r="50" fill="none" stroke="#e2c793" stroke-width="1.5"/>
+  <text x="200" y="138" text-anchor="middle" font-size="28" font-weight="900" fill="#e2c793">4/5</text>
+  <text x="200" y="220" text-anchor="middle" font-size="11" fill="#7a7666">HOOK · </text>
+  <line x1="60" y1="240" x2="340" y2="240" stroke="#3a3730" stroke-width="1"/>
+</svg></div>
+        <ul class="bullet-list"><li class="tilt-card reveal" style="transition-delay:0.00s" onclick="event.stopPropagation();"><span class="bullet-num">01</span><span class="bullet-text">💡 솔직히 · B 옷가게 셀러님이 6강에서 사진 시리즈 5컷 만들고 </span><span class="bullet-arrow">→</span><div class="bullet-detail">B 옷가게 셀러님이 6강에서 사진 시리즈 5컷 만들고 이런 생각 하셨을 거예요.</div></li><li class="tilt-card reveal" style="transition-delay:0.12s" onclick="event.stopPropagation();"><span class="bullet-num">02</span><span class="bullet-text">⚡ 오늘의 시도 · 이왕이면 영상도 한 번 올려보고 싶은데...</span><span class="bullet-arrow">→</span><div class="bullet-detail">&quot;이왕이면 영상도 한 번 올려보고 싶은데...</div></li><li class="tilt-card reveal" style="transition-delay:0.24s" onclick="event.stopPropagation();"><span class="bullet-num">03</span><span class="bullet-text">🌿 부담 제로 · 영상은 너무 어려워 보여요. 인스타 릴스 보면 옷 </span><span class="bullet-arrow">→</span><div class="bullet-detail">영상은 너무 어려워 보여요.&quot; &quot;인스타 릴스 보면 옷 입고 빙글 도는 영상 많은데, 그런 거 어떻게 만들어요?&quot; &quot;카메라 들고 직접 찍기는 부끄럽고, 모델 부르긴 비싸고...&quot; 이 두근두근 첫 영상, 오늘 같이 만들어봐요.</div></li></ul>
+      </div>
+      <div class="section-foot">
+        <div class="audio-bars"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
+        <div class="foot-tag">HOOK</div>
+      </div>
+          <details class="teacher-note" open>
+        <summary>📝 강사 노트</summary>
+        <div class="note-body">
+          <div class="note-script">
+            <div class="note-script-text">B 옷가게 셀러님이 6강에서 사진 시리즈 5컷 만들고 이런 생각 하셨을 거예요. "이왕이면 영상도 한 번 올려보고 싶은데... 영상은 너무 어려워 보여요." "인스타 릴스 보면 옷 입고 빙글 도는 영상 많은데, 그런 거 어떻게 만들어요?" "카메라 들고 직접 찍기는 부끄럽고, 모델 부르긴 비싸고..." 이 두근두근 첫 영상, 오늘 같이 만들어봐요. 힉스필드에 Kling 3.0(클링 3.0)이라는 셰프가 있어요. 9:16 세로 인스타 릴스 만드는 게 특기예요. 영상 1편 = 약 6크레딧이에요. 가벼운 영상 셰프예요. 3강에서 Sora 셰프는 영상 1편에 40~70크레딧 든다고 했죠. Kling은 그 1/10 비용이에요. 첫 영상은 부담 없이 5초짜리로 시작해요. [CONCEPT 1] Kling 3.0(클링 3.0 · Kling 영상 모델)부터 짚을게요. Kling은요. 중국 회사 Kling AI가 만든 영상 셰프예요. 힉스필드가 그 셰프를 자기 주방에 모셔놨어요. 이 셰프 특기 두 가지 있어요. 첫째, 9:16 세로 영상에 강해요. 인스타 릴스·틱톡·유튜브 쇼츠가 다 9:16이에요. 그 영상 진짜 잘 만들어요. 둘째, 사람 얼굴·움직임이 자연스러워요. 다른 영상 셰프(Sora 2)는 시네마틱 영화 분위기에 강하지만 일상 인물 영상은 좀 어색할 수 있어요. Kling은 일상 인물 영상이 진짜 자연스러워요. B 옷가게 셀러님처럼 "옷 입은 모델이 자연스럽게 움직이는 영상" 만들어야 한다면 정답이 Kling 3.0이에요. 힉스필드 메인 화면 4분할 피처 카드 중 "KLING 3.0 IN 4K" 카드 봤었죠. 그 셰프예요. [CONCEPT 2] 영상 1편 = 약 6크레딧이라는 게 무슨 의미인지 짚을게요. 3강 크레딧 가계부 다시 떠올려봐요. Plus 정기권($34~39)은 매월 1,000크레딧 줘요. Kling 영상 1편 = 6크레딧이라면 Plus 정기권으로 한 달에 약 166편 만들 수 있다는 뜻이에요. 166편이면 매일 5편씩 만들어도 한 달치예요. 이게 가벼운 영상 셰프의 매력이에요. 부담 없이 마음껏 시도할 수 있어요. "잘못 만들면 어쩌지" 걱정 안 해도 돼요. 6크레딧 = 약 100원 정도 비용이에요. 잘못 나오면 다시 만들면 돼요. 마음 편하게 시도하세요. [CONCEPT 3] 영상 프롬프트 잘 쓰는 법을 알려드릴게요. 영상 프롬프트는 사진 프롬프트와 좀 달라요. "움직임"을 추가해야 해요. 4가지 원칙이에요. 첫째, 누가? 사진 프롬프트와 똑같이 인물·물체·배경을 묘사해요. 둘째, 무엇을 하는지. "걸어가는 모습"·"옷을 입어보는 모습"·"빙글 도는 모습" — 동작을 명시해주세요. 셋째, 카메라 동작. "카메라가 천천히 줌인"·"카메라 고정" — 카메라가 어떻게 움직이는지요. 넷째, 분위기·조명. 사진 프롬프트와 똑같아요. "자연광"·"따뜻한 톤" 같은 거요. 예시: "20대 한국 여성 모델이 옷가게 매장에서 옷을 입어보며 자연스럽게 미소 짓는 모습, 카메라 천천히 줌인, 자연광, 미니멀 분위기" 이렇게 쓰면 셰프가 5초 영상 만들어줘요. [CONCEPT 4] 9:16 세로 액자가 영상에서 더 중요한 이유를 짚을게요. 사진은 액자 잘못 골라도 인스타에서 위아래 잘리고 끝이에요. 영상은 더 심해요. 잘리면 뜻이 안 통할 수 있어요. 모델이 옷 입은 모습 보여주려고 만든 영상인데 9:16이 아니라 16:9로 만들면 인스타 릴스에 올릴 때 모델 다리가 잘려서 안 보여요. 처음부터 9:16으로 만들어야 모든 채널(인스타 릴스·틱톡·쇼츠) 다 자연스럽게 활용 가능해요. B 옷가게 셀러님 같은 경우는요. 9:16이 절대 표준이에요. 다른 액자 고민할 필요 없어요.</div>
+          </div>
+        </div>
+      </details>
+    </section>
+    <section class="slide slide-section" data-slide="4" data-diagram="recap" data-duration="120">
+      <div class="section-head">
+        <div class="section-kicker reveal">RECAP · 복습</div>
+        <div class="section-counter reveal">04 / 05</div>
+      </div>
+      <div class="section-grid">
+        <h2 class="section-title"></h2>
+        <div class="section-visual reveal" style="transition-delay:0.3s"><svg viewBox="0 0 400 260" class="infographic">
+  <defs>
+    <radialGradient id="g4" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#e2c793" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#e2c793" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <circle cx="200" cy="130" r="80" fill="url(#g4)" stroke="#3a3730" stroke-width="1"/>
+  <circle cx="200" cy="130" r="50" fill="none" stroke="#e2c793" stroke-width="1.5"/>
+  <text x="200" y="138" text-anchor="middle" font-size="28" font-weight="900" fill="#e2c793">5/5</text>
+  <text x="200" y="220" text-anchor="middle" font-size="11" fill="#7a7666">RECAP · </text>
+  <line x1="60" y1="240" x2="340" y2="240" stroke="#3a3730" stroke-width="1"/>
+</svg></div>
+        <ul class="bullet-list"><li class="tilt-card reveal" style="transition-delay:0.00s" onclick="event.stopPropagation();"><span class="bullet-num">01</span><span class="bullet-text">✅ 오늘 배운 것 · 오늘 한 일 정리할게요.</span><span class="bullet-arrow">→</span><div class="bullet-detail">오늘 한 일 정리할게요.</div></li><li class="tilt-card reveal" style="transition-delay:0.12s" onclick="event.stopPropagation();"><span class="bullet-num">02</span><span class="bullet-text">📌 체크포인트 · Kling 3.0(클링 3.0)은 Kling AI가 만</span><span class="bullet-arrow">→</span><div class="bullet-detail">Kling 3.0(클링 3.0)은 Kling AI가 만든 9:16 세로 인스타 릴스 전문 셰프예요.</div></li><li class="tilt-card reveal" style="transition-delay:0.24s" onclick="event.stopPropagation();"><span class="bullet-num">03</span><span class="bullet-text">💾 저장 포인트 · 사람 얼굴·움직임이 자연스러워서 옷·일상 콘텐츠에 강해</span><span class="bullet-arrow">→</span><div class="bullet-detail">사람 얼굴·움직임이 자연스러워서 옷·일상 콘텐츠에 강해요.</div></li></ul>
+      </div>
+      <div class="section-foot">
+        <div class="audio-bars"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
+        <div class="foot-tag">RECAP</div>
+      </div>
+          <details class="teacher-note" open>
+        <summary>📝 강사 노트</summary>
+        <div class="note-body">
+          <div class="note-script">
+            <div class="note-script-text">오늘 한 일 정리할게요. 첫째. Kling 3.0(클링 3.0)은 Kling AI가 만든 9:16 세로 인스타 릴스 전문 셰프예요. 사람 얼굴·움직임이 자연스러워서 옷·일상 콘텐츠에 강해요. 힉스필드 4분할 피처 카드의 "KLING 3.0 IN 4K"가 이 셰프예요. 둘째. B 옷가게 셀러 페르소나로 한국어 프롬프트 + 9:16 + 5초 = 첫 인스타 릴스 영상 1편 받았어요. 결과물 누적 6번 ✓ (영상 ACT 첫 영상). 셋째. 영상 1편 = 약 6크레딧이에요. Plus 정기권으로 한 달에 약 166편 만들 수 있어요. 가벼운 셰프라 마음 편하게 시도하세요.</div>
+          </div>
+        </div>
+      </details>
+    </section>
+    <section class="slide slide-section" data-slide="5" data-diagram="bridge" data-duration="120">
+      <div class="section-head">
+        <div class="section-kicker reveal">BRIDGE · 다음 악장</div>
+        <div class="section-counter reveal">05 / 05</div>
+      </div>
+      <div class="section-grid">
+        <h2 class="section-title"></h2>
+        <div class="section-visual reveal" style="transition-delay:0.3s"><svg viewBox="0 0 400 260" class="infographic">
+  <defs>
+    <radialGradient id="g5" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#e2c793" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#e2c793" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <circle cx="200" cy="130" r="80" fill="url(#g5)" stroke="#3a3730" stroke-width="1"/>
+  <circle cx="200" cy="130" r="50" fill="none" stroke="#e2c793" stroke-width="1.5"/>
+  <text x="200" y="138" text-anchor="middle" font-size="28" font-weight="900" fill="#e2c793">6/5</text>
+  <text x="200" y="220" text-anchor="middle" font-size="11" fill="#7a7666">BRIDGE · </text>
+  <line x1="60" y1="240" x2="340" y2="240" stroke="#3a3730" stroke-width="1"/>
+</svg></div>
+        <ul class="bullet-list"><li class="tilt-card reveal" style="transition-delay:0.00s" onclick="event.stopPropagation();"><span class="bullet-num">01</span><span class="bullet-text">🚪 다음 회차 예고 · 다음 시간엔 사람이 말하는 영상 만들어볼게요.</span><span class="bullet-arrow">→</span><div class="bullet-detail">다음 시간엔 사람이 말하는 영상 만들어볼게요.</div></li><li class="tilt-card reveal" style="transition-delay:0.12s" onclick="event.stopPropagation();"><span class="bullet-num">02</span><span class="bullet-text">🔜 연결 고리 · D 트레이너 페르소나로 다시 돌아가요.</span><span class="bullet-arrow">→</span><div class="bullet-detail">D 트레이너 페르소나로 다시 돌아가요.</div></li><li class="tilt-card reveal" style="transition-delay:0.24s" onclick="event.stopPropagation();"><span class="bullet-num">03</span><span class="bullet-text">🎁 미리 준비 · 운동 시연 영상에서 내가 직접 말하는 게 부끄럽고 시</span><span class="bullet-arrow">→</span><div class="bullet-detail">&quot;운동 시연 영상에서 내가 직접 말하는 게 부끄럽고 시간도 없어서 못 만드는데&quot; — 이 고민 다음 회차에서 끝.</div></li></ul>
+      </div>
+      <div class="section-foot">
+        <div class="audio-bars"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
+        <div class="foot-tag">BRIDGE</div>
+      </div>
+          <details class="teacher-note" open>
+        <summary>📝 강사 노트</summary>
+        <div class="note-body">
+          <div class="note-script">
+            <div class="note-script-text">다음 시간엔 사람이 말하는 영상 만들어볼게요. D 트레이너 페르소나로 다시 돌아가요. "운동 시연 영상에서 내가 직접 말하는 게 부끄럽고 시간도 없어서 못 만드는데" — 이 고민 다음 회차에서 끝. Seedance 2.0(시드댄스 2.0 · Bytedance 영상 모델)이라는 셰프를 만나볼 거예요. 입 모양이 따라가는 토킹헤드(Talking Head · 사람이 말하는 영상) 전문 셰프예요. 오디오까지 같이 만들어주는 신기한 셰프이고, 틱톡 9:16 액자로 받아봐요. 힉스필드 메인 화면 액션 카드의 "Seedance 2.0 · Most advanced video model"이 그 셰프예요. 다음 회차에서 만나요.</div>
+          </div>
+        </div>
+      </details>
+    </section>
+    <section class="slide slide-outro" data-slide="6">
+      <div class="outro-radial"></div>
+      <div class="outro-kicker reveal">END OF PART 09</div>
+      <h2 class="outro-title reveal" style="transition-delay:0.15s">Kling 인스타 릴스 마무리</h2>
+      <div class="outro-sub reveal" style="transition-delay:0.3s">NEXT · Part 10 · Seedance 틱톡 립싱크</div>
+      <div class="outro-actions reveal" style="transition-delay:0.5s">
+        <a class="btn btn-ghost" href="../index.html">← 전체 목차</a>
+        <button class="btn btn-gold" onclick="goFirst()">처음으로 ↺</button>
+        <a class="btn btn-gold" href="../../10강_Seedance_틱톡_립싱크/PPT/part-10.html">다음으로 →</a>
+      </div>
+    </section>
+</main>
+
+<div class="controls">
+  <button class="ctl-btn" onclick="prev()" title="이전 슬라이드">◀</button>
+  <div class="counter"><span id="counter">01</span> / <span id="total">7</span></div>
+  <button class="ctl-btn" onclick="next()" title="다음 슬라이드">▶</button>
+  <button class="ctl-btn" onclick="toggleThumbs()" title="썸네일 (T)">🎴</button>
+  <button class="ctl-btn" onclick="toggleHelp()" title="도움말 (?)">?</button>
+  <button class="ctl-btn" onclick="toggleFullscreen()" title="전체화면 (F)">⛶</button>
+</div>
+
+<div class="thumb-strip" id="thumbStrip">
+  <div class="thumb-strip-inner" id="thumbInner">
+    <div class="thumb" data-idx="0"><span class="thumb-num">01</span><span class="thumb-label">COVER</span></div><div class="thumb" data-idx="1"><span class="thumb-num">02</span><span class="thumb-label">META</span></div><div class="thumb" data-idx="2"><span class="thumb-num">03</span><span class="thumb-label">OVERVIEW</span></div><div class="thumb" data-idx="3"><span class="thumb-num">04</span><span class="thumb-label">HOOK</span></div><div class="thumb" data-idx="4"><span class="thumb-num">05</span><span class="thumb-label">RECAP</span></div><div class="thumb" data-idx="5"><span class="thumb-num">06</span><span class="thumb-label">BRIDGE</span></div><div class="thumb" data-idx="6"><span class="thumb-num">07</span><span class="thumb-label">END</span></div>
+  </div>
+</div>
+
+<div class="help-overlay" id="helpOverlay">
+  <div class="help-card">
+    <h3>키보드 단축키</h3>
+    <ul>
+      <li><kbd>←</kbd> / <kbd>→</kbd> 슬라이드 이동</li>
+      <li><kbd>Space</kbd> / <kbd>Backspace</kbd> 문장 다음/이전</li>
+      <li><kbd>F</kbd> 전체화면</li>
+      <li><kbd>T</kbd> 썸네일</li>
+      <li><kbd>N</kbd> 강사 노트 토글</li>
+      <li><kbd>?</kbd> 도움말</li>
+    </ul>
+    <button onclick="toggleHelp()">닫기</button>
+  </div>
+</div>
+
+<footer class="page-footer">© PajamaBoss · 힉스필드 풀코스 · ACT 3 · 영상</footer>
+
+<script src="../../assets/common.js"></script>
+</body>
+</html>

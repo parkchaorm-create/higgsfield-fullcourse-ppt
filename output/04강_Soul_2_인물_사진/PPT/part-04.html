@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Part 04 · Soul 2.0 인물 사진 — 힉스필드 풀코스</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css">
+<link rel="stylesheet" href="../../assets/common.css">
+</head>
+<body class="teacher-view" data-bg-mode="CONSTELLATION">
+
+<canvas id="bgcanvas"></canvas>
+<div class="dot-grid"></div>
+<div class="vignette"></div>
+<div class="cursor-dot" id="cursorDot"></div>
+<div class="cursor-ring" id="cursorRing"></div>
+
+<div class="topbar">
+  <div class="brand">HIGGSFIELD · 풀코스</div>
+  <div class="topbar-center">PART 04 · Soul 2.0 인물 사진</div>
+  <div class="topbar-right">
+    <button id="projectorBtn" type="button" onclick="window.openProjectorWindow()" style="display:none;" title="프로젝터용 수강생 창 새로 열기">📺 프로젝터</button>
+    <a class="nav-arrow" href="../../03강_크레딧_가계부/PPT/part-03.html" title="이전 회차">◀ PART 03</a>
+    <a class="nav-arrow" href="../../index.html">INDEX</a>
+    <a class="nav-arrow" href="../../05강_Soul_ID_일관_캐릭터/PPT/part-05.html" title="다음 회차">PART 05 ▶</a>
+  </div>
+</div>
+
+<div class="progress" id="progress"></div>
+
+<main class="deck" id="deck">
+    <section class="slide slide-cover" data-slide="0" data-duration="60">
+      <div class="cover-bg-shapes">
+        <svg class="float-shape fs1" viewBox="0 0 100 100"><polygon points="50,10 90,90 10,90" fill="none" stroke="#e2c793" stroke-width="1"/></svg>
+        <svg class="float-shape fs2" viewBox="0 0 100 100"><circle cx="50" cy="50" r="40" fill="none" stroke="#e2c793" stroke-width="1"/></svg>
+        <svg class="float-shape fs3" viewBox="0 0 100 100"><rect x="10" y="10" width="80" height="80" fill="none" stroke="#e2c793" stroke-width="1" transform="rotate(15 50 50)"/></svg>
+        <svg class="float-shape fs4" viewBox="0 0 100 100"><polygon points="50,5 95,30 95,70 50,95 5,70 5,30" fill="none" stroke="#e2c793" stroke-width="1"/></svg>
+      </div>
+      <div class="cover-kicker reveal">ACT 2 · 이미지</div>
+      <div class="cover-number reveal" style="transition-delay:0.1s">PART 04</div>
+      <h1 class="cover-title typewriter-target" data-text="Soul 2.0 인물 사진">&nbsp;</h1>
+      <div class="cover-sub reveal" style="transition-delay:0.6s">Soul 2.0 · 60+ 프리셋 첫 인물 사진</div>
+      <div class="cover-meta reveal" style="transition-delay:0.8s">
+        <span class="meta-dot"></span>
+        <span>인터랙티브 슬라이드 · 마우스·키보드로 조작</span>
+      </div>
+      <div class="cover-hint reveal" style="transition-delay:1s">⌨ <kbd>←</kbd><kbd>→</kbd> 슬라이드 · <kbd>Space</kbd>/<kbd>Backspace</kbd> 문장 다음/이전 · <kbd>F</kbd> 전체화면 · <kbd>N</kbd> 노트</div>
+    </section>
+    <section class="slide slide-section" data-slide="1" data-diagram="meta" data-duration="120">
+      <div class="section-head">
+        <div class="section-kicker reveal">META · 파트 메타</div>
+        <div class="section-counter reveal">01 / 05</div>
+      </div>
+      <div class="section-grid">
+        <h2 class="section-title"></h2>
+        <div class="section-visual reveal" style="transition-delay:0.3s"><svg viewBox="0 0 400 260" class="infographic">
+  <defs>
+    <radialGradient id="g1" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#e2c793" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#e2c793" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <circle cx="200" cy="130" r="80" fill="url(#g1)" stroke="#3a3730" stroke-width="1"/>
+  <circle cx="200" cy="130" r="50" fill="none" stroke="#e2c793" stroke-width="1.5"/>
+  <text x="200" y="138" text-anchor="middle" font-size="28" font-weight="900" fill="#e2c793">2/5</text>
+  <text x="200" y="220" text-anchor="middle" font-size="11" fill="#7a7666">META · </text>
+  <line x1="60" y1="240" x2="340" y2="240" stroke="#3a3730" stroke-width="1"/>
+</svg></div>
+        <ul class="bullet-list"><li class="tilt-card reveal" style="transition-delay:0.00s" onclick="event.stopPropagation();"><span class="bullet-num">01</span><span class="bullet-text">🎬 파트 메타 · 이번 파트는 힉스필드 풀코스 4강.</span><span class="bullet-arrow">→</span><div class="bullet-detail">이번 파트는 힉스필드 풀코스 4강.</div></li><li class="tilt-card reveal" style="transition-delay:0.12s" onclick="event.stopPropagation();"><span class="bullet-num">02</span><span class="bullet-text">🎯 핵심 비유 · 30분 동안 진행해요.</span><span class="bullet-arrow">→</span><div class="bullet-detail">30분 동안 진행해요.</div></li><li class="tilt-card reveal" style="transition-delay:0.24s" onclick="event.stopPropagation();"><span class="bullet-num">03</span><span class="bullet-text">⏱️ 오늘의 목표 · 핵심 비유는 셰프의 추천 메뉴 60가지(Soul 2</span><span class="bullet-arrow">→</span><div class="bullet-detail">핵심 비유는 &quot;셰프의 추천 메뉴 60가지&quot;(Soul 2.0 프리셋).</div></li></ul>
+      </div>
+      <div class="section-foot">
+        <div class="audio-bars"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
+        <div class="foot-tag">META</div>
+      </div>
+          <details class="teacher-note" open>
+        <summary>📝 강사 노트</summary>
+        <div class="note-body">
+          <div class="note-script">
+            <div class="note-script-text">이번 파트는 힉스필드 풀코스 4강. 30분 동안 진행해요. 핵심 비유는 "셰프의 추천 메뉴 60가지"(Soul 2.0 프리셋). 가상 클라이언트는 A 카페 사장님이에요. 카페 인스타 피드에 올릴 인물 사진 1장을 한국어 프롬프트만으로 받아볼 거예요. 시작합니다.</div>
+          </div>
+        </div>
+      </details>
+    </section>
+    <section class="slide slide-section" data-slide="2" data-diagram="overview" data-duration="120">
+      <div class="section-head">
+        <div class="section-kicker reveal">OVERVIEW · 한눈 요약</div>
+        <div class="section-counter reveal">00 / 00</div>
+      </div>
+      <div class="section-grid">
+        <h2 class="section-title"></h2>
+        <div class="section-visual reveal" style="transition-delay:0.3s"><svg viewBox="0 0 400 260" class="infographic">
+  <defs>
+    <radialGradient id="g2" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#e2c793" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#e2c793" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <circle cx="200" cy="130" r="80" fill="url(#g2)" stroke="#3a3730" stroke-width="1"/>
+  <circle cx="200" cy="130" r="50" fill="none" stroke="#e2c793" stroke-width="1.5"/>
+  <text x="200" y="138" text-anchor="middle" font-size="28" font-weight="900" fill="#e2c793">3/5</text>
+  <text x="200" y="220" text-anchor="middle" font-size="11" fill="#7a7666">OVERVIEW · </text>
+  <line x1="60" y1="240" x2="340" y2="240" stroke="#3a3730" stroke-width="1"/>
+</svg></div>
+        <ul class="bullet-list"><li class="tilt-card reveal" style="transition-delay:0.00s" onclick="event.stopPropagation();"><span class="bullet-num">01</span><span class="bullet-text">📋 수업 흐름 · 오늘 만들 것 3가지예요.</span><span class="bullet-arrow">→</span><div class="bullet-detail">오늘 만들 것 3가지예요.</div></li><li class="tilt-card reveal" style="transition-delay:0.12s" onclick="event.stopPropagation();"><span class="bullet-num">02</span><span class="bullet-text">🎤 핵심 비유 · 첫째, Soul 2.0(솔 2.0 · 인물 사진 전문 </span><span class="bullet-arrow">→</span><div class="bullet-detail">첫째, Soul 2.0(솔 2.0 · 인물 사진 전문 셰프)에 60+ 프리셋(Preset · 미리 만든 설정 모음) 중 카페 분위기 1개를 고를 거예요.</div></li><li class="tilt-card reveal" style="transition-delay:0.24s" onclick="event.stopPropagation();"><span class="bullet-num">03</span><span class="bullet-text">🚀 결과물 목표 · 둘째, A 카페 사장 페르소나로 한국어 프롬프트 작성해</span><span class="bullet-arrow">→</span><div class="bullet-detail">둘째, A 카페 사장 페르소나로 한국어 프롬프트 작성해서 1:1 정사각 액자(인스타 피드용)로 1장 받을 거예요.</div></li></ul>
+      </div>
+      <div class="section-foot">
+        <div class="audio-bars"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
+        <div class="foot-tag">OVERVIEW</div>
+      </div>
+          <details class="teacher-note" open>
+        <summary>📝 강사 노트</summary>
+        <div class="note-body">
+          <div class="note-script">
+            <div class="note-script-text">오늘 만들 것 3가지예요. 첫째, Soul 2.0(솔 2.0 · 인물 사진 전문 셰프)에 60+ 프리셋(Preset · 미리 만든 설정 모음) 중 카페 분위기 1개를 고를 거예요. 둘째, A 카페 사장 페르소나로 한국어 프롬프트 작성해서 1:1 정사각 액자(인스타 피드용)로 1장 받을 거예요. 셋째, Assets(에셋 · 결과물 보관함)에서 다운로드해서 폰으로 옮기는 방법까지 익힐 거예요.</div>
+          </div>
+        </div>
+      </details>
+    </section>
+    <section class="slide slide-section" data-slide="3" data-diagram="hook" data-duration="120">
+      <div class="section-head">
+        <div class="section-kicker reveal">HOOK · 오프닝 훅</div>
+        <div class="section-counter reveal">03 / 05</div>
+      </div>
+      <div class="section-grid">
+        <h2 class="section-title"></h2>
+        <div class="section-visual reveal" style="transition-delay:0.3s"><svg viewBox="0 0 400 260" class="infographic">
+  <defs>
+    <radialGradient id="g3" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#e2c793" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#e2c793" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <circle cx="200" cy="130" r="80" fill="url(#g3)" stroke="#3a3730" stroke-width="1"/>
+  <circle cx="200" cy="130" r="50" fill="none" stroke="#e2c793" stroke-width="1.5"/>
+  <text x="200" y="138" text-anchor="middle" font-size="28" font-weight="900" fill="#e2c793">4/5</text>
+  <text x="200" y="220" text-anchor="middle" font-size="11" fill="#7a7666">HOOK · </text>
+  <line x1="60" y1="240" x2="340" y2="240" stroke="#3a3730" stroke-width="1"/>
+</svg></div>
+        <ul class="bullet-list"><li class="tilt-card reveal" style="transition-delay:0.00s" onclick="event.stopPropagation();"><span class="bullet-num">01</span><span class="bullet-text">💡 솔직히 · A 카페 사장님이 진짜 자주 하는 고민 하나 있어요.</span><span class="bullet-arrow">→</span><div class="bullet-detail">A 카페 사장님이 진짜 자주 하는 고민 하나 있어요.</div></li><li class="tilt-card reveal" style="transition-delay:0.12s" onclick="event.stopPropagation();"><span class="bullet-num">02</span><span class="bullet-text">⚡ 오늘의 시도 · 카페 인스타에 올릴 인물 사진, 모델 부르긴 비싸서 </span><span class="bullet-arrow">→</span><div class="bullet-detail">&quot;카페 인스타에 올릴 인물 사진, 모델 부르긴 비싸서 못 쓰는데...&quot; &quot;내가 직접 찍은 셀카는 너무 어색하고...&quot; &quot;전문 사진작가 부르는 건 일 한 번에 30만 원이 넘는데...&quot; 이거 오늘 다 해결돼요.</div></li><li class="tilt-card reveal" style="transition-delay:0.24s" onclick="event.stopPropagation();"><span class="bullet-num">03</span><span class="bullet-text">🌿 부담 제로 · 힉스필드의 Soul 2.0(솔 2.0 · 인물 사진 셰</span><span class="bullet-arrow">→</span><div class="bullet-detail">힉스필드의 Soul 2.0(솔 2.0 · 인물 사진 셰프)이 이 일 전담이에요.</div></li></ul>
+      </div>
+      <div class="section-foot">
+        <div class="audio-bars"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
+        <div class="foot-tag">HOOK</div>
+      </div>
+          <details class="teacher-note" open>
+        <summary>📝 강사 노트</summary>
+        <div class="note-body">
+          <div class="note-script">
+            <div class="note-script-text">A 카페 사장님이 진짜 자주 하는 고민 하나 있어요. "카페 인스타에 올릴 인물 사진, 모델 부르긴 비싸서 못 쓰는데..." "내가 직접 찍은 셀카는 너무 어색하고..." "전문 사진작가 부르는 건 일 한 번에 30만 원이 넘는데..." 이거 오늘 다 해결돼요. 힉스필드의 Soul 2.0(솔 2.0 · 인물 사진 셰프)이 이 일 전담이에요. 60가지 인물 분위기를 미리 정해두고 우리는 1개 고르기만 하면 돼요. 모델 부르지 않아도 되고, 셀카 안 찍어도 돼요. 사진 1장 = 약 0.25~5크레딧 = 정기권 비용으로 50장 100장 만들어요. [CONCEPT 1] Soul 2.0(솔 2.0 · 인물 사진 생성 모델)부터 짚을게요. Soul은 힉스필드가 직접 만든 인물 사진 전문 셰프예요. 2026년 2월에 새로 출시됐어요. 다른 일은 안 하고 인물 사진만 만들어요. 근데 그냥 "인물 사진 만들어줘" 하면 셰프가 헤매요. 어떤 분위기? 어떤 옷? 어떤 배경? 그래서 셰프가 직접 메뉴를 60가지 만들어뒀어요. "카페 사장 분위기" 메뉴, "운동 시연 분위기" 메뉴, "잡지 표지 분위기" 메뉴… 이게 프리셋(Preset · 미리 만든 설정 모음)이에요. 우리는 메뉴 1개 고르고 한국어로 살만 붙이면 돼요. "40대 한국 여성 카페 사장, 따뜻한 갈색 톤, 미소 짓는 모습" — 이 정도만 추가하면 셰프가 알아서 만들어요. [CONCEPT 2] 프리셋(Preset)을 비유로 풀어볼게요. 프리셋은 셰프의 추천 메뉴라고 생각하세요. 요리 레시피처럼요. 힉스필드 셰프가 60가지 자주 만드는 분위기를 미리 다 준비해뒀어요. "카페 오너 분위기"라는 메뉴를 누르면요. 셰프 머릿속에 이런 게 자동으로 입력돼요. "따뜻한 조명, 갈색 톤, 손에 커피잔, 카페 배경, 친근한 미소…" 우리는 "40대 한국 여성"만 추가하면 끝. 이게 프리셋의 마법이에요. 영어 메뉴명 외울 필요 없고, 디자인 감각 없어도 셰프가 메뉴대로 만들어줘요. [CONCEPT 3] 한국어 프롬프트가 정말 통한다는 걸 한 번 더 짚을게요. 힉스필드 메뉴(UI)는 영어지만, 셰프(AI)한테 주문(프롬프트)할 때는 한국어로 해도 다 알아들어요. 영어로 "A Korean female coffee shop owner in her 40s..." 이렇게 안 해도 돼요. 한국어로 "40대 한국 여성 카페 사장님" 이렇게 쓰면 셰프가 더 잘 알아들어요. 왜요? 셰프(AI 모델)가 한국어 데이터 엄청 많이 학습했거든요. 영어로 어색하게 쓰는 것보다 한국어로 자연스럽게 쓰는 게 결과가 더 좋아요. 오늘 우리도 한국어로만 쓸 거예요. 마음 편하게. [CONCEPT 4] 종횡비(Aspect Ratio · 가로:세로 비율)를 짚을게요. 종횡비는 액자 모양이에요. 같은 사진이라도 액자 모양 따라 어울리는 채널이 달라요. 1:1 — 정사각 액자. 인스타 피드 표준이에요. A 카페 사장 인스타 메인 피드용. 9:16 — 세로 핸드폰 액자. 인스타 릴스·틱톡·쇼츠용. 6강부터 자주 써요. 4:5 — 약간 세로. 인스타 광고·페북 광고에 어울려요. 12강에서 다뤄요. 16:9 — 가로 TV 액자. X(트위터) 헤더용. 8강에서 써요. 오늘 A 카페 인스타 피드용이니까 1:1 정사각만 골라요.</div>
+          </div>
+        </div>
+      </details>
+    </section>
+    <section class="slide slide-section" data-slide="4" data-diagram="recap" data-duration="120">
+      <div class="section-head">
+        <div class="section-kicker reveal">RECAP · 복습</div>
+        <div class="section-counter reveal">04 / 05</div>
+      </div>
+      <div class="section-grid">
+        <h2 class="section-title"></h2>
+        <div class="section-visual reveal" style="transition-delay:0.3s"><svg viewBox="0 0 400 260" class="infographic">
+  <defs>
+    <radialGradient id="g4" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#e2c793" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#e2c793" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <circle cx="200" cy="130" r="80" fill="url(#g4)" stroke="#3a3730" stroke-width="1"/>
+  <circle cx="200" cy="130" r="50" fill="none" stroke="#e2c793" stroke-width="1.5"/>
+  <text x="200" y="138" text-anchor="middle" font-size="28" font-weight="900" fill="#e2c793">5/5</text>
+  <text x="200" y="220" text-anchor="middle" font-size="11" fill="#7a7666">RECAP · </text>
+  <line x1="60" y1="240" x2="340" y2="240" stroke="#3a3730" stroke-width="1"/>
+</svg></div>
+        <ul class="bullet-list"><li class="tilt-card reveal" style="transition-delay:0.00s" onclick="event.stopPropagation();"><span class="bullet-num">01</span><span class="bullet-text">✅ 오늘 배운 것 · 오늘 한 일 정리할게요.</span><span class="bullet-arrow">→</span><div class="bullet-detail">오늘 한 일 정리할게요.</div></li><li class="tilt-card reveal" style="transition-delay:0.12s" onclick="event.stopPropagation();"><span class="bullet-num">02</span><span class="bullet-text">📌 체크포인트 · Soul 2.0(솔 2.0)은 인물 사진 전문 셰프예요</span><span class="bullet-arrow">→</span><div class="bullet-detail">Soul 2.0(솔 2.0)은 인물 사진 전문 셰프예요.</div></li><li class="tilt-card reveal" style="transition-delay:0.24s" onclick="event.stopPropagation();"><span class="bullet-num">03</span><span class="bullet-text">💾 저장 포인트 · 60+ 프리셋(미리 만든 분위기 메뉴) 중 1개 골라서</span><span class="bullet-arrow">→</span><div class="bullet-detail">60+ 프리셋(미리 만든 분위기 메뉴) 중 1개 골라서 한국어로 살만 붙이면 인물 사진 완성이에요.</div></li></ul>
+      </div>
+      <div class="section-foot">
+        <div class="audio-bars"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
+        <div class="foot-tag">RECAP</div>
+      </div>
+          <details class="teacher-note" open>
+        <summary>📝 강사 노트</summary>
+        <div class="note-body">
+          <div class="note-script">
+            <div class="note-script-text">오늘 한 일 정리할게요. 첫째. Soul 2.0(솔 2.0)은 인물 사진 전문 셰프예요. 60+ 프리셋(미리 만든 분위기 메뉴) 중 1개 골라서 한국어로 살만 붙이면 인물 사진 완성이에요. 둘째. A 카페 사장 페르소나로 "Coffee Shop Owner" 프리셋 + 한국어 프롬프트 + 1:1 정사각 액자 = 인스타 피드용 사진 1장 받았어요. 결과물 1번 누적 ✓. 셋째. 마음에 안 들면 Regenerate로 2~3번 시도해서 베스트 1장 고르는 게 정상이에요. 첫 시도에 완벽 안 나와도 정상이니 부담 없이 시도하세요.</div>
+          </div>
+        </div>
+      </details>
+    </section>
+    <section class="slide slide-section" data-slide="5" data-diagram="bridge" data-duration="120">
+      <div class="section-head">
+        <div class="section-kicker reveal">BRIDGE · 다음 악장</div>
+        <div class="section-counter reveal">05 / 05</div>
+      </div>
+      <div class="section-grid">
+        <h2 class="section-title"></h2>
+        <div class="section-visual reveal" style="transition-delay:0.3s"><svg viewBox="0 0 400 260" class="infographic">
+  <defs>
+    <radialGradient id="g5" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#e2c793" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#e2c793" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <circle cx="200" cy="130" r="80" fill="url(#g5)" stroke="#3a3730" stroke-width="1"/>
+  <circle cx="200" cy="130" r="50" fill="none" stroke="#e2c793" stroke-width="1.5"/>
+  <text x="200" y="138" text-anchor="middle" font-size="28" font-weight="900" fill="#e2c793">6/5</text>
+  <text x="200" y="220" text-anchor="middle" font-size="11" fill="#7a7666">BRIDGE · </text>
+  <line x1="60" y1="240" x2="340" y2="240" stroke="#3a3730" stroke-width="1"/>
+</svg></div>
+        <ul class="bullet-list"><li class="tilt-card reveal" style="transition-delay:0.00s" onclick="event.stopPropagation();"><span class="bullet-num">01</span><span class="bullet-text">🚪 다음 회차 예고 · 다음 시간엔 더 신기한 거 해볼게요.</span><span class="bullet-arrow">→</span><div class="bullet-detail">다음 시간엔 더 신기한 거 해볼게요.</div></li><li class="tilt-card reveal" style="transition-delay:0.12s" onclick="event.stopPropagation();"><span class="bullet-num">02</span><span class="bullet-text">🔜 연결 고리 · 내 얼굴을 셰프한테 가르쳐서 매번 같은 얼굴로 사진</span><span class="bullet-arrow">→</span><div class="bullet-detail">&quot;내 얼굴&quot;을 셰프한테 가르쳐서 매번 같은 얼굴로 사진 받는 방법이에요.</div></li><li class="tilt-card reveal" style="transition-delay:0.24s" onclick="event.stopPropagation();"><span class="bullet-num">03</span><span class="bullet-text">🎁 미리 준비 · D 트레이너 페르소나로 진행할 거예요.</span><span class="bullet-arrow">→</span><div class="bullet-detail">D 트레이너 페르소나로 진행할 거예요.</div></li></ul>
+      </div>
+      <div class="section-foot">
+        <div class="audio-bars"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
+        <div class="foot-tag">BRIDGE</div>
+      </div>
+          <details class="teacher-note" open>
+        <summary>📝 강사 노트</summary>
+        <div class="note-body">
+          <div class="note-script">
+            <div class="note-script-text">다음 시간엔 더 신기한 거 해볼게요. "내 얼굴"을 셰프한테 가르쳐서 매번 같은 얼굴로 사진 받는 방법이에요. D 트레이너 페르소나로 진행할 거예요. "운동 시리즈 콘텐츠 만들고 싶은데 매번 얼굴이 다르게 나와요" — 이 고민 다음 회차에서 끝. Soul ID(솔 ID · 내 사진 학습) 기능을 같이 익혀볼게요. 다음 회차에서 만나요.</div>
+          </div>
+        </div>
+      </details>
+    </section>
+    <section class="slide slide-outro" data-slide="6">
+      <div class="outro-radial"></div>
+      <div class="outro-kicker reveal">END OF PART 04</div>
+      <h2 class="outro-title reveal" style="transition-delay:0.15s">Soul 2.0 인물 사진 마무리</h2>
+      <div class="outro-sub reveal" style="transition-delay:0.3s">NEXT · Part 05 · Soul ID 일관 캐릭터</div>
+      <div class="outro-actions reveal" style="transition-delay:0.5s">
+        <a class="btn btn-ghost" href="../index.html">← 전체 목차</a>
+        <button class="btn btn-gold" onclick="goFirst()">처음으로 ↺</button>
+        <a class="btn btn-gold" href="../../05강_Soul_ID_일관_캐릭터/PPT/part-05.html">다음으로 →</a>
+      </div>
+    </section>
+</main>
+
+<div class="controls">
+  <button class="ctl-btn" onclick="prev()" title="이전 슬라이드">◀</button>
+  <div class="counter"><span id="counter">01</span> / <span id="total">7</span></div>
+  <button class="ctl-btn" onclick="next()" title="다음 슬라이드">▶</button>
+  <button class="ctl-btn" onclick="toggleThumbs()" title="썸네일 (T)">🎴</button>
+  <button class="ctl-btn" onclick="toggleHelp()" title="도움말 (?)">?</button>
+  <button class="ctl-btn" onclick="toggleFullscreen()" title="전체화면 (F)">⛶</button>
+</div>
+
+<div class="thumb-strip" id="thumbStrip">
+  <div class="thumb-strip-inner" id="thumbInner">
+    <div class="thumb" data-idx="0"><span class="thumb-num">01</span><span class="thumb-label">COVER</span></div><div class="thumb" data-idx="1"><span class="thumb-num">02</span><span class="thumb-label">META</span></div><div class="thumb" data-idx="2"><span class="thumb-num">03</span><span class="thumb-label">OVERVIEW</span></div><div class="thumb" data-idx="3"><span class="thumb-num">04</span><span class="thumb-label">HOOK</span></div><div class="thumb" data-idx="4"><span class="thumb-num">05</span><span class="thumb-label">RECAP</span></div><div class="thumb" data-idx="5"><span class="thumb-num">06</span><span class="thumb-label">BRIDGE</span></div><div class="thumb" data-idx="6"><span class="thumb-num">07</span><span class="thumb-label">END</span></div>
+  </div>
+</div>
+
+<div class="help-overlay" id="helpOverlay">
+  <div class="help-card">
+    <h3>키보드 단축키</h3>
+    <ul>
+      <li><kbd>←</kbd> / <kbd>→</kbd> 슬라이드 이동</li>
+      <li><kbd>Space</kbd> / <kbd>Backspace</kbd> 문장 다음/이전</li>
+      <li><kbd>F</kbd> 전체화면</li>
+      <li><kbd>T</kbd> 썸네일</li>
+      <li><kbd>N</kbd> 강사 노트 토글</li>
+      <li><kbd>?</kbd> 도움말</li>
+    </ul>
+    <button onclick="toggleHelp()">닫기</button>
+  </div>
+</div>
+
+<footer class="page-footer">© PajamaBoss · 힉스필드 풀코스 · ACT 2 · 이미지</footer>
+
+<script src="../../assets/common.js"></script>
+</body>
+</html>

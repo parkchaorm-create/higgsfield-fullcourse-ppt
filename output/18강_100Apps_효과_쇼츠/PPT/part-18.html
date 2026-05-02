@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Part 18 · 100+ Apps 효과 — 힉스필드 풀코스</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css">
+<link rel="stylesheet" href="../../assets/common.css">
+</head>
+<body class="teacher-view" data-bg-mode="WAVES">
+
+<canvas id="bgcanvas"></canvas>
+<div class="dot-grid"></div>
+<div class="vignette"></div>
+<div class="cursor-dot" id="cursorDot"></div>
+<div class="cursor-ring" id="cursorRing"></div>
+
+<div class="topbar">
+  <div class="brand">HIGGSFIELD · 풀코스</div>
+  <div class="topbar-center">PART 18 · 100+ Apps 효과</div>
+  <div class="topbar-right">
+    <button id="projectorBtn" type="button" onclick="window.openProjectorWindow()" style="display:none;" title="프로젝터용 수강생 창 새로 열기">📺 프로젝터</button>
+    <a class="nav-arrow" href="../../17강_TV_Spot_페북_시네마틱/PPT/part-17.html" title="이전 회차">◀ PART 17</a>
+    <a class="nav-arrow" href="../../index.html">INDEX</a>
+    <a class="nav-arrow" href="../../19강_한주_콘텐츠_캘린더/PPT/part-19.html" title="다음 회차">PART 19 ▶</a>
+  </div>
+</div>
+
+<div class="progress" id="progress"></div>
+
+<main class="deck" id="deck">
+    <section class="slide slide-cover" data-slide="0" data-duration="60">
+      <div class="cover-bg-shapes">
+        <svg class="float-shape fs1" viewBox="0 0 100 100"><polygon points="50,10 90,90 10,90" fill="none" stroke="#e2c793" stroke-width="1"/></svg>
+        <svg class="float-shape fs2" viewBox="0 0 100 100"><circle cx="50" cy="50" r="40" fill="none" stroke="#e2c793" stroke-width="1"/></svg>
+        <svg class="float-shape fs3" viewBox="0 0 100 100"><rect x="10" y="10" width="80" height="80" fill="none" stroke="#e2c793" stroke-width="1" transform="rotate(15 50 50)"/></svg>
+        <svg class="float-shape fs4" viewBox="0 0 100 100"><polygon points="50,5 95,30 95,70 50,95 5,70 5,30" fill="none" stroke="#e2c793" stroke-width="1"/></svg>
+      </div>
+      <div class="cover-kicker reveal">ACT 5 · 실전</div>
+      <div class="cover-number reveal" style="transition-delay:0.1s">PART 18</div>
+      <h1 class="cover-title typewriter-target" data-text="100+ Apps 효과">&nbsp;</h1>
+      <div class="cover-sub reveal" style="transition-delay:0.6s">100+ Apps · 얼굴 교체·트랜지션·효과</div>
+      <div class="cover-meta reveal" style="transition-delay:0.8s">
+        <span class="meta-dot"></span>
+        <span>인터랙티브 슬라이드 · 마우스·키보드로 조작</span>
+      </div>
+      <div class="cover-hint reveal" style="transition-delay:1s">⌨ <kbd>←</kbd><kbd>→</kbd> 슬라이드 · <kbd>Space</kbd>/<kbd>Backspace</kbd> 문장 다음/이전 · <kbd>F</kbd> 전체화면 · <kbd>N</kbd> 노트</div>
+    </section>
+    <section class="slide slide-section" data-slide="1" data-diagram="meta" data-duration="120">
+      <div class="section-head">
+        <div class="section-kicker reveal">META · 파트 메타</div>
+        <div class="section-counter reveal">01 / 05</div>
+      </div>
+      <div class="section-grid">
+        <h2 class="section-title"></h2>
+        <div class="section-visual reveal" style="transition-delay:0.3s"><svg viewBox="0 0 400 260" class="infographic">
+  <defs>
+    <radialGradient id="g1" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#e2c793" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#e2c793" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <circle cx="200" cy="130" r="80" fill="url(#g1)" stroke="#3a3730" stroke-width="1"/>
+  <circle cx="200" cy="130" r="50" fill="none" stroke="#e2c793" stroke-width="1.5"/>
+  <text x="200" y="138" text-anchor="middle" font-size="28" font-weight="900" fill="#e2c793">2/5</text>
+  <text x="200" y="220" text-anchor="middle" font-size="11" fill="#7a7666">META · </text>
+  <line x1="60" y1="240" x2="340" y2="240" stroke="#3a3730" stroke-width="1"/>
+</svg></div>
+        <ul class="bullet-list"><li class="tilt-card reveal" style="transition-delay:0.00s" onclick="event.stopPropagation();"><span class="bullet-num">01</span><span class="bullet-text">🎬 파트 메타 · 이번 파트는 힉스필드 풀코스 18강.</span><span class="bullet-arrow">→</span><div class="bullet-detail">이번 파트는 힉스필드 풀코스 18강.</div></li><li class="tilt-card reveal" style="transition-delay:0.12s" onclick="event.stopPropagation();"><span class="bullet-num">02</span><span class="bullet-text">🎯 핵심 비유 · 30분 동안 진행해요.</span><span class="bullet-arrow">→</span><div class="bullet-detail">30분 동안 진행해요.</div></li><li class="tilt-card reveal" style="transition-delay:0.24s" onclick="event.stopPropagation();"><span class="bullet-num">03</span><span class="bullet-text">⏱️ 오늘의 목표 · 핵심 비유는 효과 백화점(100+ Apps).</span><span class="bullet-arrow">→</span><div class="bullet-detail">핵심 비유는 &quot;효과 백화점&quot;(100+ Apps).</div></li></ul>
+      </div>
+      <div class="section-foot">
+        <div class="audio-bars"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
+        <div class="foot-tag">META</div>
+      </div>
+          <details class="teacher-note" open>
+        <summary>📝 강사 노트</summary>
+        <div class="note-body">
+          <div class="note-script">
+            <div class="note-script-text">이번 파트는 힉스필드 풀코스 18강. 30분 동안 진행해요. 핵심 비유는 "효과 백화점"(100+ Apps). 가상 클라이언트는 D 트레이너님이에요. 5강 Soul ID·10강 Seedance·15강 UGC에서 만난 그 페르소나 다시 돌아와요. ACT 5 실전·종합의 첫 회차예요. Marketing Studio 4모드(14~17강) 다 경험했으니 이제 영상에 효과 추가하는 도구들을 만나는 회차예요. 시작합니다.</div>
+          </div>
+        </div>
+      </details>
+    </section>
+    <section class="slide slide-section" data-slide="2" data-diagram="overview" data-duration="120">
+      <div class="section-head">
+        <div class="section-kicker reveal">OVERVIEW · 한눈 요약</div>
+        <div class="section-counter reveal">00 / 00</div>
+      </div>
+      <div class="section-grid">
+        <h2 class="section-title"></h2>
+        <div class="section-visual reveal" style="transition-delay:0.3s"><svg viewBox="0 0 400 260" class="infographic">
+  <defs>
+    <radialGradient id="g2" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#e2c793" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#e2c793" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <circle cx="200" cy="130" r="80" fill="url(#g2)" stroke="#3a3730" stroke-width="1"/>
+  <circle cx="200" cy="130" r="50" fill="none" stroke="#e2c793" stroke-width="1.5"/>
+  <text x="200" y="138" text-anchor="middle" font-size="28" font-weight="900" fill="#e2c793">3/5</text>
+  <text x="200" y="220" text-anchor="middle" font-size="11" fill="#7a7666">OVERVIEW · </text>
+  <line x1="60" y1="240" x2="340" y2="240" stroke="#3a3730" stroke-width="1"/>
+</svg></div>
+        <ul class="bullet-list"><li class="tilt-card reveal" style="transition-delay:0.00s" onclick="event.stopPropagation();"><span class="bullet-num">01</span><span class="bullet-text">📋 수업 흐름 · 오늘 만들 것 3가지예요.</span><span class="bullet-arrow">→</span><div class="bullet-detail">오늘 만들 것 3가지예요.</div></li><li class="tilt-card reveal" style="transition-delay:0.12s" onclick="event.stopPropagation();"><span class="bullet-num">02</span><span class="bullet-text">🎤 핵심 비유 · 첫째, 100+ Apps(앱 100개+)가 왜 효과 </span><span class="bullet-arrow">→</span><div class="bullet-detail">첫째, 100+ Apps(앱 100개+)가 왜 &quot;효과 백화점&quot; 비유가 정확한 메뉴인지 짚을 거예요.</div></li><li class="tilt-card reveal" style="transition-delay:0.24s" onclick="event.stopPropagation();"><span class="bullet-num">03</span><span class="bullet-text">🚀 결과물 목표 · 둘째, 얼굴 교체(face swap)·트랜지션(장면 전</span><span class="bullet-arrow">→</span><div class="bullet-detail">둘째, 얼굴 교체(face swap)·트랜지션(장면 전환)·특수 효과 인기 3종을 만나볼 거예요.</div></li></ul>
+      </div>
+      <div class="section-foot">
+        <div class="audio-bars"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
+        <div class="foot-tag">OVERVIEW</div>
+      </div>
+          <details class="teacher-note" open>
+        <summary>📝 강사 노트</summary>
+        <div class="note-body">
+          <div class="note-script">
+            <div class="note-script-text">오늘 만들 것 3가지예요. 첫째, 100+ Apps(앱 100개+)가 왜 "효과 백화점" 비유가 정확한 메뉴인지 짚을 거예요. 둘째, 얼굴 교체(face swap)·트랜지션(장면 전환)·특수 효과 인기 3종을 만나볼 거예요. 셋째, D 트레이너 페르소나로 기존 운동 시연 영상에 효과 추가해서 유튜브 쇼츠 9:16 한 단계 업그레이드된 영상 1편 받을 거예요.</div>
+          </div>
+        </div>
+      </details>
+    </section>
+    <section class="slide slide-section" data-slide="3" data-diagram="hook" data-duration="120">
+      <div class="section-head">
+        <div class="section-kicker reveal">HOOK · 오프닝 훅</div>
+        <div class="section-counter reveal">03 / 05</div>
+      </div>
+      <div class="section-grid">
+        <h2 class="section-title"></h2>
+        <div class="section-visual reveal" style="transition-delay:0.3s"><svg viewBox="0 0 400 260" class="infographic">
+  <defs>
+    <radialGradient id="g3" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#e2c793" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#e2c793" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <circle cx="200" cy="130" r="80" fill="url(#g3)" stroke="#3a3730" stroke-width="1"/>
+  <circle cx="200" cy="130" r="50" fill="none" stroke="#e2c793" stroke-width="1.5"/>
+  <text x="200" y="138" text-anchor="middle" font-size="28" font-weight="900" fill="#e2c793">4/5</text>
+  <text x="200" y="220" text-anchor="middle" font-size="11" fill="#7a7666">HOOK · </text>
+  <line x1="60" y1="240" x2="340" y2="240" stroke="#3a3730" stroke-width="1"/>
+</svg></div>
+        <ul class="bullet-list"><li class="tilt-card reveal" style="transition-delay:0.00s" onclick="event.stopPropagation();"><span class="bullet-num">01</span><span class="bullet-text">💡 솔직히 · D 트레이너님이 평소 본인 운동 시연 영상 만들고 나서</span><span class="bullet-arrow">→</span><div class="bullet-detail">D 트레이너님이 평소 본인 운동 시연 영상 만들고 나서 이런 생각 하셨을 거예요.</div></li><li class="tilt-card reveal" style="transition-delay:0.12s" onclick="event.stopPropagation();"><span class="bullet-num">02</span><span class="bullet-text">⚡ 오늘의 시도 · 운동 시연 영상은 만들었는데 다른 트레이너 영상에 비</span><span class="bullet-arrow">→</span><div class="bullet-detail">&quot;운동 시연 영상은 만들었는데 다른 트레이너 영상에 비해 너무 밋밋해요.&quot; &quot;인기 트레이너 쇼츠 보면 얼굴 교체·트랜지션·특수 효과 같은 거 막 들어가 있는데 어떻게 만들어요?&quot; &quot;영상 편집 소프트웨어(프리미어·파이널컷) 배워야 해요?</div></li><li class="tilt-card reveal" style="transition-delay:0.24s" onclick="event.stopPropagation();"><span class="bullet-num">03</span><span class="bullet-text">🌿 부담 제로 · 너무 어려워요. 이 고민, 오늘 한 방에 풀려요.</span><span class="bullet-arrow">→</span><div class="bullet-detail">너무 어려워요.&quot; 이 고민, 오늘 한 방에 풀려요.</div></li></ul>
+      </div>
+      <div class="section-foot">
+        <div class="audio-bars"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
+        <div class="foot-tag">HOOK</div>
+      </div>
+          <details class="teacher-note" open>
+        <summary>📝 강사 노트</summary>
+        <div class="note-body">
+          <div class="note-script">
+            <div class="note-script-text">D 트레이너님이 평소 본인 운동 시연 영상 만들고 나서 이런 생각 하셨을 거예요. "운동 시연 영상은 만들었는데 다른 트레이너 영상에 비해 너무 밋밋해요." "인기 트레이너 쇼츠 보면 얼굴 교체·트랜지션·특수 효과 같은 거 막 들어가 있는데 어떻게 만들어요?" "영상 편집 소프트웨어(프리미어·파이널컷) 배워야 해요? 너무 어려워요." 이 고민, 오늘 한 방에 풀려요. 힉스필드 메뉴 중 Apps(앱)이라는 메뉴가 있어요. "효과 백화점" 비유가 정확해요. 한 메뉴 안에 100가지 다른 효과가 모여 있어요. 얼굴 교체·트랜지션·특수 효과 같은 거 클릭 한 번으로 적용 가능해요. 영상 편집 소프트웨어 안 배워도 돼요. Apps 메뉴는 클릭 한 번으로 효과 적용되는 단순 인터페이스예요. 오늘 D 트레이너 운동 시연 영상에 인기 효과 3가지 추가해서 유튜브 쇼츠 한 단계 업그레이드해봐요. [CONCEPT 1] 100+ Apps(앱 100개+ · 얼굴 교체·효과 100+) 부터 짚을게요. "Apps"는요. 영어 원어 그대로 "앱(애플리케이션)"이라는 뜻이에요. 핸드폰 앱 같은 작은 도구라는 뜻이에요. 힉스필드 Apps 메뉴는요. 영상에 추가할 수 있는 다양한 효과·도구를 100가지 이상 모아놓은 메뉴예요. "효과 백화점" 비유가 정확해요. 백화점 안에 다양한 가게(효과) 있고, 본인이 필요한 가게 골라 들어가서 효과 1개 사가는 거예요. 좌측 13번째 글로벌 네비 메뉴에 "Apps" 라벨로 있어요. 2강에서 글로벌 네비 메뉴 15개 만났을 때 Apps 메뉴는 첫 등장이라 풀이 1번 했었어요. 오늘이 Apps를 처음 깊게 다루는 회차예요. 어떤 효과들이 있냐면요. face swap(얼굴 교체)·transition(장면 전환)·slow motion(슬로우 모션)·color grading(색감 보정)·background remove(배경 제거)·motion blur(모션 블러) 등 100가지 이상이에요. 회차 18강에서 다 다루면 30분 모자라요. 인기 3종만 깊게 다루고 나머지는 본인이 추가 학습하시면 돼요. [CONCEPT 2] 얼굴 교체·트랜지션 인기 3종을 짚을게요. 인기 효과 3가지를 골랐어요. 첫째, **face swap(페이스 스왑 · 얼굴 교체)**. 한 사람 영상 위에 다른 사람 얼굴을 합성하는 효과예요. D 트레이너 운동 시연 영상에 본인 얼굴 그대로 두는 게 가장 자연스럽지만, 다양한 모델 얼굴로 변형해서 시리즈 만들 때 활용 가능해요. 주의: 다른 사람 얼굴 합성 시 사전 동의 필수예요. 동의 없이 유명인 얼굴 합성하면 초상권 침해예요. 둘째, **transition(트랜지션 · 장면 전환)**. 한 장면에서 다음 장면으로 넘어갈 때 효과 추가하는 거예요. 짧은 쇼츠에 장면 전환 효과 들어가면 시청자 몰입도 높아져요. 인기 트랜지션 종류는 fade(페이드 · 서서히 사라짐)·slide(슬라이드 · 옆으로 밀려남)·zoom(줌 · 확대)·glitch(글리치 · 디지털 깜박임) 같은 거예요. 셋째, **special effects(스페셜 이펙트 · 특수 효과)**. 영상에 시각적 화려함 추가하는 효과예요. 운동 영상에 어울리는 효과는 motion blur(모션 블러 · 동작 흐림)·speed ramp(스피드 램프 · 속도 변화)·strobe(스트로브 · 깜박임) 같은 거예요. 이 3가지 효과를 운동 영상에 추가하면 밋밋한 영상이 한 단계 업그레이드돼요. [CONCEPT 3] 기존 영상에 효과 적용 흐름을 짚을게요. Apps 메뉴는 새 영상 만들기보다 기존 영상에 효과 추가하는 용도가 핵심이에요. 9강·10강·11강·12강·13강에서 만든 영상 다 활용 가능해요. 또는 본인이 폰으로 직접 찍은 영상도 OK예요. 흐름은 단순해요. 첫째, Edit(편집) 메뉴 또는 Apps 메뉴 진입. 둘째, 효과 추가할 영상 업로드. 셋째, 적용할 효과 선택 (face swap·transition·effects 중 1개). 넷째, 효과 미세 조정 (강도·위치·시점). 다섯째, Generate(만들기) 버튼 클릭 → 효과 적용된 영상 받기. 한 영상에 여러 효과 동시 적용도 가능해요. 단 효과 너무 많이 넣으면 산만해져요. 영상 1편당 효과 1~3개가 적당해요. [CONCEPT 4] 크레딧 비용을 짚을게요. Apps 효과 적용은 효과 종류별로 크레딧이 달라요. 가벼운 효과(transition·color grading): 5~10크레딧. 중간 효과(slow motion·motion blur·speed ramp): 10~20크레딧. 무거운 효과(face swap·background remove·special effects): 20~40크레딧. 한 영상에 효과 3개 적용하면 약 35~70크레딧 정도 들어요. 9강 Kling 영상 1편 만들 때 6크레딧이었던 거 기억나시죠. 효과 추가는 그것보다 더 들지만, 14강·15강·17강 Marketing Studio(70~150)보다는 가벼워요. 새 영상 만드는 것보다 기존 영상에 효과만 추가하는 게 비용 효율적이에요. D 트레이너님이 한 번 만든 운동 영상 1편을 효과만 바꿔서 5번 변형하면 시리즈 5편 빠르게 채울 수 있어요. [CONCEPT 5] 쇼츠 9:16 업로드 흐름을 짚을게요. 효과 적용 결과는 영상 파일이에요. 다운로드 후 폰으로 옮기면 돼요. 유튜브 쇼츠 9:16은 1분 이내 세로 영상 표준이에요. 11강에서 Sora 2로 쇼츠 만들었던 거 기억나시죠. 유튜브 쇼츠 업로드는요. 유튜브 앱 → 본인 채널 → "+" 버튼 → "쇼츠 만들기" → 영상 선택 → 음악·자막 추가 → 게시. 컴퓨터에서 직접 유튜브 스튜디오로 업로드도 가능하지만 폰 앱이 가장 편해요. 쇼츠 캡션은 운동 핵심 정보 + 트레이너 한마디 형식으로 짧게 적어주세요. 영상 길이는 30~60초가 적당해요. 너무 짧으면 알고리즘이 노출 안 시키고 너무 길면 시청 완료율 떨어져요.</div>
+          </div>
+        </div>
+      </details>
+    </section>
+    <section class="slide slide-section" data-slide="4" data-diagram="recap" data-duration="120">
+      <div class="section-head">
+        <div class="section-kicker reveal">RECAP · 복습</div>
+        <div class="section-counter reveal">04 / 05</div>
+      </div>
+      <div class="section-grid">
+        <h2 class="section-title"></h2>
+        <div class="section-visual reveal" style="transition-delay:0.3s"><svg viewBox="0 0 400 260" class="infographic">
+  <defs>
+    <radialGradient id="g4" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#e2c793" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#e2c793" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <circle cx="200" cy="130" r="80" fill="url(#g4)" stroke="#3a3730" stroke-width="1"/>
+  <circle cx="200" cy="130" r="50" fill="none" stroke="#e2c793" stroke-width="1.5"/>
+  <text x="200" y="138" text-anchor="middle" font-size="28" font-weight="900" fill="#e2c793">5/5</text>
+  <text x="200" y="220" text-anchor="middle" font-size="11" fill="#7a7666">RECAP · </text>
+  <line x1="60" y1="240" x2="340" y2="240" stroke="#3a3730" stroke-width="1"/>
+</svg></div>
+        <ul class="bullet-list"><li class="tilt-card reveal" style="transition-delay:0.00s" onclick="event.stopPropagation();"><span class="bullet-num">01</span><span class="bullet-text">✅ 오늘 배운 것 · 오늘 한 일 정리할게요.</span><span class="bullet-arrow">→</span><div class="bullet-detail">오늘 한 일 정리할게요.</div></li><li class="tilt-card reveal" style="transition-delay:0.12s" onclick="event.stopPropagation();"><span class="bullet-num">02</span><span class="bullet-text">📌 체크포인트 · 100+ Apps(앱 100개+)는 영상에 추가할 수 </span><span class="bullet-arrow">→</span><div class="bullet-detail">100+ Apps(앱 100개+)는 영상에 추가할 수 있는 효과 100가지를 모아놓은 메뉴예요.</div></li><li class="tilt-card reveal" style="transition-delay:0.24s" onclick="event.stopPropagation();"><span class="bullet-num">03</span><span class="bullet-text">💾 저장 포인트 · 효과 백화점 비유가 정확해요.</span><span class="bullet-arrow">→</span><div class="bullet-detail">&quot;효과 백화점&quot; 비유가 정확해요.</div></li></ul>
+      </div>
+      <div class="section-foot">
+        <div class="audio-bars"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
+        <div class="foot-tag">RECAP</div>
+      </div>
+          <details class="teacher-note" open>
+        <summary>📝 강사 노트</summary>
+        <div class="note-body">
+          <div class="note-script">
+            <div class="note-script-text">오늘 한 일 정리할게요. 첫째. 100+ Apps(앱 100개+)는 영상에 추가할 수 있는 효과 100가지를 모아놓은 메뉴예요. "효과 백화점" 비유가 정확해요. 글로벌 네비 13번째 메뉴예요. 영상 편집 소프트웨어 안 배워도 클릭 한 번으로 효과 적용돼요. 둘째. 인기 효과 3종을 만났어요. face swap(얼굴 교체 · 20~40크레딧)·transition(장면 전환 · 5~10크레딧)·special effects(특수 효과 · 10~20크레딧). 한 영상에 효과 1~3개 적용이 적당해요. 너무 많이 넣으면 산만해져요. 셋째. D 트레이너 페르소나로 기존 운동 시연 영상에 트랜지션 + 모션 블러 효과 추가해서 한 단계 업그레이드된 유튜브 쇼츠 9:16 영상 1편 받았어요. 결과물 누적 15번 ✓ (ACT 5 실전·종합 첫 작품). 약 15~30크레딧 들어요. 새 영상 만드는 것보다 기존 영상 효과 추가가 비용 효율적이에요.</div>
+          </div>
+        </div>
+      </details>
+    </section>
+    <section class="slide slide-section" data-slide="5" data-diagram="bridge" data-duration="120">
+      <div class="section-head">
+        <div class="section-kicker reveal">BRIDGE · 다음 악장</div>
+        <div class="section-counter reveal">05 / 05</div>
+      </div>
+      <div class="section-grid">
+        <h2 class="section-title"></h2>
+        <div class="section-visual reveal" style="transition-delay:0.3s"><svg viewBox="0 0 400 260" class="infographic">
+  <defs>
+    <radialGradient id="g5" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#e2c793" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#e2c793" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <circle cx="200" cy="130" r="80" fill="url(#g5)" stroke="#3a3730" stroke-width="1"/>
+  <circle cx="200" cy="130" r="50" fill="none" stroke="#e2c793" stroke-width="1.5"/>
+  <text x="200" y="138" text-anchor="middle" font-size="28" font-weight="900" fill="#e2c793">6/5</text>
+  <text x="200" y="220" text-anchor="middle" font-size="11" fill="#7a7666">BRIDGE · </text>
+  <line x1="60" y1="240" x2="340" y2="240" stroke="#3a3730" stroke-width="1"/>
+</svg></div>
+        <ul class="bullet-list"><li class="tilt-card reveal" style="transition-delay:0.00s" onclick="event.stopPropagation();"><span class="bullet-num">01</span><span class="bullet-text">🚪 다음 회차 예고 · 다음 시간엔 한 주 콘텐츠 캘린더 마법 회차예요.</span><span class="bullet-arrow">→</span><div class="bullet-detail">다음 시간엔 한 주 콘텐츠 캘린더 마법 회차예요.</div></li><li class="tilt-card reveal" style="transition-delay:0.12s" onclick="event.stopPropagation();"><span class="bullet-num">02</span><span class="bullet-text">🔜 연결 고리 · 가상 클라이언트 A·B·C·D 중 본인이 선택한 1종으</span><span class="bullet-arrow">→</span><div class="bullet-detail">가상 클라이언트 A·B·C·D 중 본인이 선택한 1종으로 진행해요.</div></li><li class="tilt-card reveal" style="transition-delay:0.24s" onclick="event.stopPropagation();"><span class="bullet-num">03</span><span class="bullet-text">🎁 미리 준비 · 어느 페르소나든 다 적용 가능해요.</span><span class="bullet-arrow">→</span><div class="bullet-detail">어느 페르소나든 다 적용 가능해요.</div></li></ul>
+      </div>
+      <div class="section-foot">
+        <div class="audio-bars"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
+        <div class="foot-tag">BRIDGE</div>
+      </div>
+          <details class="teacher-note" open>
+        <summary>📝 강사 노트</summary>
+        <div class="note-body">
+          <div class="note-script">
+            <div class="note-script-text">다음 시간엔 한 주 콘텐츠 캘린더 마법 회차예요. 가상 클라이언트 A·B·C·D 중 본인이 선택한 1종으로 진행해요. 어느 페르소나든 다 적용 가능해요. "매일 SNS 콘텐츠 만들기 너무 힘들어요. 한 주에 7편 한 번에 만들 수 없을까요?" — 이 고민 다음 회차에서 풀어봐요. 한 주 콘텐츠 캘린더(월~일 7편) 만드는 회차예요. 1강~18강에서 배운 모델·모드·효과를 다 혼합 운영해서 한 번에 7편 빠르게 만드는 흐름이에요. "공장 라인 작업" 비유가 정확한 회차예요. 한 번에 1편씩 만드는 게 아니라 공장 라인처럼 7편을 효율적으로 일괄 생성하는 회차예요. 회차 모델 재활용(12강 Veo·13강 Cinema Studio·14강 Marketing Studio 등) 흐름도 같이 익히는 회차예요. 다음 회차에서 만나요.</div>
+          </div>
+        </div>
+      </details>
+    </section>
+    <section class="slide slide-outro" data-slide="6">
+      <div class="outro-radial"></div>
+      <div class="outro-kicker reveal">END OF PART 18</div>
+      <h2 class="outro-title reveal" style="transition-delay:0.15s">100+ Apps 효과 마무리</h2>
+      <div class="outro-sub reveal" style="transition-delay:0.3s">NEXT · Part 19 · 한 주 콘텐츠 캘린더</div>
+      <div class="outro-actions reveal" style="transition-delay:0.5s">
+        <a class="btn btn-ghost" href="../index.html">← 전체 목차</a>
+        <button class="btn btn-gold" onclick="goFirst()">처음으로 ↺</button>
+        <a class="btn btn-gold" href="../../19강_한주_콘텐츠_캘린더/PPT/part-19.html">다음으로 →</a>
+      </div>
+    </section>
+</main>
+
+<div class="controls">
+  <button class="ctl-btn" onclick="prev()" title="이전 슬라이드">◀</button>
+  <div class="counter"><span id="counter">01</span> / <span id="total">7</span></div>
+  <button class="ctl-btn" onclick="next()" title="다음 슬라이드">▶</button>
+  <button class="ctl-btn" onclick="toggleThumbs()" title="썸네일 (T)">🎴</button>
+  <button class="ctl-btn" onclick="toggleHelp()" title="도움말 (?)">?</button>
+  <button class="ctl-btn" onclick="toggleFullscreen()" title="전체화면 (F)">⛶</button>
+</div>
+
+<div class="thumb-strip" id="thumbStrip">
+  <div class="thumb-strip-inner" id="thumbInner">
+    <div class="thumb" data-idx="0"><span class="thumb-num">01</span><span class="thumb-label">COVER</span></div><div class="thumb" data-idx="1"><span class="thumb-num">02</span><span class="thumb-label">META</span></div><div class="thumb" data-idx="2"><span class="thumb-num">03</span><span class="thumb-label">OVERVIEW</span></div><div class="thumb" data-idx="3"><span class="thumb-num">04</span><span class="thumb-label">HOOK</span></div><div class="thumb" data-idx="4"><span class="thumb-num">05</span><span class="thumb-label">RECAP</span></div><div class="thumb" data-idx="5"><span class="thumb-num">06</span><span class="thumb-label">BRIDGE</span></div><div class="thumb" data-idx="6"><span class="thumb-num">07</span><span class="thumb-label">END</span></div>
+  </div>
+</div>
+
+<div class="help-overlay" id="helpOverlay">
+  <div class="help-card">
+    <h3>키보드 단축키</h3>
+    <ul>
+      <li><kbd>←</kbd> / <kbd>→</kbd> 슬라이드 이동</li>
+      <li><kbd>Space</kbd> / <kbd>Backspace</kbd> 문장 다음/이전</li>
+      <li><kbd>F</kbd> 전체화면</li>
+      <li><kbd>T</kbd> 썸네일</li>
+      <li><kbd>N</kbd> 강사 노트 토글</li>
+      <li><kbd>?</kbd> 도움말</li>
+    </ul>
+    <button onclick="toggleHelp()">닫기</button>
+  </div>
+</div>
+
+<footer class="page-footer">© PajamaBoss · 힉스필드 풀코스 · ACT 5 · 실전</footer>
+
+<script src="../../assets/common.js"></script>
+</body>
+</html>

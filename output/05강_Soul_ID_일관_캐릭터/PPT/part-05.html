@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Part 05 · Soul ID 일관 캐릭터 — 힉스필드 풀코스</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css">
+<link rel="stylesheet" href="../../assets/common.css">
+</head>
+<body class="teacher-view" data-bg-mode="VORONOI">
+
+<canvas id="bgcanvas"></canvas>
+<div class="dot-grid"></div>
+<div class="vignette"></div>
+<div class="cursor-dot" id="cursorDot"></div>
+<div class="cursor-ring" id="cursorRing"></div>
+
+<div class="topbar">
+  <div class="brand">HIGGSFIELD · 풀코스</div>
+  <div class="topbar-center">PART 05 · Soul ID 일관 캐릭터</div>
+  <div class="topbar-right">
+    <button id="projectorBtn" type="button" onclick="window.openProjectorWindow()" style="display:none;" title="프로젝터용 수강생 창 새로 열기">📺 프로젝터</button>
+    <a class="nav-arrow" href="../../04강_Soul_2_인물_사진/PPT/part-04.html" title="이전 회차">◀ PART 04</a>
+    <a class="nav-arrow" href="../../index.html">INDEX</a>
+    <a class="nav-arrow" href="../../06강_Soul_Reference_시리즈/PPT/part-06.html" title="다음 회차">PART 06 ▶</a>
+  </div>
+</div>
+
+<div class="progress" id="progress"></div>
+
+<main class="deck" id="deck">
+    <section class="slide slide-cover" data-slide="0" data-duration="60">
+      <div class="cover-bg-shapes">
+        <svg class="float-shape fs1" viewBox="0 0 100 100"><polygon points="50,10 90,90 10,90" fill="none" stroke="#e2c793" stroke-width="1"/></svg>
+        <svg class="float-shape fs2" viewBox="0 0 100 100"><circle cx="50" cy="50" r="40" fill="none" stroke="#e2c793" stroke-width="1"/></svg>
+        <svg class="float-shape fs3" viewBox="0 0 100 100"><rect x="10" y="10" width="80" height="80" fill="none" stroke="#e2c793" stroke-width="1" transform="rotate(15 50 50)"/></svg>
+        <svg class="float-shape fs4" viewBox="0 0 100 100"><polygon points="50,5 95,30 95,70 50,95 5,70 5,30" fill="none" stroke="#e2c793" stroke-width="1"/></svg>
+      </div>
+      <div class="cover-kicker reveal">ACT 2 · 이미지</div>
+      <div class="cover-number reveal" style="transition-delay:0.1s">PART 05</div>
+      <h1 class="cover-title typewriter-target" data-text="Soul ID 일관 캐릭터">&nbsp;</h1>
+      <div class="cover-sub reveal" style="transition-delay:0.6s">Soul ID · 내 사진 학습으로 일관 캐릭터</div>
+      <div class="cover-meta reveal" style="transition-delay:0.8s">
+        <span class="meta-dot"></span>
+        <span>인터랙티브 슬라이드 · 마우스·키보드로 조작</span>
+      </div>
+      <div class="cover-hint reveal" style="transition-delay:1s">⌨ <kbd>←</kbd><kbd>→</kbd> 슬라이드 · <kbd>Space</kbd>/<kbd>Backspace</kbd> 문장 다음/이전 · <kbd>F</kbd> 전체화면 · <kbd>N</kbd> 노트</div>
+    </section>
+    <section class="slide slide-section" data-slide="1" data-diagram="meta" data-duration="120">
+      <div class="section-head">
+        <div class="section-kicker reveal">META · 파트 메타</div>
+        <div class="section-counter reveal">01 / 05</div>
+      </div>
+      <div class="section-grid">
+        <h2 class="section-title"></h2>
+        <div class="section-visual reveal" style="transition-delay:0.3s"><svg viewBox="0 0 400 260" class="infographic">
+  <defs>
+    <radialGradient id="g1" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#e2c793" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#e2c793" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <circle cx="200" cy="130" r="80" fill="url(#g1)" stroke="#3a3730" stroke-width="1"/>
+  <circle cx="200" cy="130" r="50" fill="none" stroke="#e2c793" stroke-width="1.5"/>
+  <text x="200" y="138" text-anchor="middle" font-size="28" font-weight="900" fill="#e2c793">2/5</text>
+  <text x="200" y="220" text-anchor="middle" font-size="11" fill="#7a7666">META · </text>
+  <line x1="60" y1="240" x2="340" y2="240" stroke="#3a3730" stroke-width="1"/>
+</svg></div>
+        <ul class="bullet-list"><li class="tilt-card reveal" style="transition-delay:0.00s" onclick="event.stopPropagation();"><span class="bullet-num">01</span><span class="bullet-text">🎬 파트 메타 · 이번 파트는 힉스필드 풀코스 5강.</span><span class="bullet-arrow">→</span><div class="bullet-detail">이번 파트는 힉스필드 풀코스 5강.</div></li><li class="tilt-card reveal" style="transition-delay:0.12s" onclick="event.stopPropagation();"><span class="bullet-num">02</span><span class="bullet-text">🎯 핵심 비유 · 30분 동안 진행해요.</span><span class="bullet-arrow">→</span><div class="bullet-detail">30분 동안 진행해요.</div></li><li class="tilt-card reveal" style="transition-delay:0.24s" onclick="event.stopPropagation();"><span class="bullet-num">03</span><span class="bullet-text">⏱️ 오늘의 목표 · 핵심 비유는 셰프 앞치마에 내 이름 새기기(Soul</span><span class="bullet-arrow">→</span><div class="bullet-detail">핵심 비유는 &quot;셰프 앞치마에 내 이름 새기기&quot;(Soul ID).</div></li></ul>
+      </div>
+      <div class="section-foot">
+        <div class="audio-bars"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
+        <div class="foot-tag">META</div>
+      </div>
+          <details class="teacher-note" open>
+        <summary>📝 강사 노트</summary>
+        <div class="note-body">
+          <div class="note-script">
+            <div class="note-script-text">이번 파트는 힉스필드 풀코스 5강. 30분 동안 진행해요. 핵심 비유는 "셰프 앞치마에 내 이름 새기기"(Soul ID). 가상 클라이언트는 D 트레이너님이에요. 내 사진 5장을 셰프에게 학습시켜서 매번 같은 얼굴로 운동 시연 인물 사진을 받는 방법을 익혀볼 거예요. 시작합니다.</div>
+          </div>
+        </div>
+      </details>
+    </section>
+    <section class="slide slide-section" data-slide="2" data-diagram="overview" data-duration="120">
+      <div class="section-head">
+        <div class="section-kicker reveal">OVERVIEW · 한눈 요약</div>
+        <div class="section-counter reveal">00 / 00</div>
+      </div>
+      <div class="section-grid">
+        <h2 class="section-title"></h2>
+        <div class="section-visual reveal" style="transition-delay:0.3s"><svg viewBox="0 0 400 260" class="infographic">
+  <defs>
+    <radialGradient id="g2" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#e2c793" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#e2c793" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <circle cx="200" cy="130" r="80" fill="url(#g2)" stroke="#3a3730" stroke-width="1"/>
+  <circle cx="200" cy="130" r="50" fill="none" stroke="#e2c793" stroke-width="1.5"/>
+  <text x="200" y="138" text-anchor="middle" font-size="28" font-weight="900" fill="#e2c793">3/5</text>
+  <text x="200" y="220" text-anchor="middle" font-size="11" fill="#7a7666">OVERVIEW · </text>
+  <line x1="60" y1="240" x2="340" y2="240" stroke="#3a3730" stroke-width="1"/>
+</svg></div>
+        <ul class="bullet-list"><li class="tilt-card reveal" style="transition-delay:0.00s" onclick="event.stopPropagation();"><span class="bullet-num">01</span><span class="bullet-text">📋 수업 흐름 · 오늘 만들 것 3가지예요.</span><span class="bullet-arrow">→</span><div class="bullet-detail">오늘 만들 것 3가지예요.</div></li><li class="tilt-card reveal" style="transition-delay:0.12s" onclick="event.stopPropagation();"><span class="bullet-num">02</span><span class="bullet-text">🎤 핵심 비유 · 첫째, Soul ID(솔 ID · 내 사진 학습으로 일</span><span class="bullet-arrow">→</span><div class="bullet-detail">첫째, Soul ID(솔 ID · 내 사진 학습으로 일관 캐릭터)가 왜 필요한지, 셰프 앞치마 비유로 이해할 거예요.</div></li><li class="tilt-card reveal" style="transition-delay:0.24s" onclick="event.stopPropagation();"><span class="bullet-num">03</span><span class="bullet-text">🚀 결과물 목표 · 둘째, Character(캐릭터 · 인물 일관성) 메뉴</span><span class="bullet-arrow">→</span><div class="bullet-detail">둘째, Character(캐릭터 · 인물 일관성) 메뉴에서 D 트레이너 사진 5장을 업로드해서 학습시킬 거예요.</div></li></ul>
+      </div>
+      <div class="section-foot">
+        <div class="audio-bars"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
+        <div class="foot-tag">OVERVIEW</div>
+      </div>
+          <details class="teacher-note" open>
+        <summary>📝 강사 노트</summary>
+        <div class="note-body">
+          <div class="note-script">
+            <div class="note-script-text">오늘 만들 것 3가지예요. 첫째, Soul ID(솔 ID · 내 사진 학습으로 일관 캐릭터)가 왜 필요한지, 셰프 앞치마 비유로 이해할 거예요. 둘째, Character(캐릭터 · 인물 일관성) 메뉴에서 D 트레이너 사진 5장을 업로드해서 학습시킬 거예요. 셋째, 학습 완료된 캐릭터로 운동 시연 인물 사진 1~2장을 받을 거예요.</div>
+          </div>
+        </div>
+      </details>
+    </section>
+    <section class="slide slide-section" data-slide="3" data-diagram="hook" data-duration="120">
+      <div class="section-head">
+        <div class="section-kicker reveal">HOOK · 오프닝 훅</div>
+        <div class="section-counter reveal">03 / 05</div>
+      </div>
+      <div class="section-grid">
+        <h2 class="section-title"></h2>
+        <div class="section-visual reveal" style="transition-delay:0.3s"><svg viewBox="0 0 400 260" class="infographic">
+  <defs>
+    <radialGradient id="g3" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#e2c793" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#e2c793" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <circle cx="200" cy="130" r="80" fill="url(#g3)" stroke="#3a3730" stroke-width="1"/>
+  <circle cx="200" cy="130" r="50" fill="none" stroke="#e2c793" stroke-width="1.5"/>
+  <text x="200" y="138" text-anchor="middle" font-size="28" font-weight="900" fill="#e2c793">4/5</text>
+  <text x="200" y="220" text-anchor="middle" font-size="11" fill="#7a7666">HOOK · </text>
+  <line x1="60" y1="240" x2="340" y2="240" stroke="#3a3730" stroke-width="1"/>
+</svg></div>
+        <ul class="bullet-list"><li class="tilt-card reveal" style="transition-delay:0.00s" onclick="event.stopPropagation();"><span class="bullet-num">01</span><span class="bullet-text">💡 솔직히 · D 트레이너님이 4강 끝나고 이런 생각하셨을 거예요.</span><span class="bullet-arrow">→</span><div class="bullet-detail">D 트레이너님이 4강 끝나고 이런 생각하셨을 거예요.</div></li><li class="tilt-card reveal" style="transition-delay:0.12s" onclick="event.stopPropagation();"><span class="bullet-num">02</span><span class="bullet-text">⚡ 오늘의 시도 · 인물 사진 1장은 잘 됐는데...</span><span class="bullet-arrow">→</span><div class="bullet-detail">&quot;인물 사진 1장은 잘 됐는데...</div></li><li class="tilt-card reveal" style="transition-delay:0.24s" onclick="event.stopPropagation();"><span class="bullet-num">03</span><span class="bullet-text">🌿 부담 제로 · 이걸로 시리즈 콘텐츠 만들기는 좀 그래. 매번 다른</span><span class="bullet-arrow">→</span><div class="bullet-detail">이걸로 시리즈 콘텐츠 만들기는 좀 그래.&quot; &quot;매번 다른 얼굴이 나오는데 어떻게 같은 사람으로 시리즈 영상 만들지?&quot; &quot;인스타 운동 시리즈에 매주 다른 얼굴이 나오면 좀 이상하잖아.&quot; 이거 진짜 흔한 고민이에요.</div></li></ul>
+      </div>
+      <div class="section-foot">
+        <div class="audio-bars"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
+        <div class="foot-tag">HOOK</div>
+      </div>
+          <details class="teacher-note" open>
+        <summary>📝 강사 노트</summary>
+        <div class="note-body">
+          <div class="note-script">
+            <div class="note-script-text">D 트레이너님이 4강 끝나고 이런 생각하셨을 거예요. "인물 사진 1장은 잘 됐는데... 이걸로 시리즈 콘텐츠 만들기는 좀 그래." "매번 다른 얼굴이 나오는데 어떻게 같은 사람으로 시리즈 영상 만들지?" "인스타 운동 시리즈에 매주 다른 얼굴이 나오면 좀 이상하잖아." 이거 진짜 흔한 고민이에요. 4강의 Soul 2.0은 매번 새 얼굴을 만들어요. 같은 프리셋 써도 얼굴은 매번 달라요. 오늘 그 한계를 깨는 마법 도구 가져왔어요. "Soul ID(솔 ID · 내 사진 학습)"라는 기능이에요. 내 사진 5~10장을 셰프한테 보여주면, 셰프가 "아, 이 사람이구나" 하고 외워요. 그 다음부터는 매번 같은 얼굴로 새 사진 만들어줘요. 시리즈 콘텐츠 끝. [CONCEPT 1] Soul ID(솔 ID · 내 사진 학습으로 일관 캐릭터)부터 짚을게요. Soul ID는요. 셰프 앞치마에 내 이름과 사진을 새기는 거예요. 앞치마라고 비유 한 이유가 있어요. 힉스필드 셰프(AI 모델)는 매번 새로운 사람을 만들어요. 손님 한 명 한 명 다른 거 만들 듯이요. 근데 Soul ID는 셰프 앞치마에 "이 사람을 만들어줘"라고 사진 5장을 새겨두는 거예요. 다음부터 그 셰프한테 주문하면, 셰프가 앞치마 보고 "아, 이 사람이구나" 하고 항상 같은 얼굴로 만들어요. 이게 일관 캐릭터(Consistent Character)의 마법이에요. [CONCEPT 2] 왜 일관 캐릭터가 중요한지 짚을게요. 인스타·틱톡·유튜브에서 콘텐츠 잘 되는 채널들은 다 한 가지 공통점이 있어요. "같은 사람이 매번 나와요." 채널 호스트가 일관되게 보여요. 구독자가 그 얼굴에 정 들고, 친근감 느끼고, 다시 와요. 근데 매번 다른 AI 얼굴 나오면? 구독자가 "이거 누구야?" 헷갈려요. 브랜드도 안 만들어져요. D 트레이너님이 "운동 시리즈 영상 5편" 만들었는데 매번 다른 얼굴 나오면 시리즈 자체가 망가져요. Soul ID 학습 한 번 하면 평생 같은 얼굴로 콘텐츠 100편이든 1,000편이든 만들 수 있어요. [CONCEPT 3] 학습용 사진 가이드를 알려드릴게요. Soul ID는 사진 5~10장 정도면 충분히 학습해요. 어떤 사진을 골라야 하나요? 3가지 원칙이에요. 첫째, 다양한 각도. 정면 1장·옆얼굴 1장·살짝 위에서 1장·살짝 아래에서 1장. 셰프가 얼굴 입체감 익히게요. 둘째, 다양한 표정. 미소 1장·진지한 얼굴 1장·운동하는 모습 1장. 표정마다 얼굴 근육이 달라져요. 셋째, 깨끗한 얼굴. 모자·선글라스·마스크 쓴 사진 X. 셰프가 얼굴을 못 봐요. 이 3가지만 지키면 학습 잘 돼요. 사진 화질은 폰 셀카 정도면 충분해요. [CONCEPT 4] 학습 시간을 짚을게요. Soul ID는 사진 업로드 후 5~10분 정도 학습 시간 걸려요. 셰프가 "음, 이 사람 얼굴 외우는 중…" 하는 시간이에요. 이 5~10분 동안 우리는 다른 일 해도 돼요. 화면 앞에 안 있어도 돼요. 학습 완료되면 알림(Notification · 화면 우측 상단 벨 아이콘) 와요. 완료 후엔 그 셰프한테 "운동 시연 사진 만들어줘" 하면, 매번 D 트레이너 본인 얼굴로 사진 나와요. 이 5~10분 한 번 투자가 평생 시리즈 콘텐츠 만들 수 있게 해줘요. [CONCEPT 5] 주의 사항 1개 짚을게요. Soul ID 학습은 본인 사진으로만 하세요. 친구·가족·연예인 사진 무단 학습 금지예요. 이건 초상권 문제예요. SNS에 올린 다른 사람 사진 가져다가 Soul ID 학습시키면 법적 문제 될 수 있어요. 본인 얼굴은 자유. 본인 가족은 가족 동의 받고. 그 외는 금지. 강의에서는 항상 본인 얼굴 또는 본인 동의 받은 얼굴로만 시연해요. 안전하게.</div>
+          </div>
+        </div>
+      </details>
+    </section>
+    <section class="slide slide-section" data-slide="4" data-diagram="recap" data-duration="120">
+      <div class="section-head">
+        <div class="section-kicker reveal">RECAP · 복습</div>
+        <div class="section-counter reveal">04 / 05</div>
+      </div>
+      <div class="section-grid">
+        <h2 class="section-title"></h2>
+        <div class="section-visual reveal" style="transition-delay:0.3s"><svg viewBox="0 0 400 260" class="infographic">
+  <defs>
+    <radialGradient id="g4" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#e2c793" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#e2c793" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <circle cx="200" cy="130" r="80" fill="url(#g4)" stroke="#3a3730" stroke-width="1"/>
+  <circle cx="200" cy="130" r="50" fill="none" stroke="#e2c793" stroke-width="1.5"/>
+  <text x="200" y="138" text-anchor="middle" font-size="28" font-weight="900" fill="#e2c793">5/5</text>
+  <text x="200" y="220" text-anchor="middle" font-size="11" fill="#7a7666">RECAP · </text>
+  <line x1="60" y1="240" x2="340" y2="240" stroke="#3a3730" stroke-width="1"/>
+</svg></div>
+        <ul class="bullet-list"><li class="tilt-card reveal" style="transition-delay:0.00s" onclick="event.stopPropagation();"><span class="bullet-num">01</span><span class="bullet-text">✅ 오늘 배운 것 · 오늘 한 일 정리할게요.</span><span class="bullet-arrow">→</span><div class="bullet-detail">오늘 한 일 정리할게요.</div></li><li class="tilt-card reveal" style="transition-delay:0.12s" onclick="event.stopPropagation();"><span class="bullet-num">02</span><span class="bullet-text">📌 체크포인트 · Soul ID(솔 ID)는 셰프 앞치마에 내 이름과 사</span><span class="bullet-arrow">→</span><div class="bullet-detail">Soul ID(솔 ID)는 셰프 앞치마에 내 이름과 사진을 새기는 기능이에요.</div></li><li class="tilt-card reveal" style="transition-delay:0.24s" onclick="event.stopPropagation();"><span class="bullet-num">03</span><span class="bullet-text">💾 저장 포인트 · 한 번 학습하면 매번 같은 얼굴로 사진 만들어줘요.</span><span class="bullet-arrow">→</span><div class="bullet-detail">한 번 학습하면 매번 같은 얼굴로 사진 만들어줘요.</div></li></ul>
+      </div>
+      <div class="section-foot">
+        <div class="audio-bars"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
+        <div class="foot-tag">RECAP</div>
+      </div>
+          <details class="teacher-note" open>
+        <summary>📝 강사 노트</summary>
+        <div class="note-body">
+          <div class="note-script">
+            <div class="note-script-text">오늘 한 일 정리할게요. 첫째. Soul ID(솔 ID)는 셰프 앞치마에 내 이름과 사진을 새기는 기능이에요. 한 번 학습하면 매번 같은 얼굴로 사진 만들어줘요. 시리즈 콘텐츠의 핵심이에요. 둘째. D 트레이너 페르소나로 본인 사진 5장 업로드 → 5~10분 학습 → 본인 얼굴로 운동 시연 사진 1~2장 받았어요. 결과물 누적 2~3번 ✓. 셋째. 본인 사진만 학습 사용하세요. 친구·연예인 사진 무단 학습은 초상권 문제예요. 강의에서는 항상 본인 얼굴 또는 본인 동의 얼굴로만 진행해요.</div>
+          </div>
+        </div>
+      </details>
+    </section>
+    <section class="slide slide-section" data-slide="5" data-diagram="bridge" data-duration="120">
+      <div class="section-head">
+        <div class="section-kicker reveal">BRIDGE · 다음 악장</div>
+        <div class="section-counter reveal">05 / 05</div>
+      </div>
+      <div class="section-grid">
+        <h2 class="section-title"></h2>
+        <div class="section-visual reveal" style="transition-delay:0.3s"><svg viewBox="0 0 400 260" class="infographic">
+  <defs>
+    <radialGradient id="g5" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#e2c793" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#e2c793" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <circle cx="200" cy="130" r="80" fill="url(#g5)" stroke="#3a3730" stroke-width="1"/>
+  <circle cx="200" cy="130" r="50" fill="none" stroke="#e2c793" stroke-width="1.5"/>
+  <text x="200" y="138" text-anchor="middle" font-size="28" font-weight="900" fill="#e2c793">6/5</text>
+  <text x="200" y="220" text-anchor="middle" font-size="11" fill="#7a7666">BRIDGE · </text>
+  <line x1="60" y1="240" x2="340" y2="240" stroke="#3a3730" stroke-width="1"/>
+</svg></div>
+        <ul class="bullet-list"><li class="tilt-card reveal" style="transition-delay:0.00s" onclick="event.stopPropagation();"><span class="bullet-num">01</span><span class="bullet-text">🚪 다음 회차 예고 · 다음 시간엔 사진 1장 가지고 시리즈 만드는 또 다른 </span><span class="bullet-arrow">→</span><div class="bullet-detail">다음 시간엔 사진 1장 가지고 시리즈 만드는 또 다른 방법 익혀요.</div></li><li class="tilt-card reveal" style="transition-delay:0.12s" onclick="event.stopPropagation();"><span class="bullet-num">02</span><span class="bullet-text">🔜 연결 고리 · B 옷가게 셀러 페르소나로 진행해요.</span><span class="bullet-arrow">→</span><div class="bullet-detail">B 옷가게 셀러 페르소나로 진행해요.</div></li><li class="tilt-card reveal" style="transition-delay:0.24s" onclick="event.stopPropagation();"><span class="bullet-num">03</span><span class="bullet-text">🎁 미리 준비 · 참고 사진 1장 셰프한테 보여주면서 이 분위기로 5컷</span><span class="bullet-arrow">→</span><div class="bullet-detail">참고 사진 1장 셰프한테 보여주면서 &quot;이 분위기로 5컷 더 찍어줘&quot; 하는 거예요.</div></li></ul>
+      </div>
+      <div class="section-foot">
+        <div class="audio-bars"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
+        <div class="foot-tag">BRIDGE</div>
+      </div>
+          <details class="teacher-note" open>
+        <summary>📝 강사 노트</summary>
+        <div class="note-body">
+          <div class="note-script">
+            <div class="note-script-text">다음 시간엔 사진 1장 가지고 시리즈 만드는 또 다른 방법 익혀요. B 옷가게 셀러 페르소나로 진행해요. 참고 사진 1장 셰프한테 보여주면서 "이 분위기로 5컷 더 찍어줘" 하는 거예요. Soul Reference(솔 레퍼런스 · 이미지 → 이미지 변환)라는 기능이에요. "옷가게 인스타 릴스 정지샷 시리즈 5컷" 한 번에 받는 방법, 다음 회차에서 같이 만들어봐요.</div>
+          </div>
+        </div>
+      </details>
+    </section>
+    <section class="slide slide-outro" data-slide="6">
+      <div class="outro-radial"></div>
+      <div class="outro-kicker reveal">END OF PART 05</div>
+      <h2 class="outro-title reveal" style="transition-delay:0.15s">Soul ID 일관 캐릭터 마무리</h2>
+      <div class="outro-sub reveal" style="transition-delay:0.3s">NEXT · Part 06 · Soul Reference 시리즈</div>
+      <div class="outro-actions reveal" style="transition-delay:0.5s">
+        <a class="btn btn-ghost" href="../index.html">← 전체 목차</a>
+        <button class="btn btn-gold" onclick="goFirst()">처음으로 ↺</button>
+        <a class="btn btn-gold" href="../../06강_Soul_Reference_시리즈/PPT/part-06.html">다음으로 →</a>
+      </div>
+    </section>
+</main>
+
+<div class="controls">
+  <button class="ctl-btn" onclick="prev()" title="이전 슬라이드">◀</button>
+  <div class="counter"><span id="counter">01</span> / <span id="total">7</span></div>
+  <button class="ctl-btn" onclick="next()" title="다음 슬라이드">▶</button>
+  <button class="ctl-btn" onclick="toggleThumbs()" title="썸네일 (T)">🎴</button>
+  <button class="ctl-btn" onclick="toggleHelp()" title="도움말 (?)">?</button>
+  <button class="ctl-btn" onclick="toggleFullscreen()" title="전체화면 (F)">⛶</button>
+</div>
+
+<div class="thumb-strip" id="thumbStrip">
+  <div class="thumb-strip-inner" id="thumbInner">
+    <div class="thumb" data-idx="0"><span class="thumb-num">01</span><span class="thumb-label">COVER</span></div><div class="thumb" data-idx="1"><span class="thumb-num">02</span><span class="thumb-label">META</span></div><div class="thumb" data-idx="2"><span class="thumb-num">03</span><span class="thumb-label">OVERVIEW</span></div><div class="thumb" data-idx="3"><span class="thumb-num">04</span><span class="thumb-label">HOOK</span></div><div class="thumb" data-idx="4"><span class="thumb-num">05</span><span class="thumb-label">RECAP</span></div><div class="thumb" data-idx="5"><span class="thumb-num">06</span><span class="thumb-label">BRIDGE</span></div><div class="thumb" data-idx="6"><span class="thumb-num">07</span><span class="thumb-label">END</span></div>
+  </div>
+</div>
+
+<div class="help-overlay" id="helpOverlay">
+  <div class="help-card">
+    <h3>키보드 단축키</h3>
+    <ul>
+      <li><kbd>←</kbd> / <kbd>→</kbd> 슬라이드 이동</li>
+      <li><kbd>Space</kbd> / <kbd>Backspace</kbd> 문장 다음/이전</li>
+      <li><kbd>F</kbd> 전체화면</li>
+      <li><kbd>T</kbd> 썸네일</li>
+      <li><kbd>N</kbd> 강사 노트 토글</li>
+      <li><kbd>?</kbd> 도움말</li>
+    </ul>
+    <button onclick="toggleHelp()">닫기</button>
+  </div>
+</div>
+
+<footer class="page-footer">© PajamaBoss · 힉스필드 풀코스 · ACT 2 · 이미지</footer>
+
+<script src="../../assets/common.js"></script>
+</body>
+</html>

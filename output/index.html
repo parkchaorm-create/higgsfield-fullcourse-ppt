@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>학생용 인덱스 — 힉스필드 풀코스</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css">
+<style>
+  :root {
+    --black: #0D0D0D; --ink: #141414;
+    --gold: #e2c793; --gold-soft: #b8941f;
+    --cream: #F7F0DF; --text: #E8E0CC;
+    --muted: #7a7666; --dim: #3a3730;
+    --border: #1f1d19;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { background: var(--black); color: var(--text); font-family: 'Pretendard Variable', 'Pretendard', sans-serif; letter-spacing: -0.01em; }
+  body { min-height: 100vh; overflow-x: hidden; cursor: none; }
+  canvas#bgcanvas { position: fixed; inset: 0; z-index: 0; opacity: 0.45; pointer-events: none; }
+  .dot-grid { position: fixed; inset: 0; z-index: 1; opacity: 0.06; pointer-events: none; background-image: radial-gradient(circle, var(--gold) 1px, transparent 1px); background-size: 40px 40px; }
+  .vignette { position: fixed; inset: 0; z-index: 2; pointer-events: none; background: radial-gradient(ellipse at center, transparent 30%, rgba(0,0,0,0.65) 100%); }
+  .cursor-dot, .cursor-ring { position: fixed; z-index: 9999; pointer-events: none; left: 0; top: 0; transition: transform 0.05s ease-out; }
+  .cursor-dot { width: 6px; height: 6px; background: var(--gold); border-radius: 50%; box-shadow: 0 0 12px var(--gold); }
+  .cursor-ring { width: 38px; height: 38px; border: 1px solid var(--gold); border-radius: 50%; opacity: 0.5; transition: width 0.2s, height 0.2s, opacity 0.2s; transform: translate(-19px, -19px); }
+  main { position: relative; z-index: 10; max-width: 1280px; margin: 0 auto; padding: clamp(40px, 6vw, 80px) clamp(20px, 4vw, 60px); }
+  .hero { text-align: center; padding: clamp(60px, 10vw, 120px) 0 clamp(40px, 6vw, 80px); }
+  .brand-pill { display: inline-flex; align-items: center; gap: 12px; padding: 8px 24px; border: 1px solid var(--gold); border-radius: 100px; font-size: 12px; font-weight: 900; letter-spacing: 5px; color: var(--gold); margin-bottom: 32px; }
+  .brand-pill::before { content: ''; width: 6px; height: 6px; background: var(--gold); border-radius: 50%; box-shadow: 0 0 8px var(--gold); animation: spin 3s linear infinite; }
+  @keyframes spin { to { transform: rotate(360deg); } }
+  .hero h1 { font-size: clamp(38px, 5.5vw, 86px); font-weight: 900; color: var(--cream); line-height: 1.15; margin-bottom: 24px; letter-spacing: -0.02em; }
+  .word { display: inline-block; opacity: 0; transform: translateY(40px); animation: wordIn 0.9s cubic-bezier(0.22, 1, 0.36, 1) forwards; }
+  @keyframes wordIn { to { opacity: 1; transform: translateY(0); } }
+  .hero p.sub { font-size: clamp(16px, 1.4vw, 22px); color: var(--muted); margin-bottom: 32px; }
+  .stats { display: flex; justify-content: center; gap: clamp(20px, 3vw, 40px); flex-wrap: wrap; font-family: 'JetBrains Mono', monospace; font-size: 14px; color: var(--gold-soft); }
+  .stats span { display: inline-flex; align-items: center; gap: 8px; }
+  .stats span::before { content: '·'; color: var(--gold); }
+  .courses { padding: 40px 0; }
+  .courses h2 { font-size: clamp(24px, 2.4vw, 36px); font-weight: 900; color: var(--cream); margin-bottom: 32px; text-align: center; }
+  .courses h2::after { content: ''; display: block; width: 60px; height: 2px; background: var(--gold); margin: 16px auto 0; }
+  .card-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 20px; }
+  .card { display: block; text-decoration: none; color: inherit; position: relative; overflow: hidden; transition: transform 0.3s; }
+  .card:hover { transform: translateY(-4px); }
+  .card-inner { padding: 24px; background: linear-gradient(135deg, rgba(226,199,147,0.04), rgba(13,13,13,0.4)); border: 1px solid var(--border); border-radius: 8px; position: relative; height: 100%; transition: border-color 0.3s; }
+  .card:hover .card-inner { border-color: var(--gold); }
+  .card-num { display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px; font-family: 'JetBrains Mono', monospace; font-size: 12px; color: var(--gold); }
+  .tutor { color: var(--muted); font-weight: 400; }
+  .card-title { font-size: 18px; font-weight: 700; color: var(--cream); margin-bottom: 12px; line-height: 1.4; }
+  .card-desc { font-size: 13px; color: var(--muted); line-height: 1.6; margin-bottom: 20px; min-height: 42px; }
+  .card-meta { display: flex; justify-content: space-between; align-items: center; font-size: 12px; color: var(--gold-soft); }
+  .arrow { font-size: 16px; transition: transform 0.3s; }
+  .card:hover .arrow { transform: translateX(4px); }
+  .card-glow { position: absolute; inset: 0; border-radius: 8px; opacity: 0; background: radial-gradient(circle at top right, rgba(226,199,147,0.15), transparent 70%); transition: opacity 0.3s; pointer-events: none; }
+  .card:hover .card-glow { opacity: 1; }
+  footer { text-align: center; padding: 40px 20px; color: var(--muted); font-size: 12px; border-top: 1px solid var(--border); margin-top: 60px; }
+  .view-toggle { display: inline-flex; gap: 12px; margin-top: 20px; }
+  .view-toggle a { padding: 8px 20px; border: 1px solid var(--border); border-radius: 100px; color: var(--muted); text-decoration: none; font-size: 12px; }
+  .view-toggle a.active { color: var(--gold); border-color: var(--gold); }
+</style>
+</head>
+<body>
+<canvas id="bgcanvas"></canvas>
+<div class="dot-grid"></div>
+<div class="vignette"></div>
+<div class="cursor-dot"></div>
+<div class="cursor-ring"></div>
+
+<main>
+  <section class="hero">
+    <div class="brand-pill">힉스필드 풀코스 · 학생용</div>
+    <h1>
+      <span class="word">왕초보를</span>
+      <span class="word" style="animation-delay:0.1s">위한</span>
+      <span class="word" style="animation-delay:0.2s">힉스필드</span>
+      <span class="word" style="animation-delay:0.3s">A</span>
+      <span class="word" style="animation-delay:0.4s">to</span>
+      <span class="word" style="animation-delay:0.5s">Z</span>
+      <span class="word" style="animation-delay:0.6s">풀코스</span>
+    </h1>
+    <p class="sub">실전 예제로 SNS 콘텐츠·마케팅 자료 만들기 · 20회 × 30분</p>
+    <div class="stats">
+      <span>20회차</span>
+      <span>5 ACT</span>
+      <span>4 가상 클라이언트</span>
+      <span>10시간 풀코스</span>
+    </div>
+    <div class="view-toggle">
+      <a href="./index.html" class="active">🎓 학생용</a>
+      <a href="./teacher.html" class="">🎤 강사용</a>
+    </div>
+  </section>
+
+  <section class="courses">
+    <h2>전체 회차 목록</h2>
+    <div class="card-grid">
+        <a class="card available" href="./01강_힉스필드_첫_만남/PPT/part-01.html?view=student">
+          <div class="card-inner">
+            <div class="card-num"><span>1회</span><span class="tutor">ACT 1 · 입문</span></div>
+            <div class="card-title">힉스필드 첫 만남</div>
+            <div class="card-desc">힉스필드 첫 만남 · 30분</div>
+            <div class="card-meta"><span>열기</span><span class="arrow">→</span></div>
+            <div class="card-glow"></div>
+          </div>
+        </a>
+        <a class="card available" href="./02강_영어_메뉴_풀이사전/PPT/part-02.html?view=student">
+          <div class="card-inner">
+            <div class="card-num"><span>2회</span><span class="tutor">ACT 1 · 입문</span></div>
+            <div class="card-title">영어 메뉴 풀이사전</div>
+            <div class="card-desc">영어 메뉴 풀이사전 · 30분</div>
+            <div class="card-meta"><span>열기</span><span class="arrow">→</span></div>
+            <div class="card-glow"></div>
+          </div>
+        </a>
+        <a class="card available" href="./03강_크레딧_가계부/PPT/part-03.html?view=student">
+          <div class="card-inner">
+            <div class="card-num"><span>3회</span><span class="tutor">ACT 1 · 입문</span></div>
+            <div class="card-title">크레딧 가계부</div>
+            <div class="card-desc">크레딧 가계부 · 30분</div>
+            <div class="card-meta"><span>열기</span><span class="arrow">→</span></div>
+            <div class="card-glow"></div>
+          </div>
+        </a>
+        <a class="card available" href="./04강_Soul_2_인물_사진/PPT/part-04.html?view=student">
+          <div class="card-inner">
+            <div class="card-num"><span>4회</span><span class="tutor">ACT 2 · 이미지</span></div>
+            <div class="card-title">Soul 2 인물 사진</div>
+            <div class="card-desc">Soul 2 인물 사진 · 30분</div>
+            <div class="card-meta"><span>열기</span><span class="arrow">→</span></div>
+            <div class="card-glow"></div>
+          </div>
+        </a>
+        <a class="card available" href="./05강_Soul_ID_일관_캐릭터/PPT/part-05.html?view=student">
+          <div class="card-inner">
+            <div class="card-num"><span>5회</span><span class="tutor">ACT 2 · 이미지</span></div>
+            <div class="card-title">Soul ID 일관 캐릭터</div>
+            <div class="card-desc">Soul ID 일관 캐릭터 · 30분</div>
+            <div class="card-meta"><span>열기</span><span class="arrow">→</span></div>
+            <div class="card-glow"></div>
+          </div>
+        </a>
+        <a class="card available" href="./06강_Soul_Reference_시리즈/PPT/part-06.html?view=student">
+          <div class="card-inner">
+            <div class="card-num"><span>6회</span><span class="tutor">ACT 2 · 이미지</span></div>
+            <div class="card-title">Soul Reference 시리즈</div>
+            <div class="card-desc">Soul Reference 시리즈 · 30분</div>
+            <div class="card-meta"><span>열기</span><span class="arrow">→</span></div>
+            <div class="card-glow"></div>
+          </div>
+        </a>
+        <a class="card available" href="./07강_Nano_Banana_Pro_4K/PPT/part-07.html?view=student">
+          <div class="card-inner">
+            <div class="card-num"><span>7회</span><span class="tutor">ACT 2 · 이미지</span></div>
+            <div class="card-title">Nano Banana Pro 4K</div>
+            <div class="card-desc">Nano Banana Pro 4K · 30분</div>
+            <div class="card-meta"><span>열기</span><span class="arrow">→</span></div>
+            <div class="card-glow"></div>
+          </div>
+        </a>
+        <a class="card available" href="./08강_GPT_Image_2_포스터/PPT/part-08.html?view=student">
+          <div class="card-inner">
+            <div class="card-num"><span>8회</span><span class="tutor">ACT 2 · 이미지</span></div>
+            <div class="card-title">GPT Image 2 포스터</div>
+            <div class="card-desc">GPT Image 2 포스터 · 30분</div>
+            <div class="card-meta"><span>열기</span><span class="arrow">→</span></div>
+            <div class="card-glow"></div>
+          </div>
+        </a>
+        <a class="card available" href="./09강_Kling_인스타_릴스/PPT/part-09.html?view=student">
+          <div class="card-inner">
+            <div class="card-num"><span>9회</span><span class="tutor">ACT 3 · 영상</span></div>
+            <div class="card-title">Kling 인스타 릴스</div>
+            <div class="card-desc">Kling 인스타 릴스 · 30분</div>
+            <div class="card-meta"><span>열기</span><span class="arrow">→</span></div>
+            <div class="card-glow"></div>
+          </div>
+        </a>
+        <a class="card available" href="./10강_Seedance_틱톡_립싱크/PPT/part-10.html?view=student">
+          <div class="card-inner">
+            <div class="card-num"><span>10회</span><span class="tutor">ACT 3 · 영상</span></div>
+            <div class="card-title">Seedance 틱톡 립싱크</div>
+            <div class="card-desc">Seedance 틱톡 립싱크 · 30분</div>
+            <div class="card-meta"><span>열기</span><span class="arrow">→</span></div>
+            <div class="card-glow"></div>
+          </div>
+        </a>
+        <a class="card available" href="./11강_Sora_2_유튜브_쇼츠/PPT/part-11.html?view=student">
+          <div class="card-inner">
+            <div class="card-num"><span>11회</span><span class="tutor">ACT 3 · 영상</span></div>
+            <div class="card-title">Sora 2 유튜브 쇼츠</div>
+            <div class="card-desc">Sora 2 유튜브 쇼츠 · 30분</div>
+            <div class="card-meta"><span>열기</span><span class="arrow">→</span></div>
+            <div class="card-glow"></div>
+          </div>
+        </a>
+        <a class="card available" href="./12강_Veo_페북_광고/PPT/part-12.html?view=student">
+          <div class="card-inner">
+            <div class="card-num"><span>12회</span><span class="tutor">ACT 3 · 영상</span></div>
+            <div class="card-title">Veo 페북 광고</div>
+            <div class="card-desc">Veo 페북 광고 · 30분</div>
+            <div class="card-meta"><span>열기</span><span class="arrow">→</span></div>
+            <div class="card-glow"></div>
+          </div>
+        </a>
+        <a class="card available" href="./13강_Cinema_Studio_시네마틱/PPT/part-13.html?view=student">
+          <div class="card-inner">
+            <div class="card-num"><span>13회</span><span class="tutor">ACT 3 · 영상</span></div>
+            <div class="card-title">Cinema Studio 시네마틱</div>
+            <div class="card-desc">Cinema Studio 시네마틱 · 30분</div>
+            <div class="card-meta"><span>열기</span><span class="arrow">→</span></div>
+            <div class="card-glow"></div>
+          </div>
+        </a>
+        <a class="card available" href="./14강_Marketing_Studio_제품광고/PPT/part-14.html?view=student">
+          <div class="card-inner">
+            <div class="card-num"><span>14회</span><span class="tutor">ACT 4 · 마케팅</span></div>
+            <div class="card-title">Marketing Studio 제품광고</div>
+            <div class="card-desc">Marketing Studio 제품광고 · 30분</div>
+            <div class="card-meta"><span>열기</span><span class="arrow">→</span></div>
+            <div class="card-glow"></div>
+          </div>
+        </a>
+        <a class="card available" href="./15강_Marketing_Studio_UGC_Hermes/PPT/part-15.html?view=student">
+          <div class="card-inner">
+            <div class="card-num"><span>15회</span><span class="tutor">ACT 4 · 마케팅</span></div>
+            <div class="card-title">Marketing Studio UGC Hermes</div>
+            <div class="card-desc">Marketing Studio UGC Hermes · 30분</div>
+            <div class="card-meta"><span>열기</span><span class="arrow">→</span></div>
+            <div class="card-glow"></div>
+          </div>
+        </a>
+        <a class="card available" href="./16강_Pro_Virtual_Try_On/PPT/part-16.html?view=student">
+          <div class="card-inner">
+            <div class="card-num"><span>16회</span><span class="tutor">ACT 4 · 마케팅</span></div>
+            <div class="card-title">Pro Virtual Try On</div>
+            <div class="card-desc">Pro Virtual Try On · 30분</div>
+            <div class="card-meta"><span>열기</span><span class="arrow">→</span></div>
+            <div class="card-glow"></div>
+          </div>
+        </a>
+        <a class="card available" href="./17강_TV_Spot_페북_시네마틱/PPT/part-17.html?view=student">
+          <div class="card-inner">
+            <div class="card-num"><span>17회</span><span class="tutor">ACT 4 · 마케팅</span></div>
+            <div class="card-title">TV Spot 페북 시네마틱</div>
+            <div class="card-desc">TV Spot 페북 시네마틱 · 30분</div>
+            <div class="card-meta"><span>열기</span><span class="arrow">→</span></div>
+            <div class="card-glow"></div>
+          </div>
+        </a>
+        <a class="card available" href="./18강_100Apps_효과_쇼츠/PPT/part-18.html?view=student">
+          <div class="card-inner">
+            <div class="card-num"><span>18회</span><span class="tutor">ACT 5 · 실전</span></div>
+            <div class="card-title">100Apps 효과 쇼츠</div>
+            <div class="card-desc">100Apps 효과 쇼츠 · 30분</div>
+            <div class="card-meta"><span>열기</span><span class="arrow">→</span></div>
+            <div class="card-glow"></div>
+          </div>
+        </a>
+        <a class="card available" href="./19강_한주_콘텐츠_캘린더/PPT/part-19.html?view=student">
+          <div class="card-inner">
+            <div class="card-num"><span>19회</span><span class="tutor">ACT 5 · 실전</span></div>
+            <div class="card-title">한주 콘텐츠 캘린더</div>
+            <div class="card-desc">한주 콘텐츠 캘린더 · 30분</div>
+            <div class="card-meta"><span>열기</span><span class="arrow">→</span></div>
+            <div class="card-glow"></div>
+          </div>
+        </a>
+        <a class="card available" href="./20강_종합_채널_매칭/PPT/part-20.html?view=student">
+          <div class="card-inner">
+            <div class="card-num"><span>20회</span><span class="tutor">ACT 5 · 실전</span></div>
+            <div class="card-title">종합 채널 매칭</div>
+            <div class="card-desc">종합 채널 매칭 · 30분</div>
+            <div class="card-meta"><span>열기</span><span class="arrow">→</span></div>
+            <div class="card-glow"></div>
+          </div>
+        </a>
+    </div>
+  </section>
+</main>
+
+<footer>
+  © PajamaBoss · 힉스필드 풀코스 · 2026<br>
+  학생용 인덱스 · 강사 노트 비표시
+</footer>
+
+<script>
+// 커스텀 커서
+const dot = document.querySelector('.cursor-dot');
+const ring = document.querySelector('.cursor-ring');
+window.addEventListener('mousemove', (e) => {
+  dot.style.transform = `translate(${e.clientX - 3}px, ${e.clientY - 3}px)`;
+  ring.style.transform = `translate(${e.clientX - 19}px, ${e.clientY - 19}px)`;
+});
+
+// 배경 캔버스 · 단순 파티클 흐름
+const canvas = document.getElementById('bgcanvas');
+const ctx = canvas.getContext('2d');
+function resize() { canvas.width = window.innerWidth; canvas.height = window.innerHeight; }
+resize();
+window.addEventListener('resize', resize);
+const particles = Array.from({ length: 80 }, () => ({
+  x: Math.random() * canvas.width,
+  y: Math.random() * canvas.height,
+  vx: (Math.random() - 0.5) * 0.3,
+  vy: (Math.random() - 0.5) * 0.3,
+  r: Math.random() * 1.5 + 0.5,
+}));
+function tick() {
+  ctx.fillStyle = 'rgba(13,13,13,0.05)';
+  ctx.fillRect(0, 0, canvas.width, canvas.height);
+  ctx.fillStyle = '#e2c793';
+  for (const p of particles) {
+    p.x += p.vx; p.y += p.vy;
+    if (p.x < 0 || p.x > canvas.width) p.vx *= -1;
+    if (p.y < 0 || p.y > canvas.height) p.vy *= -1;
+    ctx.beginPath();
+    ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+    ctx.fill();
+  }
+  requestAnimationFrame(tick);
+}
+tick();
+</script>
+</body>
+</html>

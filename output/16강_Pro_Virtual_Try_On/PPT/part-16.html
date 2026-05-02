@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Part 16 · Pro Virtual Try-On — 힉스필드 풀코스</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css">
+<link rel="stylesheet" href="../../assets/common.css">
+</head>
+<body class="teacher-view" data-bg-mode="FLOW">
+
+<canvas id="bgcanvas"></canvas>
+<div class="dot-grid"></div>
+<div class="vignette"></div>
+<div class="cursor-dot" id="cursorDot"></div>
+<div class="cursor-ring" id="cursorRing"></div>
+
+<div class="topbar">
+  <div class="brand">HIGGSFIELD · 풀코스</div>
+  <div class="topbar-center">PART 16 · Pro Virtual Try-On</div>
+  <div class="topbar-right">
+    <button id="projectorBtn" type="button" onclick="window.openProjectorWindow()" style="display:none;" title="프로젝터용 수강생 창 새로 열기">📺 프로젝터</button>
+    <a class="nav-arrow" href="../../15강_Marketing_Studio_UGC_Hermes/PPT/part-15.html" title="이전 회차">◀ PART 15</a>
+    <a class="nav-arrow" href="../../index.html">INDEX</a>
+    <a class="nav-arrow" href="../../17강_TV_Spot_페북_시네마틱/PPT/part-17.html" title="다음 회차">PART 17 ▶</a>
+  </div>
+</div>
+
+<div class="progress" id="progress"></div>
+
+<main class="deck" id="deck">
+    <section class="slide slide-cover" data-slide="0" data-duration="60">
+      <div class="cover-bg-shapes">
+        <svg class="float-shape fs1" viewBox="0 0 100 100"><polygon points="50,10 90,90 10,90" fill="none" stroke="#e2c793" stroke-width="1"/></svg>
+        <svg class="float-shape fs2" viewBox="0 0 100 100"><circle cx="50" cy="50" r="40" fill="none" stroke="#e2c793" stroke-width="1"/></svg>
+        <svg class="float-shape fs3" viewBox="0 0 100 100"><rect x="10" y="10" width="80" height="80" fill="none" stroke="#e2c793" stroke-width="1" transform="rotate(15 50 50)"/></svg>
+        <svg class="float-shape fs4" viewBox="0 0 100 100"><polygon points="50,5 95,30 95,70 50,95 5,70 5,30" fill="none" stroke="#e2c793" stroke-width="1"/></svg>
+      </div>
+      <div class="cover-kicker reveal">ACT 4 · 마케팅</div>
+      <div class="cover-number reveal" style="transition-delay:0.1s">PART 16</div>
+      <h1 class="cover-title typewriter-target" data-text="Pro Virtual Try-On">&nbsp;</h1>
+      <div class="cover-sub reveal" style="transition-delay:0.6s">Pro Virtual Try-On · 가상 모델 입히기</div>
+      <div class="cover-meta reveal" style="transition-delay:0.8s">
+        <span class="meta-dot"></span>
+        <span>인터랙티브 슬라이드 · 마우스·키보드로 조작</span>
+      </div>
+      <div class="cover-hint reveal" style="transition-delay:1s">⌨ <kbd>←</kbd><kbd>→</kbd> 슬라이드 · <kbd>Space</kbd>/<kbd>Backspace</kbd> 문장 다음/이전 · <kbd>F</kbd> 전체화면 · <kbd>N</kbd> 노트</div>
+    </section>
+    <section class="slide slide-section" data-slide="1" data-diagram="meta" data-duration="120">
+      <div class="section-head">
+        <div class="section-kicker reveal">META · 파트 메타</div>
+        <div class="section-counter reveal">01 / 05</div>
+      </div>
+      <div class="section-grid">
+        <h2 class="section-title"></h2>
+        <div class="section-visual reveal" style="transition-delay:0.3s"><svg viewBox="0 0 400 260" class="infographic">
+  <defs>
+    <radialGradient id="g1" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#e2c793" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#e2c793" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <circle cx="200" cy="130" r="80" fill="url(#g1)" stroke="#3a3730" stroke-width="1"/>
+  <circle cx="200" cy="130" r="50" fill="none" stroke="#e2c793" stroke-width="1.5"/>
+  <text x="200" y="138" text-anchor="middle" font-size="28" font-weight="900" fill="#e2c793">2/5</text>
+  <text x="200" y="220" text-anchor="middle" font-size="11" fill="#7a7666">META · </text>
+  <line x1="60" y1="240" x2="340" y2="240" stroke="#3a3730" stroke-width="1"/>
+</svg></div>
+        <ul class="bullet-list"><li class="tilt-card reveal" style="transition-delay:0.00s" onclick="event.stopPropagation();"><span class="bullet-num">01</span><span class="bullet-text">🎬 파트 메타 · 이번 파트는 힉스필드 풀코스 16강.</span><span class="bullet-arrow">→</span><div class="bullet-detail">이번 파트는 힉스필드 풀코스 16강.</div></li><li class="tilt-card reveal" style="transition-delay:0.12s" onclick="event.stopPropagation();"><span class="bullet-num">02</span><span class="bullet-text">🎯 핵심 비유 · 30분 동안 진행해요.</span><span class="bullet-arrow">→</span><div class="bullet-detail">30분 동안 진행해요.</div></li><li class="tilt-card reveal" style="transition-delay:0.24s" onclick="event.stopPropagation();"><span class="bullet-num">03</span><span class="bullet-text">⏱️ 오늘의 목표 · 핵심 비유는 종이 인형 옷 갈아입히기(Pro Vir</span><span class="bullet-arrow">→</span><div class="bullet-detail">핵심 비유는 &quot;종이 인형 옷 갈아입히기&quot;(Pro Virtual Try-On).</div></li></ul>
+      </div>
+      <div class="section-foot">
+        <div class="audio-bars"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
+        <div class="foot-tag">META</div>
+      </div>
+          <details class="teacher-note" open>
+        <summary>📝 강사 노트</summary>
+        <div class="note-body">
+          <div class="note-script">
+            <div class="note-script-text">이번 파트는 힉스필드 풀코스 16강. 30분 동안 진행해요. 핵심 비유는 "종이 인형 옷 갈아입히기"(Pro Virtual Try-On). 가상 클라이언트는 B 옷가게 셀러님이에요. 6강 Soul Reference·9강 Kling·13강 Cinema Studio에서 만난 그 페르소나 다시 돌아와요. Marketing Studio 9가지 모드 중 8번째 모드를 만나는 회차예요. 시작합니다.</div>
+          </div>
+        </div>
+      </details>
+    </section>
+    <section class="slide slide-section" data-slide="2" data-diagram="overview" data-duration="120">
+      <div class="section-head">
+        <div class="section-kicker reveal">OVERVIEW · 한눈 요약</div>
+        <div class="section-counter reveal">00 / 00</div>
+      </div>
+      <div class="section-grid">
+        <h2 class="section-title"></h2>
+        <div class="section-visual reveal" style="transition-delay:0.3s"><svg viewBox="0 0 400 260" class="infographic">
+  <defs>
+    <radialGradient id="g2" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#e2c793" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#e2c793" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <circle cx="200" cy="130" r="80" fill="url(#g2)" stroke="#3a3730" stroke-width="1"/>
+  <circle cx="200" cy="130" r="50" fill="none" stroke="#e2c793" stroke-width="1.5"/>
+  <text x="200" y="138" text-anchor="middle" font-size="28" font-weight="900" fill="#e2c793">3/5</text>
+  <text x="200" y="220" text-anchor="middle" font-size="11" fill="#7a7666">OVERVIEW · </text>
+  <line x1="60" y1="240" x2="340" y2="240" stroke="#3a3730" stroke-width="1"/>
+</svg></div>
+        <ul class="bullet-list"><li class="tilt-card reveal" style="transition-delay:0.00s" onclick="event.stopPropagation();"><span class="bullet-num">01</span><span class="bullet-text">📋 수업 흐름 · 오늘 만들 것 3가지예요.</span><span class="bullet-arrow">→</span><div class="bullet-detail">오늘 만들 것 3가지예요.</div></li><li class="tilt-card reveal" style="transition-delay:0.12s" onclick="event.stopPropagation();"><span class="bullet-num">02</span><span class="bullet-text">🎤 핵심 비유 · 첫째, Pro Virtual Try-On(프로 가상 착</span><span class="bullet-arrow">→</span><div class="bullet-detail">첫째, Pro Virtual Try-On(프로 가상 착용 · 옷·뷰티 가상)이 왜 옷가게 셀러에게 마법 같은 기능인지 짚을 거예요.</div></li><li class="tilt-card reveal" style="transition-delay:0.24s" onclick="event.stopPropagation();"><span class="bullet-num">03</span><span class="bullet-text">🚀 결과물 목표 · 둘째, 옷 사진 1장 + 모델 사진 1장 = 입은 모습</span><span class="bullet-arrow">→</span><div class="bullet-detail">둘째, 옷 사진 1장 + 모델 사진 1장 = 입은 모습 즉시 생성 흐름을 따라가볼 거예요.</div></li></ul>
+      </div>
+      <div class="section-foot">
+        <div class="audio-bars"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
+        <div class="foot-tag">OVERVIEW</div>
+      </div>
+          <details class="teacher-note" open>
+        <summary>📝 강사 노트</summary>
+        <div class="note-body">
+          <div class="note-script">
+            <div class="note-script-text">오늘 만들 것 3가지예요. 첫째, Pro Virtual Try-On(프로 가상 착용 · 옷·뷰티 가상)이 왜 옷가게 셀러에게 마법 같은 기능인지 짚을 거예요. 둘째, 옷 사진 1장 + 모델 사진 1장 = 입은 모습 즉시 생성 흐름을 따라가볼 거예요. 셋째, B 옷가게 셀러 페르소나로 옷 한 벌을 다양한 가상 모델 5컷에 입혀서 인스타 릴스 정지샷 시리즈 1세트 받을 거예요.</div>
+          </div>
+        </div>
+      </details>
+    </section>
+    <section class="slide slide-section" data-slide="3" data-diagram="hook" data-duration="120">
+      <div class="section-head">
+        <div class="section-kicker reveal">HOOK · 오프닝 훅</div>
+        <div class="section-counter reveal">03 / 05</div>
+      </div>
+      <div class="section-grid">
+        <h2 class="section-title"></h2>
+        <div class="section-visual reveal" style="transition-delay:0.3s"><svg viewBox="0 0 400 260" class="infographic">
+  <defs>
+    <radialGradient id="g3" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#e2c793" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#e2c793" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <circle cx="200" cy="130" r="80" fill="url(#g3)" stroke="#3a3730" stroke-width="1"/>
+  <circle cx="200" cy="130" r="50" fill="none" stroke="#e2c793" stroke-width="1.5"/>
+  <text x="200" y="138" text-anchor="middle" font-size="28" font-weight="900" fill="#e2c793">4/5</text>
+  <text x="200" y="220" text-anchor="middle" font-size="11" fill="#7a7666">HOOK · </text>
+  <line x1="60" y1="240" x2="340" y2="240" stroke="#3a3730" stroke-width="1"/>
+</svg></div>
+        <ul class="bullet-list"><li class="tilt-card reveal" style="transition-delay:0.00s" onclick="event.stopPropagation();"><span class="bullet-num">01</span><span class="bullet-text">💡 솔직히 · B 옷가게 셀러님이 평소 인스타 운영하면서 이런 고민 </span><span class="bullet-arrow">→</span><div class="bullet-detail">B 옷가게 셀러님이 평소 인스타 운영하면서 이런 고민 하셨을 거예요.</div></li><li class="tilt-card reveal" style="transition-delay:0.12s" onclick="event.stopPropagation();"><span class="bullet-num">02</span><span class="bullet-text">⚡ 오늘의 시도 · 옷 사진은 잘 찍었는데 모델이 없어서 옷만 사진으로 </span><span class="bullet-arrow">→</span><div class="bullet-detail">&quot;옷 사진은 잘 찍었는데 모델이 없어서 옷만 사진으로 보여주니 임팩트가 약해요.&quot; &quot;모델 한 분 부르면 하루 촬영비 30~50만원이고 옷마다 부르기 부담돼요.&quot; &quot;같은 옷을 여러 모델·여러 자세로 찍어서 시리즈 만들고 싶은데, 이게 가능해요?&quot; 이 고민, 오늘 한 방에 풀려요.</div></li><li class="tilt-card reveal" style="transition-delay:0.24s" onclick="event.stopPropagation();"><span class="bullet-num">03</span><span class="bullet-text">🌿 부담 제로 · 힉스필드 Marketing Studio에 Pro Vir</span><span class="bullet-arrow">→</span><div class="bullet-detail">힉스필드 Marketing Studio에 Pro Virtual Try-On(프로 가상 착용) 모드가 있어요.</div></li></ul>
+      </div>
+      <div class="section-foot">
+        <div class="audio-bars"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
+        <div class="foot-tag">HOOK</div>
+      </div>
+          <details class="teacher-note" open>
+        <summary>📝 강사 노트</summary>
+        <div class="note-body">
+          <div class="note-script">
+            <div class="note-script-text">B 옷가게 셀러님이 평소 인스타 운영하면서 이런 고민 하셨을 거예요. "옷 사진은 잘 찍었는데 모델이 없어서 옷만 사진으로 보여주니 임팩트가 약해요." "모델 한 분 부르면 하루 촬영비 30~50만원이고 옷마다 부르기 부담돼요." "같은 옷을 여러 모델·여러 자세로 찍어서 시리즈 만들고 싶은데, 이게 가능해요?" 이 고민, 오늘 한 방에 풀려요. 힉스필드 Marketing Studio에 Pro Virtual Try-On(프로 가상 착용) 모드가 있어요. "종이 인형 옷 갈아입히기" 비유가 정확해요. 어렸을 때 종이 인형에 옷 종이 갖다 대면 입은 모습 되었던 거 기억나시죠. 디지털로 그 마법이 가능해진 거예요. 옷 사진 1장 + 모델 사진 1장 = 입은 모습 즉시 생성. 모델은 본인 사진도 OK, AI 가상 모델도 OK예요. 가상 모델은 다양한 인종·체형·자세로 무한 변형 가능해요. 오늘 같은 옷 한 벌을 5컷 다른 모델로 변형해서 인스타 릴스 정지샷 시리즈 만들어봐요. [CONCEPT 1] Pro Virtual Try-On(프로 가상 착용 · 옷·뷰티 가상 입히기) 부터 짚을게요. "가상 착용"은요. 글자 그대로 "가상으로 옷을 입어보는 것"이라는 뜻이에요. 실제 모델 부르지 않고 사진만으로 입은 모습을 보여주는 기술이에요. 온라인 쇼핑몰 가본 적 있으시죠. 요즘 일부 쇼핑몰에 "AR로 입어보기" 기능 있는 거 보셨을 거예요. 그게 바로 가상 착용 기술이에요. 힉스필드 Pro Virtual Try-On은요. 의류 셀러용으로 특화된 가상 착용 기능이에요. 종이 인형 옷 갈아입히기 비유가 정확해요. 종이 모델에 옷 종이 갖다 대면 입은 모습 즉시 보였잖아요. 그걸 디지털로 옮긴 거예요. 9가지 Marketing Studio 모드 중 8번째 모드예요. 14강 Product Review·15강 UGC와는 다른 카테고리(의류·뷰티 셀러용)예요. B 옷가게 셀러님처럼 의류 판매하시는 분들이 가장 많이 쓰는 마법 같은 기능이에요. [CONCEPT 2] 옷 사진 + 모델 사진 업로드 흐름을 짚을게요. Pro Virtual Try-On 모드에 진입하면 두 가지 업로드 박스가 떠요. 첫째 박스, "Garment(가먼트 · 옷 사진)" 업로드. 둘째 박스, "Model(모델 사진)" 업로드. 옷 사진은요. 본인이 판매하는 옷을 평평하게 펼쳐 찍은 사진이 가장 좋아요. 또는 마네킹에 입혀진 사진도 OK예요. 배경이 깔끔할수록 결과 정확해요. 모델 사진은 두 가지 옵션이 있어요. 첫째, 본인이나 지인 사진 업로드(실제 모델 입은 모습 받기). 둘째, AI 가상 모델 선택(다양한 인종·체형·자세에서 골라 입히기). B 옷가게 셀러님 같은 분은 가상 모델이 더 활용도 높아요. 모델 한 분이 못 보여주는 다양한 체형·인종·연령대를 한 번에 보여줄 수 있거든요. [CONCEPT 3] 입은 모습 즉시 생성을 짚을게요. 업로드 마치고 Generate(만들기) 버튼 누르면 약 1~2분 안에 입은 모습이 나와요. 14강 Marketing Studio(5~10분)·15강 UGC(5~10분)보다 빨라요. Pro Virtual Try-On은 옷+모델 결합만 하기 때문에 가벼운 작업이에요. 크레딧 비용도 30~50크레딧으로 14강·15강(50~100)보다 절반 정도예요. 옷의 색상·질감·로고가 그대로 유지되는지 확인하세요. 가끔 옷이 살짝 변형되는 경우가 있어요. 그럴 땐 다시 생성하거나 옷 사진을 더 깔끔한 걸로 교체하면 돼요. 입은 모습이 어색하지 않은지(예: 옷이 모델 몸에 안 맞는 비율) 확인하세요. 어색하면 모델 사진을 다른 체형으로 바꿔서 재시도해요. [CONCEPT 4] 다양한 모델로 5컷 변형을 짚을게요. 같은 옷 + 5명 다른 가상 모델 = 5컷 시리즈 만들 수 있어요. 각 모델은 인종·체형·자세 다 다르게 선택 가능해요. 첫 번째 컷, 20대 한국 여성 모델 + 자연스러운 자세. 두 번째 컷, 30대 한국 여성 모델 + 옆모습. 세 번째 컷, 20대 동남아 여성 모델 + 워킹 자세. 네 번째 컷, 30대 서양 여성 모델 + 정면 자세. 다섯 번째 컷, 40대 한국 여성 모델 + 자연스러운 미소. 이렇게 5컷 만들면 한 옷에 5가지 다른 분위기가 나와요. 인스타 릴스 정지샷 시리즈로 활용할 때 시청자가 다양한 체형에서 옷이 어떻게 보이는지 한 눈에 비교할 수 있어요. 같은 옷을 5컷 만들 때 크레딧은 약 150~250(컷당 30~50)이에요. [CONCEPT 5] 인스타 릴스 정지샷 변환을 짚을게요. Pro Virtual Try-On 결과는 정지 이미지(JPG·PNG)예요. 영상이 아니에요. 그래서 인스타 릴스로 활용하려면 정지샷 5컷을 영상 편집 앱에서 슬라이드쇼로 묶어야 해요. 6강 Soul Reference 정지샷을 릴스로 변환했던 거 기억나시죠. 간단한 방법은요. 인스타 앱 안에 "릴스" 메뉴에서 사진 5컷 선택 → 자동 슬라이드쇼 → 음악 추가. 이게 가장 쉬워요. 조금 더 정교하게 하려면 캡컷(CapCut)·인쇼트(InShot) 같은 무료 영상 편집 앱에서 슬라이드 전환 효과 추가하시면 돼요. 영상 길이는 15~20초가 적당해요. 너무 길면 시청 완료율 떨어져요.</div>
+          </div>
+        </div>
+      </details>
+    </section>
+    <section class="slide slide-section" data-slide="4" data-diagram="recap" data-duration="120">
+      <div class="section-head">
+        <div class="section-kicker reveal">RECAP · 복습</div>
+        <div class="section-counter reveal">04 / 05</div>
+      </div>
+      <div class="section-grid">
+        <h2 class="section-title"></h2>
+        <div class="section-visual reveal" style="transition-delay:0.3s"><svg viewBox="0 0 400 260" class="infographic">
+  <defs>
+    <radialGradient id="g4" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#e2c793" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#e2c793" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <circle cx="200" cy="130" r="80" fill="url(#g4)" stroke="#3a3730" stroke-width="1"/>
+  <circle cx="200" cy="130" r="50" fill="none" stroke="#e2c793" stroke-width="1.5"/>
+  <text x="200" y="138" text-anchor="middle" font-size="28" font-weight="900" fill="#e2c793">5/5</text>
+  <text x="200" y="220" text-anchor="middle" font-size="11" fill="#7a7666">RECAP · </text>
+  <line x1="60" y1="240" x2="340" y2="240" stroke="#3a3730" stroke-width="1"/>
+</svg></div>
+        <ul class="bullet-list"><li class="tilt-card reveal" style="transition-delay:0.00s" onclick="event.stopPropagation();"><span class="bullet-num">01</span><span class="bullet-text">✅ 오늘 배운 것 · 오늘 한 일 정리할게요.</span><span class="bullet-arrow">→</span><div class="bullet-detail">오늘 한 일 정리할게요.</div></li><li class="tilt-card reveal" style="transition-delay:0.12s" onclick="event.stopPropagation();"><span class="bullet-num">02</span><span class="bullet-text">📌 체크포인트 · Pro Virtual Try-On(프로 가상 착용)은 </span><span class="bullet-arrow">→</span><div class="bullet-detail">Pro Virtual Try-On(프로 가상 착용)은 옷 사진 1장 + 모델 사진 1장 = 입은 모습 즉시 만드는 마법 같은 모드예요.</div></li><li class="tilt-card reveal" style="transition-delay:0.24s" onclick="event.stopPropagation();"><span class="bullet-num">03</span><span class="bullet-text">💾 저장 포인트 · 종이 인형 옷 갈아입히기 디지털 버전이에요.</span><span class="bullet-arrow">→</span><div class="bullet-detail">&quot;종이 인형 옷 갈아입히기&quot; 디지털 버전이에요.</div></li></ul>
+      </div>
+      <div class="section-foot">
+        <div class="audio-bars"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
+        <div class="foot-tag">RECAP</div>
+      </div>
+          <details class="teacher-note" open>
+        <summary>📝 강사 노트</summary>
+        <div class="note-body">
+          <div class="note-script">
+            <div class="note-script-text">오늘 한 일 정리할게요. 첫째. Pro Virtual Try-On(프로 가상 착용)은 옷 사진 1장 + 모델 사진 1장 = 입은 모습 즉시 만드는 마법 같은 모드예요. "종이 인형 옷 갈아입히기" 디지털 버전이에요. Marketing Studio 9가지 모드 중 8번째예요. 의류·뷰티 셀러 전용으로 특화돼있어요. 둘째. 가상 모델은 다양한 인종·체형·연령대·자세 무한 변형 가능해요. 한 모델 부를 때 30~50만원 들지만 가상 모델은 컷당 30~50크레딧이에요. 5컷 만들어도 150~250크레딧이라 실제 모델 비용의 100분의 1 수준이에요. 셋째. B 옷가게 셀러 페르소나로 옷 한 벌을 5명 다른 가상 모델에 입힌 5컷 시리즈 받았어요. 결과물 누적 13번 ✓ (Marketing Studio ACT 3번째 작품). 인스타 릴스 슬라이드쇼로 묶어서 게시했어요. 다양한 체형으로 옷이 보이니 더 많은 잠재 고객이 본인 스타일 가능성을 봐요.</div>
+          </div>
+        </div>
+      </details>
+    </section>
+    <section class="slide slide-section" data-slide="5" data-diagram="bridge" data-duration="120">
+      <div class="section-head">
+        <div class="section-kicker reveal">BRIDGE · 다음 악장</div>
+        <div class="section-counter reveal">05 / 05</div>
+      </div>
+      <div class="section-grid">
+        <h2 class="section-title"></h2>
+        <div class="section-visual reveal" style="transition-delay:0.3s"><svg viewBox="0 0 400 260" class="infographic">
+  <defs>
+    <radialGradient id="g5" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#e2c793" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#e2c793" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <circle cx="200" cy="130" r="80" fill="url(#g5)" stroke="#3a3730" stroke-width="1"/>
+  <circle cx="200" cy="130" r="50" fill="none" stroke="#e2c793" stroke-width="1.5"/>
+  <text x="200" y="138" text-anchor="middle" font-size="28" font-weight="900" fill="#e2c793">6/5</text>
+  <text x="200" y="220" text-anchor="middle" font-size="11" fill="#7a7666">BRIDGE · </text>
+  <line x1="60" y1="240" x2="340" y2="240" stroke="#3a3730" stroke-width="1"/>
+</svg></div>
+        <ul class="bullet-list"><li class="tilt-card reveal" style="transition-delay:0.00s" onclick="event.stopPropagation();"><span class="bullet-num">01</span><span class="bullet-text">🚪 다음 회차 예고 · 다음 시간엔 카페 페북 광고 시네마틱 회차예요.</span><span class="bullet-arrow">→</span><div class="bullet-detail">다음 시간엔 카페 페북 광고 시네마틱 회차예요.</div></li><li class="tilt-card reveal" style="transition-delay:0.12s" onclick="event.stopPropagation();"><span class="bullet-num">02</span><span class="bullet-text">🔜 연결 고리 · A 카페 사장 페르소나로 다시 돌아가요.</span><span class="bullet-arrow">→</span><div class="bullet-detail">A 카페 사장 페르소나로 다시 돌아가요.</div></li><li class="tilt-card reveal" style="transition-delay:0.24s" onclick="event.stopPropagation();"><span class="bullet-num">03</span><span class="bullet-text">🎁 미리 준비 · 4강·8강·11강에서 만난 그 페르소나예요.</span><span class="bullet-arrow">→</span><div class="bullet-detail">4강·8강·11강에서 만난 그 페르소나예요.</div></li></ul>
+      </div>
+      <div class="section-foot">
+        <div class="audio-bars"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
+        <div class="foot-tag">BRIDGE</div>
+      </div>
+          <details class="teacher-note" open>
+        <summary>📝 강사 노트</summary>
+        <div class="note-body">
+          <div class="note-script">
+            <div class="note-script-text">다음 시간엔 카페 페북 광고 시네마틱 회차예요. A 카페 사장 페르소나로 다시 돌아가요. 4강·8강·11강에서 만난 그 페르소나예요. "카페 페북 광고 만들고 싶은데 UGC 분위기 말고 진짜 TV 광고처럼 시네마틱하게 만들 수 있어요?" — 이 고민 다음 회차에서 풀어봐요. TV Spot(TV 스팟 · TV 광고 형식) 모드를 만나볼 거예요. Marketing Studio 9가지 모드 중 1번째예요. "30초 TV 광고" 비유가 정확한 모드예요. 임팩트 강한 시네마틱 카메라 동작이 자동으로 들어가요. 13강 Cinema Studio 카메라 컨트롤이 Marketing Studio 안에서 자동 적용되는 모드라고 보면 돼요. 페북 광고 표준 1:1 정사각 액자로 만들어서 페북 광고 매니저에 바로 올릴 수 있는 영상 받는 회차예요. 다음 회차에서 만나요.</div>
+          </div>
+        </div>
+      </details>
+    </section>
+    <section class="slide slide-outro" data-slide="6">
+      <div class="outro-radial"></div>
+      <div class="outro-kicker reveal">END OF PART 16</div>
+      <h2 class="outro-title reveal" style="transition-delay:0.15s">Pro Virtual Try-On 마무리</h2>
+      <div class="outro-sub reveal" style="transition-delay:0.3s">NEXT · Part 17 · TV Spot 페북</div>
+      <div class="outro-actions reveal" style="transition-delay:0.5s">
+        <a class="btn btn-ghost" href="../index.html">← 전체 목차</a>
+        <button class="btn btn-gold" onclick="goFirst()">처음으로 ↺</button>
+        <a class="btn btn-gold" href="../../17강_TV_Spot_페북_시네마틱/PPT/part-17.html">다음으로 →</a>
+      </div>
+    </section>
+</main>
+
+<div class="controls">
+  <button class="ctl-btn" onclick="prev()" title="이전 슬라이드">◀</button>
+  <div class="counter"><span id="counter">01</span> / <span id="total">7</span></div>
+  <button class="ctl-btn" onclick="next()" title="다음 슬라이드">▶</button>
+  <button class="ctl-btn" onclick="toggleThumbs()" title="썸네일 (T)">🎴</button>
+  <button class="ctl-btn" onclick="toggleHelp()" title="도움말 (?)">?</button>
+  <button class="ctl-btn" onclick="toggleFullscreen()" title="전체화면 (F)">⛶</button>
+</div>
+
+<div class="thumb-strip" id="thumbStrip">
+  <div class="thumb-strip-inner" id="thumbInner">
+    <div class="thumb" data-idx="0"><span class="thumb-num">01</span><span class="thumb-label">COVER</span></div><div class="thumb" data-idx="1"><span class="thumb-num">02</span><span class="thumb-label">META</span></div><div class="thumb" data-idx="2"><span class="thumb-num">03</span><span class="thumb-label">OVERVIEW</span></div><div class="thumb" data-idx="3"><span class="thumb-num">04</span><span class="thumb-label">HOOK</span></div><div class="thumb" data-idx="4"><span class="thumb-num">05</span><span class="thumb-label">RECAP</span></div><div class="thumb" data-idx="5"><span class="thumb-num">06</span><span class="thumb-label">BRIDGE</span></div><div class="thumb" data-idx="6"><span class="thumb-num">07</span><span class="thumb-label">END</span></div>
+  </div>
+</div>
+
+<div class="help-overlay" id="helpOverlay">
+  <div class="help-card">
+    <h3>키보드 단축키</h3>
+    <ul>
+      <li><kbd>←</kbd> / <kbd>→</kbd> 슬라이드 이동</li>
+      <li><kbd>Space</kbd> / <kbd>Backspace</kbd> 문장 다음/이전</li>
+      <li><kbd>F</kbd> 전체화면</li>
+      <li><kbd>T</kbd> 썸네일</li>
+      <li><kbd>N</kbd> 강사 노트 토글</li>
+      <li><kbd>?</kbd> 도움말</li>
+    </ul>
+    <button onclick="toggleHelp()">닫기</button>
+  </div>
+</div>
+
+<footer class="page-footer">© PajamaBoss · 힉스필드 풀코스 · ACT 4 · 마케팅</footer>
+
+<script src="../../assets/common.js"></script>
+</body>
+</html>

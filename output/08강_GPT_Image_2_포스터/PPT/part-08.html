@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Part 08 · GPT Image 2 포스터 — 힉스필드 풀코스</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css">
+<link rel="stylesheet" href="../../assets/common.css">
+</head>
+<body class="teacher-view" data-bg-mode="WAVES">
+
+<canvas id="bgcanvas"></canvas>
+<div class="dot-grid"></div>
+<div class="vignette"></div>
+<div class="cursor-dot" id="cursorDot"></div>
+<div class="cursor-ring" id="cursorRing"></div>
+
+<div class="topbar">
+  <div class="brand">HIGGSFIELD · 풀코스</div>
+  <div class="topbar-center">PART 08 · GPT Image 2 포스터</div>
+  <div class="topbar-right">
+    <button id="projectorBtn" type="button" onclick="window.openProjectorWindow()" style="display:none;" title="프로젝터용 수강생 창 새로 열기">📺 프로젝터</button>
+    <a class="nav-arrow" href="../../07강_Nano_Banana_Pro_4K/PPT/part-07.html" title="이전 회차">◀ PART 07</a>
+    <a class="nav-arrow" href="../../index.html">INDEX</a>
+    <a class="nav-arrow" href="../../09강_Kling_인스타_릴스/PPT/part-09.html" title="다음 회차">PART 09 ▶</a>
+  </div>
+</div>
+
+<div class="progress" id="progress"></div>
+
+<main class="deck" id="deck">
+    <section class="slide slide-cover" data-slide="0" data-duration="60">
+      <div class="cover-bg-shapes">
+        <svg class="float-shape fs1" viewBox="0 0 100 100"><polygon points="50,10 90,90 10,90" fill="none" stroke="#e2c793" stroke-width="1"/></svg>
+        <svg class="float-shape fs2" viewBox="0 0 100 100"><circle cx="50" cy="50" r="40" fill="none" stroke="#e2c793" stroke-width="1"/></svg>
+        <svg class="float-shape fs3" viewBox="0 0 100 100"><rect x="10" y="10" width="80" height="80" fill="none" stroke="#e2c793" stroke-width="1" transform="rotate(15 50 50)"/></svg>
+        <svg class="float-shape fs4" viewBox="0 0 100 100"><polygon points="50,5 95,30 95,70 50,95 5,70 5,30" fill="none" stroke="#e2c793" stroke-width="1"/></svg>
+      </div>
+      <div class="cover-kicker reveal">ACT 2 · 이미지</div>
+      <div class="cover-number reveal" style="transition-delay:0.1s">PART 08</div>
+      <h1 class="cover-title typewriter-target" data-text="GPT Image 2 포스터">&nbsp;</h1>
+      <div class="cover-sub reveal" style="transition-delay:0.6s">GPT Image 2 · 글자 들어간 포스터</div>
+      <div class="cover-meta reveal" style="transition-delay:0.8s">
+        <span class="meta-dot"></span>
+        <span>인터랙티브 슬라이드 · 마우스·키보드로 조작</span>
+      </div>
+      <div class="cover-hint reveal" style="transition-delay:1s">⌨ <kbd>←</kbd><kbd>→</kbd> 슬라이드 · <kbd>Space</kbd>/<kbd>Backspace</kbd> 문장 다음/이전 · <kbd>F</kbd> 전체화면 · <kbd>N</kbd> 노트</div>
+    </section>
+    <section class="slide slide-section" data-slide="1" data-diagram="meta" data-duration="120">
+      <div class="section-head">
+        <div class="section-kicker reveal">META · 파트 메타</div>
+        <div class="section-counter reveal">01 / 05</div>
+      </div>
+      <div class="section-grid">
+        <h2 class="section-title"></h2>
+        <div class="section-visual reveal" style="transition-delay:0.3s"><svg viewBox="0 0 400 260" class="infographic">
+  <defs>
+    <radialGradient id="g1" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#e2c793" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#e2c793" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <circle cx="200" cy="130" r="80" fill="url(#g1)" stroke="#3a3730" stroke-width="1"/>
+  <circle cx="200" cy="130" r="50" fill="none" stroke="#e2c793" stroke-width="1.5"/>
+  <text x="200" y="138" text-anchor="middle" font-size="28" font-weight="900" fill="#e2c793">2/5</text>
+  <text x="200" y="220" text-anchor="middle" font-size="11" fill="#7a7666">META · </text>
+  <line x1="60" y1="240" x2="340" y2="240" stroke="#3a3730" stroke-width="1"/>
+</svg></div>
+        <ul class="bullet-list"><li class="tilt-card reveal" style="transition-delay:0.00s" onclick="event.stopPropagation();"><span class="bullet-num">01</span><span class="bullet-text">🎬 파트 메타 · 이번 파트는 힉스필드 풀코스 8강.</span><span class="bullet-arrow">→</span><div class="bullet-detail">이번 파트는 힉스필드 풀코스 8강.</div></li><li class="tilt-card reveal" style="transition-delay:0.12s" onclick="event.stopPropagation();"><span class="bullet-num">02</span><span class="bullet-text">🎯 핵심 비유 · 30분 동안 진행해요.</span><span class="bullet-arrow">→</span><div class="bullet-detail">30분 동안 진행해요.</div></li><li class="tilt-card reveal" style="transition-delay:0.24s" onclick="event.stopPropagation();"><span class="bullet-num">03</span><span class="bullet-text">⏱️ 오늘의 목표 · 핵심 비유는 글자 잘 쓰는 셰프(GPT Image </span><span class="bullet-arrow">→</span><div class="bullet-detail">핵심 비유는 &quot;글자 잘 쓰는 셰프&quot;(GPT Image 2).</div></li></ul>
+      </div>
+      <div class="section-foot">
+        <div class="audio-bars"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
+        <div class="foot-tag">META</div>
+      </div>
+          <details class="teacher-note" open>
+        <summary>📝 강사 노트</summary>
+        <div class="note-body">
+          <div class="note-script">
+            <div class="note-script-text">이번 파트는 힉스필드 풀코스 8강. 30분 동안 진행해요. 핵심 비유는 "글자 잘 쓰는 셰프"(GPT Image 2). 가상 클라이언트는 A 카페 사장님이에요. AI가 글자 만들면 흐릿하게 나오는 고질병, 오늘 한 방에 끝납니다. 그리고 이미지 ACT 5종 셰프(Soul 2.0·Soul ID·Soul Reference·Nano Banana Pro·GPT Image 2) 누적 점검도 같이 해요. 시작합니다.</div>
+          </div>
+        </div>
+      </details>
+    </section>
+    <section class="slide slide-section" data-slide="2" data-diagram="overview" data-duration="120">
+      <div class="section-head">
+        <div class="section-kicker reveal">OVERVIEW · 한눈 요약</div>
+        <div class="section-counter reveal">00 / 00</div>
+      </div>
+      <div class="section-grid">
+        <h2 class="section-title"></h2>
+        <div class="section-visual reveal" style="transition-delay:0.3s"><svg viewBox="0 0 400 260" class="infographic">
+  <defs>
+    <radialGradient id="g2" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#e2c793" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#e2c793" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <circle cx="200" cy="130" r="80" fill="url(#g2)" stroke="#3a3730" stroke-width="1"/>
+  <circle cx="200" cy="130" r="50" fill="none" stroke="#e2c793" stroke-width="1.5"/>
+  <text x="200" y="138" text-anchor="middle" font-size="28" font-weight="900" fill="#e2c793">3/5</text>
+  <text x="200" y="220" text-anchor="middle" font-size="11" fill="#7a7666">OVERVIEW · </text>
+  <line x1="60" y1="240" x2="340" y2="240" stroke="#3a3730" stroke-width="1"/>
+</svg></div>
+        <ul class="bullet-list"><li class="tilt-card reveal" style="transition-delay:0.00s" onclick="event.stopPropagation();"><span class="bullet-num">01</span><span class="bullet-text">📋 수업 흐름 · 오늘 만들 것 3가지예요.</span><span class="bullet-arrow">→</span><div class="bullet-detail">오늘 만들 것 3가지예요.</div></li><li class="tilt-card reveal" style="transition-delay:0.12s" onclick="event.stopPropagation();"><span class="bullet-num">02</span><span class="bullet-text">🎤 핵심 비유 · 첫째, GPT Image 2(GPT 이미지 2 · Op</span><span class="bullet-arrow">→</span><div class="bullet-detail">첫째, GPT Image 2(GPT 이미지 2 · OpenAI 4K + 글자 셰프)가 왜 글자에 강한지, OpenAI와 힉스필드의 콜라보가 무슨 의미인지 짚을 거예요.</div></li><li class="tilt-card reveal" style="transition-delay:0.24s" onclick="event.stopPropagation();"><span class="bullet-num">03</span><span class="bullet-text">🚀 결과물 목표 · 둘째, A 카페 사장 페르소나로 한글 글자 들어간 X(</span><span class="bullet-arrow">→</span><div class="bullet-detail">둘째, A 카페 사장 페르소나로 한글 글자 들어간 X(트위터) 헤더 배너를 16:9 액자로 받을 거예요.</div></li></ul>
+      </div>
+      <div class="section-foot">
+        <div class="audio-bars"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
+        <div class="foot-tag">OVERVIEW</div>
+      </div>
+          <details class="teacher-note" open>
+        <summary>📝 강사 노트</summary>
+        <div class="note-body">
+          <div class="note-script">
+            <div class="note-script-text">오늘 만들 것 3가지예요. 첫째, GPT Image 2(GPT 이미지 2 · OpenAI 4K + 글자 셰프)가 왜 글자에 강한지, OpenAI와 힉스필드의 콜라보가 무슨 의미인지 짚을 거예요. 둘째, A 카페 사장 페르소나로 한글 글자 들어간 X(트위터) 헤더 배너를 16:9 액자로 받을 거예요. 셋째, 이미지 ACT 5종 셰프 누적 점검 + 결과물 5개 누적 갤러리를 같이 정리할 거예요.</div>
+          </div>
+        </div>
+      </details>
+    </section>
+    <section class="slide slide-section" data-slide="3" data-diagram="hook" data-duration="120">
+      <div class="section-head">
+        <div class="section-kicker reveal">HOOK · 오프닝 훅</div>
+        <div class="section-counter reveal">03 / 05</div>
+      </div>
+      <div class="section-grid">
+        <h2 class="section-title"></h2>
+        <div class="section-visual reveal" style="transition-delay:0.3s"><svg viewBox="0 0 400 260" class="infographic">
+  <defs>
+    <radialGradient id="g3" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#e2c793" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#e2c793" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <circle cx="200" cy="130" r="80" fill="url(#g3)" stroke="#3a3730" stroke-width="1"/>
+  <circle cx="200" cy="130" r="50" fill="none" stroke="#e2c793" stroke-width="1.5"/>
+  <text x="200" y="138" text-anchor="middle" font-size="28" font-weight="900" fill="#e2c793">4/5</text>
+  <text x="200" y="220" text-anchor="middle" font-size="11" fill="#7a7666">HOOK · </text>
+  <line x1="60" y1="240" x2="340" y2="240" stroke="#3a3730" stroke-width="1"/>
+</svg></div>
+        <ul class="bullet-list"><li class="tilt-card reveal" style="transition-delay:0.00s" onclick="event.stopPropagation();"><span class="bullet-num">01</span><span class="bullet-text">💡 솔직히 · A 카페 사장님이 진짜 자주 겪는 일 하나 있어요.</span><span class="bullet-arrow">→</span><div class="bullet-detail">A 카페 사장님이 진짜 자주 겪는 일 하나 있어요.</div></li><li class="tilt-card reveal" style="transition-delay:0.12s" onclick="event.stopPropagation();"><span class="bullet-num">02</span><span class="bullet-text">⚡ 오늘의 시도 · AI로 포스터 만들었는데 글자가 흐릿하게 나와요. </span><span class="bullet-arrow">→</span><div class="bullet-detail">&quot;AI로 포스터 만들었는데 글자가 흐릿하게 나와요.&quot; &quot;가게 이름이 '코지 카페'인데 AI가 만든 글자는 'K°zy Café' 이런 식으로 깨져있어요.&quot; &quot;한글은 더 심해요.</div></li><li class="tilt-card reveal" style="transition-delay:0.24s" onclick="event.stopPropagation();"><span class="bullet-num">03</span><span class="bullet-text">🌿 부담 제로 · 외계어처럼 나와요. 이거 다른 AI 이미지 도구의 고</span><span class="bullet-arrow">→</span><div class="bullet-detail">외계어처럼 나와요.&quot; 이거 다른 AI 이미지 도구의 고질병이에요.</div></li></ul>
+      </div>
+      <div class="section-foot">
+        <div class="audio-bars"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
+        <div class="foot-tag">HOOK</div>
+      </div>
+          <details class="teacher-note" open>
+        <summary>📝 강사 노트</summary>
+        <div class="note-body">
+          <div class="note-script">
+            <div class="note-script-text">A 카페 사장님이 진짜 자주 겪는 일 하나 있어요. "AI로 포스터 만들었는데 글자가 흐릿하게 나와요." "가게 이름이 '코지 카페'인데 AI가 만든 글자는 'K°zy Café' 이런 식으로 깨져있어요." "한글은 더 심해요. 외계어처럼 나와요." 이거 다른 AI 이미지 도구의 고질병이에요. 근데 오늘 만날 셰프는 다릅니다. GPT Image 2(GPT 이미지 2)는 글자 또렷하게 만드는 게 특기예요. 한글 글자도 깨지지 않고 진짜 글자처럼 나와요. X 트위터 헤더에 "코지 카페 · 동네 단골 환영" 이런 한글 문구를 또렷하게 박을 수 있어요. 이게 가능해진 게 OpenAI와 힉스필드 콜라보 덕분이에요. [CONCEPT 1] GPT Image 2(GPT 이미지 2 · OpenAI 4K + 글자 렌더링 셰프)부터 짚을게요. GPT Image 2는요. ChatGPT(챗GPT) 만든 OpenAI(오픈에이아이)가 만든 이미지 셰프예요. 힉스필드가 그 셰프를 자기 주방에 모셔놓고 우리한테 빌려주는 거예요. 이 셰프 특기 두 가지 있어요. 첫째, 4K 화질이에요. 7강 Nano Banana Pro 셰프와 비슷한 화질이에요. 영화관 화질이요. 둘째, 글자 렌더링(Rendering · 글자 또렷하게 그리기)이에요. 다른 셰프들은 글자 만들면 깨지거나 흐릿해요. GPT Image 2는 진짜 글자처럼 또렷하게 그려요. 한글·영어·숫자 다 또렷해요. 손글씨 느낌 글자도, 인쇄체 느낌 글자도 다 잘 만들어요. A 카페 사장님처럼 "가게 이름 글자 또렷하게 박힌 배너" 만들어야 한다면 정답이 GPT Image 2예요. [CONCEPT 2] OpenAI × Higgsfield 콜라보가 무슨 의미인지 짚을게요. 원래 GPT Image 2 셰프는 OpenAI 식당에만 있었어요. ChatGPT Plus 결제해야 만날 수 있었어요. 근데 힉스필드가 OpenAI랑 손잡고 "우리 주방에서도 이 셰프 쓰게 해주세요" 부탁했어요. 그래서 지금은 힉스필드 안에서도 GPT Image 2 셰프 만날 수 있어요. 힉스필드 메인 화면 4분할 피처 카드 중 "GPT IMAGE 2" 카드가 있어요. "4K images with near-perfect text rendering" 이라는 영어 문구가 적혀있어요. "4K 화질에 글자도 거의 완벽하게 또렷이"라는 뜻이에요. ChatGPT Plus 따로 결제 안 해도 힉스필드 정기권으로 이 셰프 써요. 한 셰프, 두 식당에서 만나는 시대예요. [CONCEPT 3] 한글 글자 프롬프트 작성 가이드를 알려드릴게요. 글자 들어간 이미지 만들 때 프롬프트 쓰는 방식이 평소랑 좀 달라요. 4가지 원칙이에요. 첫째, 글자 내용을 따옴표로 감싸기. "큰따옴표" 안에 들어갈 글자를 넣으면 셰프가 "이게 글자다" 알아봐요. 둘째, 글자 위치 지정. "왼쪽 상단에" 또는 "가운데 큰 글씨로" 같이 위치 명시해주세요. 셋째, 글자 스타일. "손글씨 느낌" 또는 "굵은 인쇄체" 같이 스타일 추가해주세요. 넷째, 배경 따로 설명. 글자 외에 배경은 평소 프롬프트처럼 자연스럽게 묘사하세요. 예시: "왼쪽 상단에 '코지 카페'라는 한글 손글씨, 가운데에 '동네 단골 환영'이라는 작은 글씨, 따뜻한 갈색 톤 배경, 자연광" 이렇게 쓰면 셰프가 글자 위치·스타일까지 정확히 그려줘요. [CONCEPT 4] X 헤더 16:9 액자를 짚을게요. X(예전 트위터) 헤더는 프로필 페이지 위쪽에 있는 가로 긴 배너예요. 모양이 16:9에 가까운데 정확히는 3:1 정도예요. 16:9로 만들면 양쪽이 살짝 잘릴 수 있는데, 거의 비슷하게 활용 가능해요. 힉스필드에서 16:9 액자로 만들고 X에 올린 후 미리보기 화면에서 위치 살짝 조정하면 돼요. 4강 1:1(인스타 피드), 6강 9:16(인스타 릴스), 7강 16:9 + 1:1(페북), 8강 16:9(X 헤더) — 이렇게 액자 종류별로 익혀가는 중이에요. [CONCEPT 5] 이미지 ACT 5종 셰프 누적 점검을 짚을게요. 오늘 8강이 이미지 ACT(4~8강) 마지막 회차예요. 그동안 만난 5종 셰프 정리해드릴게요. 4강 Soul 2.0 — 인물 사진 60+ 프리셋. A 카페 사장 페르소나 첫 인물 사진. 5강 Soul ID — 내 사진 학습 일관 캐릭터. D 트레이너 페르소나 시리즈 콘텐츠. 6강 Soul Reference — 사진 1장 분위기 복사. B 옷가게 셀러 페르소나 시리즈 5컷. 7강 Nano Banana Pro — 4K 음식·제품 사진 + UNLIMITED 무제한. C 식당 사장 페르소나 메뉴 사진. 8강 GPT Image 2 — 4K + 글자 또렷이. A 카페 사장 페르소나 X 헤더 배너. 5종 셰프, 5종 결과물 누적 완료. 9강부터는 영상 ACT(9~13강) 시작해요. 셰프 5명 더 만나러 가요.</div>
+          </div>
+        </div>
+      </details>
+    </section>
+    <section class="slide slide-section" data-slide="4" data-diagram="recap" data-duration="120">
+      <div class="section-head">
+        <div class="section-kicker reveal">RECAP · 복습</div>
+        <div class="section-counter reveal">04 / 05</div>
+      </div>
+      <div class="section-grid">
+        <h2 class="section-title"></h2>
+        <div class="section-visual reveal" style="transition-delay:0.3s"><svg viewBox="0 0 400 260" class="infographic">
+  <defs>
+    <radialGradient id="g4" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#e2c793" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#e2c793" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <circle cx="200" cy="130" r="80" fill="url(#g4)" stroke="#3a3730" stroke-width="1"/>
+  <circle cx="200" cy="130" r="50" fill="none" stroke="#e2c793" stroke-width="1.5"/>
+  <text x="200" y="138" text-anchor="middle" font-size="28" font-weight="900" fill="#e2c793">5/5</text>
+  <text x="200" y="220" text-anchor="middle" font-size="11" fill="#7a7666">RECAP · </text>
+  <line x1="60" y1="240" x2="340" y2="240" stroke="#3a3730" stroke-width="1"/>
+</svg></div>
+        <ul class="bullet-list"><li class="tilt-card reveal" style="transition-delay:0.00s" onclick="event.stopPropagation();"><span class="bullet-num">01</span><span class="bullet-text">✅ 오늘 배운 것 · 오늘 한 일 정리할게요.</span><span class="bullet-arrow">→</span><div class="bullet-detail">오늘 한 일 정리할게요.</div></li><li class="tilt-card reveal" style="transition-delay:0.12s" onclick="event.stopPropagation();"><span class="bullet-num">02</span><span class="bullet-text">📌 체크포인트 · GPT Image 2(GPT 이미지 2)는 OpenAI</span><span class="bullet-arrow">→</span><div class="bullet-detail">GPT Image 2(GPT 이미지 2)는 OpenAI가 만든 4K + 글자 또렷한 셰프예요.</div></li><li class="tilt-card reveal" style="transition-delay:0.24s" onclick="event.stopPropagation();"><span class="bullet-num">03</span><span class="bullet-text">💾 저장 포인트 · 힉스필드와 콜라보로 ChatGPT Plus 결제 안 해</span><span class="bullet-arrow">→</span><div class="bullet-detail">힉스필드와 콜라보로 ChatGPT Plus 결제 안 해도 힉스필드 정기권으로 만나요.</div></li></ul>
+      </div>
+      <div class="section-foot">
+        <div class="audio-bars"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
+        <div class="foot-tag">RECAP</div>
+      </div>
+          <details class="teacher-note" open>
+        <summary>📝 강사 노트</summary>
+        <div class="note-body">
+          <div class="note-script">
+            <div class="note-script-text">오늘 한 일 정리할게요. 첫째. GPT Image 2(GPT 이미지 2)는 OpenAI가 만든 4K + 글자 또렷한 셰프예요. 힉스필드와 콜라보로 ChatGPT Plus 결제 안 해도 힉스필드 정기권으로 만나요. 한글 글자도 깨지지 않고 진짜 글자처럼 그려줘요. 둘째. A 카페 사장 페르소나로 한글 손글씨 + 자연광 카페 배경 + 16:9 가로 액자 = X 헤더용 배너 1~2장 받았어요. 결과물 누적 5번 ✓ (이미지 ACT 5강 완주). 셋째. 이미지 ACT 5종 셰프 — Soul 2.0(인물)·Soul ID(내 얼굴)·Soul Reference(분위기 복사)·Nano Banana Pro(4K 음식)·GPT Image 2(글자 또렷) — 5명 셰프 다 만나봤어요. 다음 회차부터는 영상 셰프 5명을 만나러 가요.</div>
+          </div>
+        </div>
+      </details>
+    </section>
+    <section class="slide slide-section" data-slide="5" data-diagram="bridge" data-duration="120">
+      <div class="section-head">
+        <div class="section-kicker reveal">BRIDGE · 다음 악장</div>
+        <div class="section-counter reveal">05 / 05</div>
+      </div>
+      <div class="section-grid">
+        <h2 class="section-title"></h2>
+        <div class="section-visual reveal" style="transition-delay:0.3s"><svg viewBox="0 0 400 260" class="infographic">
+  <defs>
+    <radialGradient id="g5" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#e2c793" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#e2c793" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <circle cx="200" cy="130" r="80" fill="url(#g5)" stroke="#3a3730" stroke-width="1"/>
+  <circle cx="200" cy="130" r="50" fill="none" stroke="#e2c793" stroke-width="1.5"/>
+  <text x="200" y="138" text-anchor="middle" font-size="28" font-weight="900" fill="#e2c793">6/5</text>
+  <text x="200" y="220" text-anchor="middle" font-size="11" fill="#7a7666">BRIDGE · </text>
+  <line x1="60" y1="240" x2="340" y2="240" stroke="#3a3730" stroke-width="1"/>
+</svg></div>
+        <ul class="bullet-list"><li class="tilt-card reveal" style="transition-delay:0.00s" onclick="event.stopPropagation();"><span class="bullet-num">01</span><span class="bullet-text">🚪 다음 회차 예고 · 다음 시간엔 진짜 영상 만들기 첫 발 떼요.</span><span class="bullet-arrow">→</span><div class="bullet-detail">다음 시간엔 진짜 영상 만들기 첫 발 떼요.</div></li><li class="tilt-card reveal" style="transition-delay:0.12s" onclick="event.stopPropagation();"><span class="bullet-num">02</span><span class="bullet-text">🔜 연결 고리 · B 옷가게 셀러 페르소나로 다시 돌아가요.</span><span class="bullet-arrow">→</span><div class="bullet-detail">B 옷가게 셀러 페르소나로 다시 돌아가요.</div></li><li class="tilt-card reveal" style="transition-delay:0.24s" onclick="event.stopPropagation();"><span class="bullet-num">03</span><span class="bullet-text">🎁 미리 준비 · 인스타 릴스에 영상 한 번 올려보고 싶은데 영상 만드</span><span class="bullet-arrow">→</span><div class="bullet-detail">&quot;인스타 릴스에 영상 한 번 올려보고 싶은데 영상 만드는 건 어려워 보여요&quot; — 이 두근두근 첫 영상, 다음 회차에서 같이 만들어봐요.</div></li></ul>
+      </div>
+      <div class="section-foot">
+        <div class="audio-bars"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
+        <div class="foot-tag">BRIDGE</div>
+      </div>
+          <details class="teacher-note" open>
+        <summary>📝 강사 노트</summary>
+        <div class="note-body">
+          <div class="note-script">
+            <div class="note-script-text">다음 시간엔 진짜 영상 만들기 첫 발 떼요. B 옷가게 셀러 페르소나로 다시 돌아가요. "인스타 릴스에 영상 한 번 올려보고 싶은데 영상 만드는 건 어려워 보여요" — 이 두근두근 첫 영상, 다음 회차에서 같이 만들어봐요. Kling 3.0(클링 3.0 · Kling 영상 모델)이라는 셰프를 만날 거예요. 9:16 세로 인스타 릴스 전문 셰프예요. 영상 1편 = 약 6크레딧으로 가벼운 영상 셰프이고, 첫 영상은 5초짜리로 부담 없이 시작해요. 4분할 피처 카드 중 "KLING 3.0 IN 4K" 카드도 직접 봤었죠. 그 셰프 주문해봐요. 다음 회차에서 만나요.</div>
+          </div>
+        </div>
+      </details>
+    </section>
+    <section class="slide slide-outro" data-slide="6">
+      <div class="outro-radial"></div>
+      <div class="outro-kicker reveal">END OF PART 08</div>
+      <h2 class="outro-title reveal" style="transition-delay:0.15s">GPT Image 2 포스터 마무리</h2>
+      <div class="outro-sub reveal" style="transition-delay:0.3s">NEXT · Part 09 · Kling 인스타 릴스</div>
+      <div class="outro-actions reveal" style="transition-delay:0.5s">
+        <a class="btn btn-ghost" href="../index.html">← 전체 목차</a>
+        <button class="btn btn-gold" onclick="goFirst()">처음으로 ↺</button>
+        <a class="btn btn-gold" href="../../09강_Kling_인스타_릴스/PPT/part-09.html">다음으로 →</a>
+      </div>
+    </section>
+</main>
+
+<div class="controls">
+  <button class="ctl-btn" onclick="prev()" title="이전 슬라이드">◀</button>
+  <div class="counter"><span id="counter">01</span> / <span id="total">7</span></div>
+  <button class="ctl-btn" onclick="next()" title="다음 슬라이드">▶</button>
+  <button class="ctl-btn" onclick="toggleThumbs()" title="썸네일 (T)">🎴</button>
+  <button class="ctl-btn" onclick="toggleHelp()" title="도움말 (?)">?</button>
+  <button class="ctl-btn" onclick="toggleFullscreen()" title="전체화면 (F)">⛶</button>
+</div>
+
+<div class="thumb-strip" id="thumbStrip">
+  <div class="thumb-strip-inner" id="thumbInner">
+    <div class="thumb" data-idx="0"><span class="thumb-num">01</span><span class="thumb-label">COVER</span></div><div class="thumb" data-idx="1"><span class="thumb-num">02</span><span class="thumb-label">META</span></div><div class="thumb" data-idx="2"><span class="thumb-num">03</span><span class="thumb-label">OVERVIEW</span></div><div class="thumb" data-idx="3"><span class="thumb-num">04</span><span class="thumb-label">HOOK</span></div><div class="thumb" data-idx="4"><span class="thumb-num">05</span><span class="thumb-label">RECAP</span></div><div class="thumb" data-idx="5"><span class="thumb-num">06</span><span class="thumb-label">BRIDGE</span></div><div class="thumb" data-idx="6"><span class="thumb-num">07</span><span class="thumb-label">END</span></div>
+  </div>
+</div>
+
+<div class="help-overlay" id="helpOverlay">
+  <div class="help-card">
+    <h3>키보드 단축키</h3>
+    <ul>
+      <li><kbd>←</kbd> / <kbd>→</kbd> 슬라이드 이동</li>
+      <li><kbd>Space</kbd> / <kbd>Backspace</kbd> 문장 다음/이전</li>
+      <li><kbd>F</kbd> 전체화면</li>
+      <li><kbd>T</kbd> 썸네일</li>
+      <li><kbd>N</kbd> 강사 노트 토글</li>
+      <li><kbd>?</kbd> 도움말</li>
+    </ul>
+    <button onclick="toggleHelp()">닫기</button>
+  </div>
+</div>
+
+<footer class="page-footer">© PajamaBoss · 힉스필드 풀코스 · ACT 2 · 이미지</footer>
+
+<script src="../../assets/common.js"></script>
+</body>
+</html>

@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Part 15 · Marketing Studio UGC — 힉스필드 풀코스</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css">
+<link rel="stylesheet" href="../../assets/common.css">
+</head>
+<body class="teacher-view" data-bg-mode="VORONOI">
+
+<canvas id="bgcanvas"></canvas>
+<div class="dot-grid"></div>
+<div class="vignette"></div>
+<div class="cursor-dot" id="cursorDot"></div>
+<div class="cursor-ring" id="cursorRing"></div>
+
+<div class="topbar">
+  <div class="brand">HIGGSFIELD · 풀코스</div>
+  <div class="topbar-center">PART 15 · Marketing Studio UGC</div>
+  <div class="topbar-right">
+    <button id="projectorBtn" type="button" onclick="window.openProjectorWindow()" style="display:none;" title="프로젝터용 수강생 창 새로 열기">📺 프로젝터</button>
+    <a class="nav-arrow" href="../../14강_Marketing_Studio_제품광고/PPT/part-14.html" title="이전 회차">◀ PART 14</a>
+    <a class="nav-arrow" href="../../index.html">INDEX</a>
+    <a class="nav-arrow" href="../../16강_Pro_Virtual_Try_On/PPT/part-16.html" title="다음 회차">PART 16 ▶</a>
+  </div>
+</div>
+
+<div class="progress" id="progress"></div>
+
+<main class="deck" id="deck">
+    <section class="slide slide-cover" data-slide="0" data-duration="60">
+      <div class="cover-bg-shapes">
+        <svg class="float-shape fs1" viewBox="0 0 100 100"><polygon points="50,10 90,90 10,90" fill="none" stroke="#e2c793" stroke-width="1"/></svg>
+        <svg class="float-shape fs2" viewBox="0 0 100 100"><circle cx="50" cy="50" r="40" fill="none" stroke="#e2c793" stroke-width="1"/></svg>
+        <svg class="float-shape fs3" viewBox="0 0 100 100"><rect x="10" y="10" width="80" height="80" fill="none" stroke="#e2c793" stroke-width="1" transform="rotate(15 50 50)"/></svg>
+        <svg class="float-shape fs4" viewBox="0 0 100 100"><polygon points="50,5 95,30 95,70 50,95 5,70 5,30" fill="none" stroke="#e2c793" stroke-width="1"/></svg>
+      </div>
+      <div class="cover-kicker reveal">ACT 4 · 마케팅</div>
+      <div class="cover-number reveal" style="transition-delay:0.1s">PART 15</div>
+      <h1 class="cover-title typewriter-target" data-text="Marketing Studio UGC">&nbsp;</h1>
+      <div class="cover-sub reveal" style="transition-delay:0.6s">Marketing Studio UGC · Hermes Agent 트렌드</div>
+      <div class="cover-meta reveal" style="transition-delay:0.8s">
+        <span class="meta-dot"></span>
+        <span>인터랙티브 슬라이드 · 마우스·키보드로 조작</span>
+      </div>
+      <div class="cover-hint reveal" style="transition-delay:1s">⌨ <kbd>←</kbd><kbd>→</kbd> 슬라이드 · <kbd>Space</kbd>/<kbd>Backspace</kbd> 문장 다음/이전 · <kbd>F</kbd> 전체화면 · <kbd>N</kbd> 노트</div>
+    </section>
+    <section class="slide slide-section" data-slide="1" data-diagram="meta" data-duration="120">
+      <div class="section-head">
+        <div class="section-kicker reveal">META · 파트 메타</div>
+        <div class="section-counter reveal">01 / 05</div>
+      </div>
+      <div class="section-grid">
+        <h2 class="section-title"></h2>
+        <div class="section-visual reveal" style="transition-delay:0.3s"><svg viewBox="0 0 400 260" class="infographic">
+  <defs>
+    <radialGradient id="g1" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#e2c793" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#e2c793" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <circle cx="200" cy="130" r="80" fill="url(#g1)" stroke="#3a3730" stroke-width="1"/>
+  <circle cx="200" cy="130" r="50" fill="none" stroke="#e2c793" stroke-width="1.5"/>
+  <text x="200" y="138" text-anchor="middle" font-size="28" font-weight="900" fill="#e2c793">2/5</text>
+  <text x="200" y="220" text-anchor="middle" font-size="11" fill="#7a7666">META · </text>
+  <line x1="60" y1="240" x2="340" y2="240" stroke="#3a3730" stroke-width="1"/>
+</svg></div>
+        <ul class="bullet-list"><li class="tilt-card reveal" style="transition-delay:0.00s" onclick="event.stopPropagation();"><span class="bullet-num">01</span><span class="bullet-text">🎬 파트 메타 · 이번 파트는 힉스필드 풀코스 15강.</span><span class="bullet-arrow">→</span><div class="bullet-detail">이번 파트는 힉스필드 풀코스 15강.</div></li><li class="tilt-card reveal" style="transition-delay:0.12s" onclick="event.stopPropagation();"><span class="bullet-num">02</span><span class="bullet-text">🎯 핵심 비유 · 30분 동안 진행해요.</span><span class="bullet-arrow">→</span><div class="bullet-detail">30분 동안 진행해요.</div></li><li class="tilt-card reveal" style="transition-delay:0.24s" onclick="event.stopPropagation();"><span class="bullet-num">03</span><span class="bullet-text">⏱️ 오늘의 목표 · 핵심 비유는 친구 추천 분위기(UGC) + 트렌드</span><span class="bullet-arrow">→</span><div class="bullet-detail">핵심 비유는 &quot;친구 추천 분위기&quot;(UGC) + &quot;트렌드 헌터&quot;(Hermes Agent).</div></li></ul>
+      </div>
+      <div class="section-foot">
+        <div class="audio-bars"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
+        <div class="foot-tag">META</div>
+      </div>
+          <details class="teacher-note" open>
+        <summary>📝 강사 노트</summary>
+        <div class="note-body">
+          <div class="note-script">
+            <div class="note-script-text">이번 파트는 힉스필드 풀코스 15강. 30분 동안 진행해요. 핵심 비유는 "친구 추천 분위기"(UGC) + "트렌드 헌터"(Hermes Agent). 가상 클라이언트는 D 트레이너님이에요. 5강 Soul ID·10강 Seedance에서 만난 그 페르소나 다시 돌아와요. 14강 Marketing Studio 첫 만남에 이어 오늘은 9가지 광고 모드 중 UGC 모드와 Hermes Agent를 만나는 회차예요. 시작합니다.</div>
+          </div>
+        </div>
+      </details>
+    </section>
+    <section class="slide slide-section" data-slide="2" data-diagram="overview" data-duration="120">
+      <div class="section-head">
+        <div class="section-kicker reveal">OVERVIEW · 한눈 요약</div>
+        <div class="section-counter reveal">00 / 00</div>
+      </div>
+      <div class="section-grid">
+        <h2 class="section-title"></h2>
+        <div class="section-visual reveal" style="transition-delay:0.3s"><svg viewBox="0 0 400 260" class="infographic">
+  <defs>
+    <radialGradient id="g2" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#e2c793" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#e2c793" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <circle cx="200" cy="130" r="80" fill="url(#g2)" stroke="#3a3730" stroke-width="1"/>
+  <circle cx="200" cy="130" r="50" fill="none" stroke="#e2c793" stroke-width="1.5"/>
+  <text x="200" y="138" text-anchor="middle" font-size="28" font-weight="900" fill="#e2c793">3/5</text>
+  <text x="200" y="220" text-anchor="middle" font-size="11" fill="#7a7666">OVERVIEW · </text>
+  <line x1="60" y1="240" x2="340" y2="240" stroke="#3a3730" stroke-width="1"/>
+</svg></div>
+        <ul class="bullet-list"><li class="tilt-card reveal" style="transition-delay:0.00s" onclick="event.stopPropagation();"><span class="bullet-num">01</span><span class="bullet-text">📋 수업 흐름 · 오늘 만들 것 3가지예요.</span><span class="bullet-arrow">→</span><div class="bullet-detail">오늘 만들 것 3가지예요.</div></li><li class="tilt-card reveal" style="transition-delay:0.12s" onclick="event.stopPropagation();"><span class="bullet-num">02</span><span class="bullet-text">🎤 핵심 비유 · 첫째, UGC(User Generated Content</span><span class="bullet-arrow">→</span><div class="bullet-detail">첫째, UGC(User Generated Content · 사용자가 직접 만든 듯한 콘텐츠)가 왜 광고 효과가 일반 광고보다 높은지 짚을 거예요.</div></li><li class="tilt-card reveal" style="transition-delay:0.24s" onclick="event.stopPropagation();"><span class="bullet-num">03</span><span class="bullet-text">🚀 결과물 목표 · 둘째, Hermes Agent(헤르메스 에이전트 · U</span><span class="bullet-arrow">→</span><div class="bullet-detail">둘째, Hermes Agent(헤르메스 에이전트 · UGC 트렌드 자동 분석)가 무엇인지, 매일 스캔하는 트렌드 5건을 어떻게 받는지 알아볼 거예요.</div></li></ul>
+      </div>
+      <div class="section-foot">
+        <div class="audio-bars"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
+        <div class="foot-tag">OVERVIEW</div>
+      </div>
+          <details class="teacher-note" open>
+        <summary>📝 강사 노트</summary>
+        <div class="note-body">
+          <div class="note-script">
+            <div class="note-script-text">오늘 만들 것 3가지예요. 첫째, UGC(User Generated Content · 사용자가 직접 만든 듯한 콘텐츠)가 왜 광고 효과가 일반 광고보다 높은지 짚을 거예요. 둘째, Hermes Agent(헤르메스 에이전트 · UGC 트렌드 자동 분석)가 무엇인지, 매일 스캔하는 트렌드 5건을 어떻게 받는지 알아볼 거예요. 셋째, D 트레이너 페르소나로 트렌드 1개 골라서 틱톡 UGC 광고 영상 1편을 9:16으로 받을 거예요.</div>
+          </div>
+        </div>
+      </details>
+    </section>
+    <section class="slide slide-section" data-slide="3" data-diagram="hook" data-duration="120">
+      <div class="section-head">
+        <div class="section-kicker reveal">HOOK · 오프닝 훅</div>
+        <div class="section-counter reveal">03 / 05</div>
+      </div>
+      <div class="section-grid">
+        <h2 class="section-title"></h2>
+        <div class="section-visual reveal" style="transition-delay:0.3s"><svg viewBox="0 0 400 260" class="infographic">
+  <defs>
+    <radialGradient id="g3" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#e2c793" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#e2c793" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <circle cx="200" cy="130" r="80" fill="url(#g3)" stroke="#3a3730" stroke-width="1"/>
+  <circle cx="200" cy="130" r="50" fill="none" stroke="#e2c793" stroke-width="1.5"/>
+  <text x="200" y="138" text-anchor="middle" font-size="28" font-weight="900" fill="#e2c793">4/5</text>
+  <text x="200" y="220" text-anchor="middle" font-size="11" fill="#7a7666">HOOK · </text>
+  <line x1="60" y1="240" x2="340" y2="240" stroke="#3a3730" stroke-width="1"/>
+</svg></div>
+        <ul class="bullet-list"><li class="tilt-card reveal" style="transition-delay:0.00s" onclick="event.stopPropagation();"><span class="bullet-num">01</span><span class="bullet-text">💡 솔직히 · D 트레이너님이 평소 틱톡·인스타 보다가 이런 생각 하</span><span class="bullet-arrow">→</span><div class="bullet-detail">D 트레이너님이 평소 틱톡·인스타 보다가 이런 생각 하셨을 거예요.</div></li><li class="tilt-card reveal" style="transition-delay:0.12s" onclick="event.stopPropagation();"><span class="bullet-num">02</span><span class="bullet-text">⚡ 오늘의 시도 · 인플루언서가 운동 도구 추천하는 영상 보면 광고 같이</span><span class="bullet-arrow">→</span><div class="bullet-detail">&quot;인플루언서가 운동 도구 추천하는 영상 보면 광고 같이 안 보이는데 결국 광고잖아요.&quot; &quot;광고 티 내면 사람들이 스킵하는데 친구 추천처럼 만들면 끝까지 봐요.&quot; &quot;나도 그런 영상 만들고 싶은데, 어떻게 해야 광고 같이 안 보이게 만들 수 있어요?&quot; 이 고민, 오늘 한 방에 풀려요.</div></li><li class="tilt-card reveal" style="transition-delay:0.24s" onclick="event.stopPropagation();"><span class="bullet-num">03</span><span class="bullet-text">🌿 부담 제로 · 힉스필드 Marketing Studio에 UGC(UGC</span><span class="bullet-arrow">→</span><div class="bullet-detail">힉스필드 Marketing Studio에 UGC(UGC) 모드가 있어요.</div></li></ul>
+      </div>
+      <div class="section-foot">
+        <div class="audio-bars"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
+        <div class="foot-tag">HOOK</div>
+      </div>
+          <details class="teacher-note" open>
+        <summary>📝 강사 노트</summary>
+        <div class="note-body">
+          <div class="note-script">
+            <div class="note-script-text">D 트레이너님이 평소 틱톡·인스타 보다가 이런 생각 하셨을 거예요. "인플루언서가 운동 도구 추천하는 영상 보면 광고 같이 안 보이는데 결국 광고잖아요." "광고 티 내면 사람들이 스킵하는데 친구 추천처럼 만들면 끝까지 봐요." "나도 그런 영상 만들고 싶은데, 어떻게 해야 광고 같이 안 보이게 만들 수 있어요?" 이 고민, 오늘 한 방에 풀려요. 힉스필드 Marketing Studio에 UGC(UGC) 모드가 있어요. "친구가 직접 써본 후기" 분위기로 광고를 만드는 모드예요. 14강 Product Review 모드보다 더 자연스러운 톤이에요. 근데 더 마법 같은 기능이 하나 더 있어요. Hermes Agent(헤르메스 에이전트)예요. 2026년 4월에 출시된 신규 기능이에요. 매일 틱톡·인스타에서 잘 되는 UGC 광고 트렌드를 자동 스캔해서 5건씩 알려줘요. "트렌드 헌터" 비유가 정확해요. 오늘 트렌드 5건 받고 그중 1개 골라서 D 트레이너 운동 광고 만들어봐요. [CONCEPT 1] UGC(User Generated Content · 사용자 생성 콘텐츠)부터 짚을게요. UGC는요. 글자 그대로 "사용자가 만든 콘텐츠"라는 뜻이에요. 회사가 만든 광고가 아니라 일반 사용자(친구·이웃·인플루언서)가 만든 영상이라는 뜻이에요. 근데 광고 분야에서 UGC는 살짝 다른 의미로 써요. "광고 회사가 만들었지만, 사용자가 직접 만든 것처럼 보이는 광고" — 이게 광고 분야의 UGC예요. 왜 이 분위기를 만들까요? 사람들이 광고는 스킵하지만 친구 추천은 끝까지 봐요. 그래서 광고를 친구 추천처럼 만드는 거예요. 틱톡·인스타 광고 효과 데이터 보면 UGC 광고가 일반 광고보다 클릭률 약 2~3배 높다는 보고가 있어요. 출처: 메타 광고 가이드. D 트레이너님처럼 운동 시연 광고 만들 때 "PT(퍼스널 트레이너) 광고예요!" 하는 톤보다 "제가 이거 써봤는데 진짜 좋더라고요" 하는 톤이 효과가 훨씬 높아요. [CONCEPT 2] Hermes Agent(헤르메스 에이전트 · UGC 트렌드 자동 분석)를 짚을게요. Hermes는요. 그리스 신화에서 메신저(전령)신 이름이에요. 빠르게 정보 전달하는 신이에요. 힉스필드가 그 이름을 빌려서 "트렌드 정보 빠르게 가져다주는 에이전트"라는 뜻으로 만든 기능이에요. Hermes Agent가 매일 하는 일이에요. 첫째, 틱톡·인스타에서 잘 되는 UGC 광고 자동 스캔. 둘째, 잘 되는 광고의 공통 패턴 분석 (영상 길이·카메라 동작·음악·문구 형식). 셋째, 그 패턴으로 만든 광고 콘셉트 5건씩 추천. 넷째, 추천 콘셉트 1개 클릭하면 그 톤·구조로 광고 자동 생성. "트렌드 헌터"라는 비유가 정확해요. 매일 새로운 트렌드 5건씩 받아볼 수 있어요. 14강 Marketing Studio 첫 만남에서는 직접 콘셉트 정했지만, 오늘은 Hermes가 추천한 트렌드 콘셉트로 만들어봐요. 본인이 트렌드 안 따라잡아도 자동으로 따라잡힌 광고가 나와요. [CONCEPT 3] 오늘의 트렌드 5건 받기 흐름을 짚을게요. Marketing Studio 안에 "Hermes Agent" 또는 "Today's Trends" 탭이 있어요. 클릭하면 오늘 추천 트렌드 5건이 카드 형식으로 떠요. 각 트렌드 카드에 들어있는 정보예요. 첫째, 트렌드 이름 (예: "Before/After Reveal Trend"). 둘째, 트렌드 분위기 설명 (한국어 번역 또는 영어). 셋째, 잘 되는 채널 (틱톡·인스타·둘 다). 넷째, 추천 영상 길이. 다섯째, 평균 도달율·클릭률 (광고 효과 데이터). 이 5건 중에서 본인 콘텐츠·페르소나에 맞는 트렌드 1개 고르면 돼요. D 트레이너님 같은 운동 분야면 "Before/After Reveal"·"Daily Routine"·"Quick Tips" 같은 트렌드가 자주 추천돼요. [CONCEPT 4] 트렌드 1개 선택 → UGC 광고 자동 생성을 짚을게요. 트렌드 카드 1개 클릭하면 그 트렌드 톤·구조로 광고가 자동 생성돼요. 14강 Marketing Studio와 비슷하지만 차이가 두 가지 있어요. 첫째, 콘셉트 결정 안 해도 됨. 14강은 "Product Review 모드"라고 본인이 모드 골랐는데, 오늘은 Hermes 추천 트렌드 톤으로 자동 진행돼요. 둘째, 결과물 톤이 더 구체적. 14강은 일반적인 광고 톤이었지만 오늘은 그 트렌드의 카메라 동작·음악 분위기·문구 형식까지 따라가요. 크레딧 비용은 14강 Marketing Studio와 비슷해요. 약 50~100크레딧이에요. 결과물도 7개 (영상 1편 + 카피 3가지 + 종횡비 3가지) 한 번에 나와요. [CONCEPT 5] 틱톡 9:16 업로드 흐름을 짚을게요. 14강은 페북 광고 4:5였지만 오늘은 틱톡 UGC 광고 9:16이에요. 틱톡은 9:16 세로 영상 표준이에요. 9강·10강에서 인스타 릴스·틱톡 영상 만들 때 9:16 썼던 거 기억나시죠. UGC 광고도 9:16 그대로예요. 광고 영상 효과 차이 때문에 9:16이 가장 잘 작동해요. 틱톡 광고 매니저(TikTok Ads Manager)에 업로드할 때 페북·인스타와 다른 점 하나 있어요. 틱톡은 "Spark Ads"라는 옵션이 있어요. 일반 게시물처럼 올린 영상을 광고로 활용하는 옵션이에요. UGC 영상은 Spark Ads 형식으로 올리면 광고 티가 더 안 나서 효과 좋아요. 오늘은 가볍게 일반 게시물로 올리는 정도까지 해요. Spark Ads 깊은 설정은 다음 단계예요.</div>
+          </div>
+        </div>
+      </details>
+    </section>
+    <section class="slide slide-section" data-slide="4" data-diagram="recap" data-duration="120">
+      <div class="section-head">
+        <div class="section-kicker reveal">RECAP · 복습</div>
+        <div class="section-counter reveal">04 / 05</div>
+      </div>
+      <div class="section-grid">
+        <h2 class="section-title"></h2>
+        <div class="section-visual reveal" style="transition-delay:0.3s"><svg viewBox="0 0 400 260" class="infographic">
+  <defs>
+    <radialGradient id="g4" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#e2c793" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#e2c793" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <circle cx="200" cy="130" r="80" fill="url(#g4)" stroke="#3a3730" stroke-width="1"/>
+  <circle cx="200" cy="130" r="50" fill="none" stroke="#e2c793" stroke-width="1.5"/>
+  <text x="200" y="138" text-anchor="middle" font-size="28" font-weight="900" fill="#e2c793">5/5</text>
+  <text x="200" y="220" text-anchor="middle" font-size="11" fill="#7a7666">RECAP · </text>
+  <line x1="60" y1="240" x2="340" y2="240" stroke="#3a3730" stroke-width="1"/>
+</svg></div>
+        <ul class="bullet-list"><li class="tilt-card reveal" style="transition-delay:0.00s" onclick="event.stopPropagation();"><span class="bullet-num">01</span><span class="bullet-text">✅ 오늘 배운 것 · 오늘 한 일 정리할게요.</span><span class="bullet-arrow">→</span><div class="bullet-detail">오늘 한 일 정리할게요.</div></li><li class="tilt-card reveal" style="transition-delay:0.12s" onclick="event.stopPropagation();"><span class="bullet-num">02</span><span class="bullet-text">📌 체크포인트 · UGC(User Generated Content · 사</span><span class="bullet-arrow">→</span><div class="bullet-detail">UGC(User Generated Content · 사용자 생성 콘텐츠)는 &quot;사용자가 직접 만든 듯한 광고&quot; 분위기예요.</div></li><li class="tilt-card reveal" style="transition-delay:0.24s" onclick="event.stopPropagation();"><span class="bullet-num">03</span><span class="bullet-text">💾 저장 포인트 · 일반 광고보다 클릭률 약 2~3배 높다는 광고 데이터 </span><span class="bullet-arrow">→</span><div class="bullet-detail">일반 광고보다 클릭률 약 2~3배 높다는 광고 데이터 있어요.</div></li></ul>
+      </div>
+      <div class="section-foot">
+        <div class="audio-bars"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
+        <div class="foot-tag">RECAP</div>
+      </div>
+          <details class="teacher-note" open>
+        <summary>📝 강사 노트</summary>
+        <div class="note-body">
+          <div class="note-script">
+            <div class="note-script-text">오늘 한 일 정리할게요. 첫째. UGC(User Generated Content · 사용자 생성 콘텐츠)는 "사용자가 직접 만든 듯한 광고" 분위기예요. 일반 광고보다 클릭률 약 2~3배 높다는 광고 데이터 있어요. "광고 같이 안 보이는 광고" 만들려면 UGC 모드가 정답이에요. 둘째. Hermes Agent(헤르메스 에이전트)는 매일 틱톡·인스타에서 잘 되는 UGC 트렌드를 자동 스캔해서 5건씩 추천하는 트렌드 헌터예요. 2026년 4월 출시된 신규 기능이에요. 본인이 트렌드 안 따라잡아도 자동으로 따라잡힌 광고가 나와요. 셋째. D 트레이너 페르소나로 Hermes 추천 트렌드 1개 + 한국어 추가 정보 + 9:16 + 15초 = 틱톡 UGC 광고 영상 1편 + 카피 3가지 + 종횡비 변형 3가지 받았어요. 결과물 누적 12번 ✓ (Marketing Studio ACT 2번째 작품). 약 50~100크레딧 들어요. 14강 일반 Marketing Studio와 비슷한 비용이에요.</div>
+          </div>
+        </div>
+      </details>
+    </section>
+    <section class="slide slide-section" data-slide="5" data-diagram="bridge" data-duration="120">
+      <div class="section-head">
+        <div class="section-kicker reveal">BRIDGE · 다음 악장</div>
+        <div class="section-counter reveal">05 / 05</div>
+      </div>
+      <div class="section-grid">
+        <h2 class="section-title"></h2>
+        <div class="section-visual reveal" style="transition-delay:0.3s"><svg viewBox="0 0 400 260" class="infographic">
+  <defs>
+    <radialGradient id="g5" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#e2c793" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#e2c793" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <circle cx="200" cy="130" r="80" fill="url(#g5)" stroke="#3a3730" stroke-width="1"/>
+  <circle cx="200" cy="130" r="50" fill="none" stroke="#e2c793" stroke-width="1.5"/>
+  <text x="200" y="138" text-anchor="middle" font-size="28" font-weight="900" fill="#e2c793">6/5</text>
+  <text x="200" y="220" text-anchor="middle" font-size="11" fill="#7a7666">BRIDGE · </text>
+  <line x1="60" y1="240" x2="340" y2="240" stroke="#3a3730" stroke-width="1"/>
+</svg></div>
+        <ul class="bullet-list"><li class="tilt-card reveal" style="transition-delay:0.00s" onclick="event.stopPropagation();"><span class="bullet-num">01</span><span class="bullet-text">🚪 다음 회차 예고 · 다음 시간엔 옷가게 가상 모델 입히기 마법 회차예요.</span><span class="bullet-arrow">→</span><div class="bullet-detail">다음 시간엔 옷가게 가상 모델 입히기 마법 회차예요.</div></li><li class="tilt-card reveal" style="transition-delay:0.12s" onclick="event.stopPropagation();"><span class="bullet-num">02</span><span class="bullet-text">🔜 연결 고리 · B 옷가게 셀러 페르소나로 다시 돌아가요.</span><span class="bullet-arrow">→</span><div class="bullet-detail">B 옷가게 셀러 페르소나로 다시 돌아가요.</div></li><li class="tilt-card reveal" style="transition-delay:0.24s" onclick="event.stopPropagation();"><span class="bullet-num">03</span><span class="bullet-text">🎁 미리 준비 · 6강·9강·13강에서 만난 그 페르소나예요.</span><span class="bullet-arrow">→</span><div class="bullet-detail">6강·9강·13강에서 만난 그 페르소나예요.</div></li></ul>
+      </div>
+      <div class="section-foot">
+        <div class="audio-bars"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
+        <div class="foot-tag">BRIDGE</div>
+      </div>
+          <details class="teacher-note" open>
+        <summary>📝 강사 노트</summary>
+        <div class="note-body">
+          <div class="note-script">
+            <div class="note-script-text">다음 시간엔 옷가게 가상 모델 입히기 마법 회차예요. B 옷가게 셀러 페르소나로 다시 돌아가요. 6강·9강·13강에서 만난 그 페르소나예요. "옷 사진은 있는데 모델이 없어요. 옷만 사진으로 보여주면 임팩트가 약해요." — 이 고민 다음 회차에서 풀어봐요. Pro Virtual Try-On(프로 가상 착용)이라는 모드를 만나볼 거예요. Marketing Studio 9가지 모드 중 8번째예요. "종이 인형 옷 갈아입히기" 비유가 정확한 모드예요. 옷 사진 1장 + 모델 사진 1장 = 입은 모습 즉시 나와요. 같은 옷을 다양한 모델·다양한 자세로 5컷 변형해서 인스타 릴스 정지샷 5컷으로 활용하는 회차예요. 다음 회차에서 만나요.</div>
+          </div>
+        </div>
+      </details>
+    </section>
+    <section class="slide slide-outro" data-slide="6">
+      <div class="outro-radial"></div>
+      <div class="outro-kicker reveal">END OF PART 15</div>
+      <h2 class="outro-title reveal" style="transition-delay:0.15s">Marketing Studio UGC 마무리</h2>
+      <div class="outro-sub reveal" style="transition-delay:0.3s">NEXT · Part 16 · Pro Virtual Try-On</div>
+      <div class="outro-actions reveal" style="transition-delay:0.5s">
+        <a class="btn btn-ghost" href="../index.html">← 전체 목차</a>
+        <button class="btn btn-gold" onclick="goFirst()">처음으로 ↺</button>
+        <a class="btn btn-gold" href="../../16강_Pro_Virtual_Try_On/PPT/part-16.html">다음으로 →</a>
+      </div>
+    </section>
+</main>
+
+<div class="controls">
+  <button class="ctl-btn" onclick="prev()" title="이전 슬라이드">◀</button>
+  <div class="counter"><span id="counter">01</span> / <span id="total">7</span></div>
+  <button class="ctl-btn" onclick="next()" title="다음 슬라이드">▶</button>
+  <button class="ctl-btn" onclick="toggleThumbs()" title="썸네일 (T)">🎴</button>
+  <button class="ctl-btn" onclick="toggleHelp()" title="도움말 (?)">?</button>
+  <button class="ctl-btn" onclick="toggleFullscreen()" title="전체화면 (F)">⛶</button>
+</div>
+
+<div class="thumb-strip" id="thumbStrip">
+  <div class="thumb-strip-inner" id="thumbInner">
+    <div class="thumb" data-idx="0"><span class="thumb-num">01</span><span class="thumb-label">COVER</span></div><div class="thumb" data-idx="1"><span class="thumb-num">02</span><span class="thumb-label">META</span></div><div class="thumb" data-idx="2"><span class="thumb-num">03</span><span class="thumb-label">OVERVIEW</span></div><div class="thumb" data-idx="3"><span class="thumb-num">04</span><span class="thumb-label">HOOK</span></div><div class="thumb" data-idx="4"><span class="thumb-num">05</span><span class="thumb-label">RECAP</span></div><div class="thumb" data-idx="5"><span class="thumb-num">06</span><span class="thumb-label">BRIDGE</span></div><div class="thumb" data-idx="6"><span class="thumb-num">07</span><span class="thumb-label">END</span></div>
+  </div>
+</div>
+
+<div class="help-overlay" id="helpOverlay">
+  <div class="help-card">
+    <h3>키보드 단축키</h3>
+    <ul>
+      <li><kbd>←</kbd> / <kbd>→</kbd> 슬라이드 이동</li>
+      <li><kbd>Space</kbd> / <kbd>Backspace</kbd> 문장 다음/이전</li>
+      <li><kbd>F</kbd> 전체화면</li>
+      <li><kbd>T</kbd> 썸네일</li>
+      <li><kbd>N</kbd> 강사 노트 토글</li>
+      <li><kbd>?</kbd> 도움말</li>
+    </ul>
+    <button onclick="toggleHelp()">닫기</button>
+  </div>
+</div>
+
+<footer class="page-footer">© PajamaBoss · 힉스필드 풀코스 · ACT 4 · 마케팅</footer>
+
+<script src="../../assets/common.js"></script>
+</body>
+</html>

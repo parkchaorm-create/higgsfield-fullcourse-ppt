@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Part 17 · TV Spot 페북 — 힉스필드 풀코스</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css">
+<link rel="stylesheet" href="../../assets/common.css">
+</head>
+<body class="teacher-view" data-bg-mode="NETWORK">
+
+<canvas id="bgcanvas"></canvas>
+<div class="dot-grid"></div>
+<div class="vignette"></div>
+<div class="cursor-dot" id="cursorDot"></div>
+<div class="cursor-ring" id="cursorRing"></div>
+
+<div class="topbar">
+  <div class="brand">HIGGSFIELD · 풀코스</div>
+  <div class="topbar-center">PART 17 · TV Spot 페북</div>
+  <div class="topbar-right">
+    <button id="projectorBtn" type="button" onclick="window.openProjectorWindow()" style="display:none;" title="프로젝터용 수강생 창 새로 열기">📺 프로젝터</button>
+    <a class="nav-arrow" href="../../16강_Pro_Virtual_Try_On/PPT/part-16.html" title="이전 회차">◀ PART 16</a>
+    <a class="nav-arrow" href="../../index.html">INDEX</a>
+    <a class="nav-arrow" href="../../18강_100Apps_효과_쇼츠/PPT/part-18.html" title="다음 회차">PART 18 ▶</a>
+  </div>
+</div>
+
+<div class="progress" id="progress"></div>
+
+<main class="deck" id="deck">
+    <section class="slide slide-cover" data-slide="0" data-duration="60">
+      <div class="cover-bg-shapes">
+        <svg class="float-shape fs1" viewBox="0 0 100 100"><polygon points="50,10 90,90 10,90" fill="none" stroke="#e2c793" stroke-width="1"/></svg>
+        <svg class="float-shape fs2" viewBox="0 0 100 100"><circle cx="50" cy="50" r="40" fill="none" stroke="#e2c793" stroke-width="1"/></svg>
+        <svg class="float-shape fs3" viewBox="0 0 100 100"><rect x="10" y="10" width="80" height="80" fill="none" stroke="#e2c793" stroke-width="1" transform="rotate(15 50 50)"/></svg>
+        <svg class="float-shape fs4" viewBox="0 0 100 100"><polygon points="50,5 95,30 95,70 50,95 5,70 5,30" fill="none" stroke="#e2c793" stroke-width="1"/></svg>
+      </div>
+      <div class="cover-kicker reveal">ACT 4 · 마케팅</div>
+      <div class="cover-number reveal" style="transition-delay:0.1s">PART 17</div>
+      <h1 class="cover-title typewriter-target" data-text="TV Spot 페북">&nbsp;</h1>
+      <div class="cover-sub reveal" style="transition-delay:0.6s">TV Spot 모드 · 페북 광고 시네마틱</div>
+      <div class="cover-meta reveal" style="transition-delay:0.8s">
+        <span class="meta-dot"></span>
+        <span>인터랙티브 슬라이드 · 마우스·키보드로 조작</span>
+      </div>
+      <div class="cover-hint reveal" style="transition-delay:1s">⌨ <kbd>←</kbd><kbd>→</kbd> 슬라이드 · <kbd>Space</kbd>/<kbd>Backspace</kbd> 문장 다음/이전 · <kbd>F</kbd> 전체화면 · <kbd>N</kbd> 노트</div>
+    </section>
+    <section class="slide slide-section" data-slide="1" data-diagram="meta" data-duration="120">
+      <div class="section-head">
+        <div class="section-kicker reveal">META · 파트 메타</div>
+        <div class="section-counter reveal">01 / 05</div>
+      </div>
+      <div class="section-grid">
+        <h2 class="section-title"></h2>
+        <div class="section-visual reveal" style="transition-delay:0.3s"><svg viewBox="0 0 400 260" class="infographic">
+  <defs>
+    <radialGradient id="g1" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#e2c793" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#e2c793" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <circle cx="200" cy="130" r="80" fill="url(#g1)" stroke="#3a3730" stroke-width="1"/>
+  <circle cx="200" cy="130" r="50" fill="none" stroke="#e2c793" stroke-width="1.5"/>
+  <text x="200" y="138" text-anchor="middle" font-size="28" font-weight="900" fill="#e2c793">2/5</text>
+  <text x="200" y="220" text-anchor="middle" font-size="11" fill="#7a7666">META · </text>
+  <line x1="60" y1="240" x2="340" y2="240" stroke="#3a3730" stroke-width="1"/>
+</svg></div>
+        <ul class="bullet-list"><li class="tilt-card reveal" style="transition-delay:0.00s" onclick="event.stopPropagation();"><span class="bullet-num">01</span><span class="bullet-text">🎬 파트 메타 · 이번 파트는 힉스필드 풀코스 17강.</span><span class="bullet-arrow">→</span><div class="bullet-detail">이번 파트는 힉스필드 풀코스 17강.</div></li><li class="tilt-card reveal" style="transition-delay:0.12s" onclick="event.stopPropagation();"><span class="bullet-num">02</span><span class="bullet-text">🎯 핵심 비유 · 30분 동안 진행해요.</span><span class="bullet-arrow">→</span><div class="bullet-detail">30분 동안 진행해요.</div></li><li class="tilt-card reveal" style="transition-delay:0.24s" onclick="event.stopPropagation();"><span class="bullet-num">03</span><span class="bullet-text">⏱️ 오늘의 목표 · 핵심 비유는 30초 TV 광고(TV Spot).</span><span class="bullet-arrow">→</span><div class="bullet-detail">핵심 비유는 &quot;30초 TV 광고&quot;(TV Spot).</div></li></ul>
+      </div>
+      <div class="section-foot">
+        <div class="audio-bars"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
+        <div class="foot-tag">META</div>
+      </div>
+          <details class="teacher-note" open>
+        <summary>📝 강사 노트</summary>
+        <div class="note-body">
+          <div class="note-script">
+            <div class="note-script-text">이번 파트는 힉스필드 풀코스 17강. 30분 동안 진행해요. 핵심 비유는 "30초 TV 광고"(TV Spot). 가상 클라이언트는 A 카페 사장님이에요. 4강 Soul 2.0·8강 GPT Image 2·11강 Sora에서 만난 그 페르소나 다시 돌아와요. Marketing Studio 9가지 모드 중 1번째 모드를 만나면서 ACT 4 Marketing Studio 4종 회차의 마지막을 마무리하는 회차예요. 시작합니다.</div>
+          </div>
+        </div>
+      </details>
+    </section>
+    <section class="slide slide-section" data-slide="2" data-diagram="overview" data-duration="120">
+      <div class="section-head">
+        <div class="section-kicker reveal">OVERVIEW · 한눈 요약</div>
+        <div class="section-counter reveal">00 / 00</div>
+      </div>
+      <div class="section-grid">
+        <h2 class="section-title"></h2>
+        <div class="section-visual reveal" style="transition-delay:0.3s"><svg viewBox="0 0 400 260" class="infographic">
+  <defs>
+    <radialGradient id="g2" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#e2c793" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#e2c793" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <circle cx="200" cy="130" r="80" fill="url(#g2)" stroke="#3a3730" stroke-width="1"/>
+  <circle cx="200" cy="130" r="50" fill="none" stroke="#e2c793" stroke-width="1.5"/>
+  <text x="200" y="138" text-anchor="middle" font-size="28" font-weight="900" fill="#e2c793">3/5</text>
+  <text x="200" y="220" text-anchor="middle" font-size="11" fill="#7a7666">OVERVIEW · </text>
+  <line x1="60" y1="240" x2="340" y2="240" stroke="#3a3730" stroke-width="1"/>
+</svg></div>
+        <ul class="bullet-list"><li class="tilt-card reveal" style="transition-delay:0.00s" onclick="event.stopPropagation();"><span class="bullet-num">01</span><span class="bullet-text">📋 수업 흐름 · 오늘 만들 것 3가지예요.</span><span class="bullet-arrow">→</span><div class="bullet-detail">오늘 만들 것 3가지예요.</div></li><li class="tilt-card reveal" style="transition-delay:0.12s" onclick="event.stopPropagation();"><span class="bullet-num">02</span><span class="bullet-text">🎤 핵심 비유 · 첫째, TV Spot(TV 스팟 · TV 광고 형식) </span><span class="bullet-arrow">→</span><div class="bullet-detail">첫째, TV Spot(TV 스팟 · TV 광고 형식) 모드가 14강·15강·16강과 어떻게 다른 톤인지 짚을 거예요.</div></li><li class="tilt-card reveal" style="transition-delay:0.24s" onclick="event.stopPropagation();"><span class="bullet-num">03</span><span class="bullet-text">🚀 결과물 목표 · 둘째, Image-to-Video 변환(이미지에서 영상</span><span class="bullet-arrow">→</span><div class="bullet-detail">둘째, Image-to-Video 변환(이미지에서 영상으로)으로 카페 사진 1장 → 시네마틱 광고 영상 1편 만드는 흐름을 따라가볼 거예요.</div></li></ul>
+      </div>
+      <div class="section-foot">
+        <div class="audio-bars"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
+        <div class="foot-tag">OVERVIEW</div>
+      </div>
+          <details class="teacher-note" open>
+        <summary>📝 강사 노트</summary>
+        <div class="note-body">
+          <div class="note-script">
+            <div class="note-script-text">오늘 만들 것 3가지예요. 첫째, TV Spot(TV 스팟 · TV 광고 형식) 모드가 14강·15강·16강과 어떻게 다른 톤인지 짚을 거예요. 둘째, Image-to-Video 변환(이미지에서 영상으로)으로 카페 사진 1장 → 시네마틱 광고 영상 1편 만드는 흐름을 따라가볼 거예요. 셋째, A 카페 사장 페르소나로 페북 광고 표준 1:1 정사각 액자 시네마틱 광고 영상 1편 받을 거예요.</div>
+          </div>
+        </div>
+      </details>
+    </section>
+    <section class="slide slide-section" data-slide="3" data-diagram="hook" data-duration="120">
+      <div class="section-head">
+        <div class="section-kicker reveal">HOOK · 오프닝 훅</div>
+        <div class="section-counter reveal">03 / 05</div>
+      </div>
+      <div class="section-grid">
+        <h2 class="section-title"></h2>
+        <div class="section-visual reveal" style="transition-delay:0.3s"><svg viewBox="0 0 400 260" class="infographic">
+  <defs>
+    <radialGradient id="g3" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#e2c793" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#e2c793" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <circle cx="200" cy="130" r="80" fill="url(#g3)" stroke="#3a3730" stroke-width="1"/>
+  <circle cx="200" cy="130" r="50" fill="none" stroke="#e2c793" stroke-width="1.5"/>
+  <text x="200" y="138" text-anchor="middle" font-size="28" font-weight="900" fill="#e2c793">4/5</text>
+  <text x="200" y="220" text-anchor="middle" font-size="11" fill="#7a7666">HOOK · </text>
+  <line x1="60" y1="240" x2="340" y2="240" stroke="#3a3730" stroke-width="1"/>
+</svg></div>
+        <ul class="bullet-list"><li class="tilt-card reveal" style="transition-delay:0.00s" onclick="event.stopPropagation();"><span class="bullet-num">01</span><span class="bullet-text">💡 솔직히 · A 카페 사장님이 평소 페북 광고 보다가 이런 생각 하</span><span class="bullet-arrow">→</span><div class="bullet-detail">A 카페 사장님이 평소 페북 광고 보다가 이런 생각 하셨을 거예요.</div></li><li class="tilt-card reveal" style="transition-delay:0.12s" onclick="event.stopPropagation();"><span class="bullet-num">02</span><span class="bullet-text">⚡ 오늘의 시도 · 동네 카페 광고 만들고 싶은데 친구 추천 분위기는 우</span><span class="bullet-arrow">→</span><div class="bullet-detail">&quot;동네 카페 광고 만들고 싶은데 친구 추천 분위기는 우리 가게 이미지에 안 맞아요.&quot; &quot;진짜 TV에 나오는 카페 CF 같은 시네마틱한 영상 만들고 싶어요.&quot; &quot;그런데 영상 제작 회사 부르면 1편 200~500만원이래요.</div></li><li class="tilt-card reveal" style="transition-delay:0.24s" onclick="event.stopPropagation();"><span class="bullet-num">03</span><span class="bullet-text">🌿 부담 제로 · 동네 카페가 그 돈 못 써요. 이 고민, 오늘 한 방</span><span class="bullet-arrow">→</span><div class="bullet-detail">동네 카페가 그 돈 못 써요.&quot; 이 고민, 오늘 한 방에 풀려요.</div></li></ul>
+      </div>
+      <div class="section-foot">
+        <div class="audio-bars"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
+        <div class="foot-tag">HOOK</div>
+      </div>
+          <details class="teacher-note" open>
+        <summary>📝 강사 노트</summary>
+        <div class="note-body">
+          <div class="note-script">
+            <div class="note-script-text">A 카페 사장님이 평소 페북 광고 보다가 이런 생각 하셨을 거예요. "동네 카페 광고 만들고 싶은데 친구 추천 분위기는 우리 가게 이미지에 안 맞아요." "진짜 TV에 나오는 카페 CF 같은 시네마틱한 영상 만들고 싶어요." "그런데 영상 제작 회사 부르면 1편 200~500만원이래요. 동네 카페가 그 돈 못 써요." 이 고민, 오늘 한 방에 풀려요. 힉스필드 Marketing Studio에 TV Spot(TV 스팟) 모드가 있어요. "30초 TV 광고" 비유가 정확한 모드예요. 임팩트 강하고 시네마틱한 카메라 동작이 자동으로 들어가는 모드예요. 13강에서 Cinema Studio(시네마 스튜디오) 카메라 컨트롤 만났던 거 기억나시죠. TV Spot 모드는 그 시네마틱 카메라 동작을 Marketing Studio 광고 모드에 자동으로 적용한 거예요. 14강 Product Review·15강 UGC·16강 Pro Virtual Try-On 다 했으니 오늘 TV Spot까지 하면 Marketing Studio 4가지 모드 다 경험하는 거예요. 오늘 카페 사진 1장으로 시네마틱 페북 광고 영상 만들어봐요. 영상 제작 회사 비용의 100분의 1 수준으로요. [CONCEPT 1] TV Spot(TV 스팟 · TV 광고 형식) 모드부터 짚을게요. "TV Spot"은요. 영어 원어 그대로 "TV 광고 한 편" 또는 "30초 TV 광고"라는 뜻이에요. TV CF(Commercial Film · 광고 영상)의 또 다른 표현이에요. TV에서 보는 광고 떠올려보세요. 30초 안에 임팩트 있는 카메라 동작 + 멋진 음악 + 짧은 카피 한 줄로 끝나잖아요. TV Spot 모드는 그 분위기를 만드는 모드예요. 14강 Product Review(제품 후기 톤)·15강 UGC(친구 추천 톤)·16강 Pro Virtual Try-On(가상 입히기)와 다른 카테고리예요. TV Spot은 "딱 봐도 광고" 분위기예요. 광고 같이 안 보이게 만드는 UGC와는 정반대 방향이에요. 임팩트가 핵심이에요. A 카페 사장님처럼 동네 카페 광고를 "정식 카페 CF" 분위기로 만들고 싶을 때 어울려요. 작은 카페라도 광고 톤이 정식 TV CF면 가게 격이 올라가 보이는 효과 있어요. Marketing Studio 9가지 모드 중 1번째라 가장 먼저 보이는 카드예요. [CONCEPT 2] Image-to-Video 변환(이미지에서 영상으로)을 짚을게요. 힉스필드 영상 모델은 두 가지 입력 방식이 있어요. 첫째, Text-to-Video(텍스트에서 영상으로). 9강 Kling·11강 Sora에서 했던 방식이에요. 글로 설명만 입력해서 영상 받기. 둘째, Image-to-Video(이미지에서 영상으로). 사진 한 장 + 짧은 텍스트로 영상 만드는 방식이에요. TV Spot 모드는 Image-to-Video 방식 활용해요. 이유는요. 사진 1장으로 영상 만들면 색감·구도·분위기가 그 사진과 일관되게 나와요. 텍스트만으로는 매번 다른 분위기 나오는데, 사진 기반은 일관성이 높아요. A 카페 사장님이 평소 카페 인스타에 올린 사진 1장을 그대로 광고 영상으로 변환할 수 있어요. 이미 본인 가게 분위기 담긴 사진이라 광고 톤도 가게 분위기와 일치해요. [CONCEPT 3] 시네마틱 카메라 자동 선택을 짚을게요. TV Spot 모드는 Cinema Studio(시네마 스튜디오 · 13강) 카메라 컨트롤을 자동으로 적용해요. 13강에서 70+ 카메라 프리셋 중 줌인·드론샷·로우앵글 같은 거 만났던 거 기억나시죠. TV Spot 모드는 본인이 카메라 직접 안 골라도 셰프(AI)가 광고에 어울리는 카메라 동작을 자동 선택해요. A 카페 광고에 자동 적용될 만한 카메라 동작 예시예요. 첫째, 드론샷 줌인. 카페 외관 위에서 천천히 내려오면서 줌인. 임팩트 강한 도입. 둘째, 슬로우 트래킹. 카페 안 손님 클로즈업에서 천천히 따라가면서 카페 분위기 보여주기. 셋째, 메뉴판·커피 클로즈업. 메뉴 설명 안 해도 시각적으로 카페 매력 전달. 이런 카메라 동작들이 자동으로 조합돼서 30초 광고 한 편이 만들어져요. [CONCEPT 4] 1:1 액자 = 페북 광고 정사각을 짚을게요. 페북 광고는 종횡비(가로·세로 비율) 표준이 1:1 정사각이에요. 4강에서 인스타 피드 1:1 만들었던 거 기억나시죠. 페북 광고 매니저(Facebook Ads Manager)에 영상 올릴 때 1:1이 가장 잘 작동해요. 16:9(가로 TV) 영상도 OK이지만 1:1이 페북·인스타 광고 양쪽에 동시 활용 가능해서 효율적이에요. 12강에서 Veo 3.1 페북 광고 영상 만들 때 4:5 액자 썼던 거 기억나시죠. 4:5는 인스타 피드 + 페북 광고에 어울리고, 1:1은 페북 광고에 가장 정통이에요. 오늘 1:1 액자로 만들어요. 페북 광고 매니저에 그대로 올려서 광고 게재 가능해요. 폰으로 보면 1:1 정사각이 화면 가운데 깔끔하게 들어와요. 가로 16:9는 폰에서 작아져 보이고 세로 9:16은 페북에 어울리지 않아요. [CONCEPT 5] Marketing Studio 4모드 점검을 짚을게요. ACT 4(14~17강) 마지막 회차라 Marketing Studio 4가지 모드를 한 번에 정리해볼게요. 14강, **Product Review** 모드 — 제품 후기 톤. C 식당 메뉴 페북 광고 만들었어요. 15강, **UGC** 모드 — 친구 추천 톤. D 트레이너 운동 광고 만들었어요. + Hermes Agent로 트렌드 자동 추천 받음. 16강, **Pro Virtual Try-On** 모드 — 옷 가상 입히기. B 옷가게 셀러 5컷 시리즈 만들었어요. 17강(오늘), **TV Spot** 모드 — TV 광고 형식. A 카페 시네마틱 광고 만들어요. 이렇게 4가지 톤이 각각 다른 상황에 어울려요. 제품 정보 강조 = Product Review. 친구 추천 분위기 = UGC. 의류·뷰티 셀러 = Pro Virtual Try-On. 정식 TV CF 분위기 = TV Spot. 본인 가게·페르소나에 따라 선택해서 활용하시면 돼요. 나머지 5가지 모드(TV Spot 외 Tutorial·Unboxing·UGC Virtual Try-On·Hyper Motion·Wild Card)는 ACT 5에서 가볍게 만나거나 본인이 추가 학습으로 시도해보시면 돼요.</div>
+          </div>
+        </div>
+      </details>
+    </section>
+    <section class="slide slide-section" data-slide="4" data-diagram="recap" data-duration="120">
+      <div class="section-head">
+        <div class="section-kicker reveal">RECAP · 복습</div>
+        <div class="section-counter reveal">04 / 05</div>
+      </div>
+      <div class="section-grid">
+        <h2 class="section-title"></h2>
+        <div class="section-visual reveal" style="transition-delay:0.3s"><svg viewBox="0 0 400 260" class="infographic">
+  <defs>
+    <radialGradient id="g4" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#e2c793" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#e2c793" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <circle cx="200" cy="130" r="80" fill="url(#g4)" stroke="#3a3730" stroke-width="1"/>
+  <circle cx="200" cy="130" r="50" fill="none" stroke="#e2c793" stroke-width="1.5"/>
+  <text x="200" y="138" text-anchor="middle" font-size="28" font-weight="900" fill="#e2c793">5/5</text>
+  <text x="200" y="220" text-anchor="middle" font-size="11" fill="#7a7666">RECAP · </text>
+  <line x1="60" y1="240" x2="340" y2="240" stroke="#3a3730" stroke-width="1"/>
+</svg></div>
+        <ul class="bullet-list"><li class="tilt-card reveal" style="transition-delay:0.00s" onclick="event.stopPropagation();"><span class="bullet-num">01</span><span class="bullet-text">✅ 오늘 배운 것 · 오늘 한 일 정리할게요.</span><span class="bullet-arrow">→</span><div class="bullet-detail">오늘 한 일 정리할게요.</div></li><li class="tilt-card reveal" style="transition-delay:0.12s" onclick="event.stopPropagation();"><span class="bullet-num">02</span><span class="bullet-text">📌 체크포인트 · TV Spot(TV 스팟 · TV 광고 형식)은 30</span><span class="bullet-arrow">→</span><div class="bullet-detail">TV Spot(TV 스팟 · TV 광고 형식)은 &quot;30초 TV 광고&quot; 분위기로 만드는 모드예요.</div></li><li class="tilt-card reveal" style="transition-delay:0.24s" onclick="event.stopPropagation();"><span class="bullet-num">03</span><span class="bullet-text">💾 저장 포인트 · Marketing Studio 9가지 모드 중 1번째예</span><span class="bullet-arrow">→</span><div class="bullet-detail">Marketing Studio 9가지 모드 중 1번째예요.</div></li></ul>
+      </div>
+      <div class="section-foot">
+        <div class="audio-bars"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
+        <div class="foot-tag">RECAP</div>
+      </div>
+          <details class="teacher-note" open>
+        <summary>📝 강사 노트</summary>
+        <div class="note-body">
+          <div class="note-script">
+            <div class="note-script-text">오늘 한 일 정리할게요. 첫째. TV Spot(TV 스팟 · TV 광고 형식)은 "30초 TV 광고" 분위기로 만드는 모드예요. Marketing Studio 9가지 모드 중 1번째예요. UGC(친구 추천)와 정반대로 "딱 봐도 광고" 시네마틱 분위기예요. 13강 Cinema Studio 카메라 컨트롤이 자동 적용된 모드예요. 둘째. Image-to-Video 변환(이미지에서 영상으로)으로 카페 사진 1장 → 시네마틱 광고 영상 1편 만들었어요. 사진 기반이라 본인 가게 색감·분위기와 일치하는 광고 톤이 나와요. 영상 제작 회사 비용 200~500만원의 100분의 1 수준이에요. 셋째. A 카페 사장 페르소나로 1:1 정사각 액자 + 30초 시네마틱 광고 영상 1편 + 카피 텍스트 받았어요. 결과물 누적 14번 ✓ (Marketing Studio ACT 4번째 작품). ACT 4 Marketing Studio 4모드 다 경험 완료. 페북 광고 매니저에 그대로 올릴 수 있는 1:1 표준 액자예요.</div>
+          </div>
+        </div>
+      </details>
+    </section>
+    <section class="slide slide-section" data-slide="5" data-diagram="bridge" data-duration="120">
+      <div class="section-head">
+        <div class="section-kicker reveal">BRIDGE · 다음 악장</div>
+        <div class="section-counter reveal">05 / 05</div>
+      </div>
+      <div class="section-grid">
+        <h2 class="section-title"></h2>
+        <div class="section-visual reveal" style="transition-delay:0.3s"><svg viewBox="0 0 400 260" class="infographic">
+  <defs>
+    <radialGradient id="g5" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#e2c793" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#e2c793" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <circle cx="200" cy="130" r="80" fill="url(#g5)" stroke="#3a3730" stroke-width="1"/>
+  <circle cx="200" cy="130" r="50" fill="none" stroke="#e2c793" stroke-width="1.5"/>
+  <text x="200" y="138" text-anchor="middle" font-size="28" font-weight="900" fill="#e2c793">6/5</text>
+  <text x="200" y="220" text-anchor="middle" font-size="11" fill="#7a7666">BRIDGE · </text>
+  <line x1="60" y1="240" x2="340" y2="240" stroke="#3a3730" stroke-width="1"/>
+</svg></div>
+        <ul class="bullet-list"><li class="tilt-card reveal" style="transition-delay:0.00s" onclick="event.stopPropagation();"><span class="bullet-num">01</span><span class="bullet-text">🚪 다음 회차 예고 · 다음 시간엔 100가지 효과 만들기 마법 회차예요.</span><span class="bullet-arrow">→</span><div class="bullet-detail">다음 시간엔 100가지 효과 만들기 마법 회차예요.</div></li><li class="tilt-card reveal" style="transition-delay:0.12s" onclick="event.stopPropagation();"><span class="bullet-num">02</span><span class="bullet-text">🔜 연결 고리 · D 트레이너 페르소나로 다시 돌아가요.</span><span class="bullet-arrow">→</span><div class="bullet-detail">D 트레이너 페르소나로 다시 돌아가요.</div></li><li class="tilt-card reveal" style="transition-delay:0.24s" onclick="event.stopPropagation();"><span class="bullet-num">03</span><span class="bullet-text">🎁 미리 준비 · 5강·10강·15강에서 만난 그 페르소나예요.</span><span class="bullet-arrow">→</span><div class="bullet-detail">5강·10강·15강에서 만난 그 페르소나예요.</div></li></ul>
+      </div>
+      <div class="section-foot">
+        <div class="audio-bars"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
+        <div class="foot-tag">BRIDGE</div>
+      </div>
+          <details class="teacher-note" open>
+        <summary>📝 강사 노트</summary>
+        <div class="note-body">
+          <div class="note-script">
+            <div class="note-script-text">다음 시간엔 100가지 효과 만들기 마법 회차예요. D 트레이너 페르소나로 다시 돌아가요. 5강·10강·15강에서 만난 그 페르소나예요. "운동 시연 영상은 만들었는데 너무 밋밋해요. 얼굴 교체·트랜지션·특수 효과 같은 거 추가하고 싶은데 어떻게 해요?" — 이 고민 다음 회차에서 풀어봐요. 100+ Apps(앱 100개+ · 얼굴 교체·효과 모음)를 만나볼 거예요. "효과 백화점" 비유가 정확한 메뉴예요. 한 메뉴 안에 100가지 다른 효과가 모여 있어요. 얼굴 교체(face swap)·트랜지션(장면 전환)·특수 효과 인기 3종을 만나서 D 트레이너 운동 쇼츠를 한 단계 업그레이드하는 회차예요. ACT 5 실전·종합의 첫 회차예요. 다음 회차에서 만나요.</div>
+          </div>
+        </div>
+      </details>
+    </section>
+    <section class="slide slide-outro" data-slide="6">
+      <div class="outro-radial"></div>
+      <div class="outro-kicker reveal">END OF PART 17</div>
+      <h2 class="outro-title reveal" style="transition-delay:0.15s">TV Spot 페북 마무리</h2>
+      <div class="outro-sub reveal" style="transition-delay:0.3s">NEXT · Part 18 · 100+ Apps 효과</div>
+      <div class="outro-actions reveal" style="transition-delay:0.5s">
+        <a class="btn btn-ghost" href="../index.html">← 전체 목차</a>
+        <button class="btn btn-gold" onclick="goFirst()">처음으로 ↺</button>
+        <a class="btn btn-gold" href="../../18강_100Apps_효과_쇼츠/PPT/part-18.html">다음으로 →</a>
+      </div>
+    </section>
+</main>
+
+<div class="controls">
+  <button class="ctl-btn" onclick="prev()" title="이전 슬라이드">◀</button>
+  <div class="counter"><span id="counter">01</span> / <span id="total">7</span></div>
+  <button class="ctl-btn" onclick="next()" title="다음 슬라이드">▶</button>
+  <button class="ctl-btn" onclick="toggleThumbs()" title="썸네일 (T)">🎴</button>
+  <button class="ctl-btn" onclick="toggleHelp()" title="도움말 (?)">?</button>
+  <button class="ctl-btn" onclick="toggleFullscreen()" title="전체화면 (F)">⛶</button>
+</div>
+
+<div class="thumb-strip" id="thumbStrip">
+  <div class="thumb-strip-inner" id="thumbInner">
+    <div class="thumb" data-idx="0"><span class="thumb-num">01</span><span class="thumb-label">COVER</span></div><div class="thumb" data-idx="1"><span class="thumb-num">02</span><span class="thumb-label">META</span></div><div class="thumb" data-idx="2"><span class="thumb-num">03</span><span class="thumb-label">OVERVIEW</span></div><div class="thumb" data-idx="3"><span class="thumb-num">04</span><span class="thumb-label">HOOK</span></div><div class="thumb" data-idx="4"><span class="thumb-num">05</span><span class="thumb-label">RECAP</span></div><div class="thumb" data-idx="5"><span class="thumb-num">06</span><span class="thumb-label">BRIDGE</span></div><div class="thumb" data-idx="6"><span class="thumb-num">07</span><span class="thumb-label">END</span></div>
+  </div>
+</div>
+
+<div class="help-overlay" id="helpOverlay">
+  <div class="help-card">
+    <h3>키보드 단축키</h3>
+    <ul>
+      <li><kbd>←</kbd> / <kbd>→</kbd> 슬라이드 이동</li>
+      <li><kbd>Space</kbd> / <kbd>Backspace</kbd> 문장 다음/이전</li>
+      <li><kbd>F</kbd> 전체화면</li>
+      <li><kbd>T</kbd> 썸네일</li>
+      <li><kbd>N</kbd> 강사 노트 토글</li>
+      <li><kbd>?</kbd> 도움말</li>
+    </ul>
+    <button onclick="toggleHelp()">닫기</button>
+  </div>
+</div>
+
+<footer class="page-footer">© PajamaBoss · 힉스필드 풀코스 · ACT 4 · 마케팅</footer>
+
+<script src="../../assets/common.js"></script>
+</body>
+</html>

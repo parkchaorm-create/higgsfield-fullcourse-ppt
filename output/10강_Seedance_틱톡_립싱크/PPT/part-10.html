@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Part 10 · Seedance 틱톡 립싱크 — 힉스필드 풀코스</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css">
+<link rel="stylesheet" href="../../assets/common.css">
+</head>
+<body class="teacher-view" data-bg-mode="VORONOI">
+
+<canvas id="bgcanvas"></canvas>
+<div class="dot-grid"></div>
+<div class="vignette"></div>
+<div class="cursor-dot" id="cursorDot"></div>
+<div class="cursor-ring" id="cursorRing"></div>
+
+<div class="topbar">
+  <div class="brand">HIGGSFIELD · 풀코스</div>
+  <div class="topbar-center">PART 10 · Seedance 틱톡 립싱크</div>
+  <div class="topbar-right">
+    <button id="projectorBtn" type="button" onclick="window.openProjectorWindow()" style="display:none;" title="프로젝터용 수강생 창 새로 열기">📺 프로젝터</button>
+    <a class="nav-arrow" href="../../09강_Kling_인스타_릴스/PPT/part-09.html" title="이전 회차">◀ PART 09</a>
+    <a class="nav-arrow" href="../../index.html">INDEX</a>
+    <a class="nav-arrow" href="../../11강_Sora_2_유튜브_쇼츠/PPT/part-11.html" title="다음 회차">PART 11 ▶</a>
+  </div>
+</div>
+
+<div class="progress" id="progress"></div>
+
+<main class="deck" id="deck">
+    <section class="slide slide-cover" data-slide="0" data-duration="60">
+      <div class="cover-bg-shapes">
+        <svg class="float-shape fs1" viewBox="0 0 100 100"><polygon points="50,10 90,90 10,90" fill="none" stroke="#e2c793" stroke-width="1"/></svg>
+        <svg class="float-shape fs2" viewBox="0 0 100 100"><circle cx="50" cy="50" r="40" fill="none" stroke="#e2c793" stroke-width="1"/></svg>
+        <svg class="float-shape fs3" viewBox="0 0 100 100"><rect x="10" y="10" width="80" height="80" fill="none" stroke="#e2c793" stroke-width="1" transform="rotate(15 50 50)"/></svg>
+        <svg class="float-shape fs4" viewBox="0 0 100 100"><polygon points="50,5 95,30 95,70 50,95 5,70 5,30" fill="none" stroke="#e2c793" stroke-width="1"/></svg>
+      </div>
+      <div class="cover-kicker reveal">ACT 3 · 영상</div>
+      <div class="cover-number reveal" style="transition-delay:0.1s">PART 10</div>
+      <h1 class="cover-title typewriter-target" data-text="Seedance 틱톡 립싱크">&nbsp;</h1>
+      <div class="cover-sub reveal" style="transition-delay:0.6s">Seedance 2.0 · 틱톡 토킹헤드 립싱크</div>
+      <div class="cover-meta reveal" style="transition-delay:0.8s">
+        <span class="meta-dot"></span>
+        <span>인터랙티브 슬라이드 · 마우스·키보드로 조작</span>
+      </div>
+      <div class="cover-hint reveal" style="transition-delay:1s">⌨ <kbd>←</kbd><kbd>→</kbd> 슬라이드 · <kbd>Space</kbd>/<kbd>Backspace</kbd> 문장 다음/이전 · <kbd>F</kbd> 전체화면 · <kbd>N</kbd> 노트</div>
+    </section>
+    <section class="slide slide-section" data-slide="1" data-diagram="meta" data-duration="120">
+      <div class="section-head">
+        <div class="section-kicker reveal">META · 파트 메타</div>
+        <div class="section-counter reveal">01 / 05</div>
+      </div>
+      <div class="section-grid">
+        <h2 class="section-title"></h2>
+        <div class="section-visual reveal" style="transition-delay:0.3s"><svg viewBox="0 0 400 260" class="infographic">
+  <defs>
+    <radialGradient id="g1" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#e2c793" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#e2c793" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <circle cx="200" cy="130" r="80" fill="url(#g1)" stroke="#3a3730" stroke-width="1"/>
+  <circle cx="200" cy="130" r="50" fill="none" stroke="#e2c793" stroke-width="1.5"/>
+  <text x="200" y="138" text-anchor="middle" font-size="28" font-weight="900" fill="#e2c793">2/5</text>
+  <text x="200" y="220" text-anchor="middle" font-size="11" fill="#7a7666">META · </text>
+  <line x1="60" y1="240" x2="340" y2="240" stroke="#3a3730" stroke-width="1"/>
+</svg></div>
+        <ul class="bullet-list"><li class="tilt-card reveal" style="transition-delay:0.00s" onclick="event.stopPropagation();"><span class="bullet-num">01</span><span class="bullet-text">🎬 파트 메타 · 이번 파트는 힉스필드 풀코스 10강.</span><span class="bullet-arrow">→</span><div class="bullet-detail">이번 파트는 힉스필드 풀코스 10강.</div></li><li class="tilt-card reveal" style="transition-delay:0.12s" onclick="event.stopPropagation();"><span class="bullet-num">02</span><span class="bullet-text">🎯 핵심 비유 · 30분 동안 진행해요.</span><span class="bullet-arrow">→</span><div class="bullet-detail">30분 동안 진행해요.</div></li><li class="tilt-card reveal" style="transition-delay:0.24s" onclick="event.stopPropagation();"><span class="bullet-num">03</span><span class="bullet-text">⏱️ 오늘의 목표 · 핵심 비유는 토킹헤드 전문 셰프(Seedance 2</span><span class="bullet-arrow">→</span><div class="bullet-detail">핵심 비유는 &quot;토킹헤드 전문 셰프&quot;(Seedance 2.0).</div></li></ul>
+      </div>
+      <div class="section-foot">
+        <div class="audio-bars"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
+        <div class="foot-tag">META</div>
+      </div>
+          <details class="teacher-note" open>
+        <summary>📝 강사 노트</summary>
+        <div class="note-body">
+          <div class="note-script">
+            <div class="note-script-text">이번 파트는 힉스필드 풀코스 10강. 30분 동안 진행해요. 핵심 비유는 "토킹헤드 전문 셰프"(Seedance 2.0). 가상 클라이언트는 D 트레이너님이에요. 사람이 말하는 영상에 입 모양까지 맞춰주는 마법 셰프, 같이 만나봐요. 시작합니다.</div>
+          </div>
+        </div>
+      </details>
+    </section>
+    <section class="slide slide-section" data-slide="2" data-diagram="overview" data-duration="120">
+      <div class="section-head">
+        <div class="section-kicker reveal">OVERVIEW · 한눈 요약</div>
+        <div class="section-counter reveal">00 / 00</div>
+      </div>
+      <div class="section-grid">
+        <h2 class="section-title"></h2>
+        <div class="section-visual reveal" style="transition-delay:0.3s"><svg viewBox="0 0 400 260" class="infographic">
+  <defs>
+    <radialGradient id="g2" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#e2c793" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#e2c793" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <circle cx="200" cy="130" r="80" fill="url(#g2)" stroke="#3a3730" stroke-width="1"/>
+  <circle cx="200" cy="130" r="50" fill="none" stroke="#e2c793" stroke-width="1.5"/>
+  <text x="200" y="138" text-anchor="middle" font-size="28" font-weight="900" fill="#e2c793">3/5</text>
+  <text x="200" y="220" text-anchor="middle" font-size="11" fill="#7a7666">OVERVIEW · </text>
+  <line x1="60" y1="240" x2="340" y2="240" stroke="#3a3730" stroke-width="1"/>
+</svg></div>
+        <ul class="bullet-list"><li class="tilt-card reveal" style="transition-delay:0.00s" onclick="event.stopPropagation();"><span class="bullet-num">01</span><span class="bullet-text">📋 수업 흐름 · 오늘 만들 것 3가지예요.</span><span class="bullet-arrow">→</span><div class="bullet-detail">오늘 만들 것 3가지예요.</div></li><li class="tilt-card reveal" style="transition-delay:0.12s" onclick="event.stopPropagation();"><span class="bullet-num">02</span><span class="bullet-text">🎤 핵심 비유 · 첫째, Seedance 2.0(시드댄스 2.0 · By</span><span class="bullet-arrow">→</span><div class="bullet-detail">첫째, Seedance 2.0(시드댄스 2.0 · Bytedance 영상 모델)이 왜 토킹헤드(Talking Head · 사람이 말하는 영상)에 강한 셰프인지 짚을 거예요.</div></li><li class="tilt-card reveal" style="transition-delay:0.24s" onclick="event.stopPropagation();"><span class="bullet-num">03</span><span class="bullet-text">🚀 결과물 목표 · 둘째, Audio(오디오 · 음성·음악) 메뉴와 결합해</span><span class="bullet-arrow">→</span><div class="bullet-detail">둘째, Audio(오디오 · 음성·음악) 메뉴와 결합해서 입 모양 자동 동기화(립싱크)되는 영상을 만들 거예요.</div></li></ul>
+      </div>
+      <div class="section-foot">
+        <div class="audio-bars"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
+        <div class="foot-tag">OVERVIEW</div>
+      </div>
+          <details class="teacher-note" open>
+        <summary>📝 강사 노트</summary>
+        <div class="note-body">
+          <div class="note-script">
+            <div class="note-script-text">오늘 만들 것 3가지예요. 첫째, Seedance 2.0(시드댄스 2.0 · Bytedance 영상 모델)이 왜 토킹헤드(Talking Head · 사람이 말하는 영상)에 강한 셰프인지 짚을 거예요. 둘째, Audio(오디오 · 음성·음악) 메뉴와 결합해서 입 모양 자동 동기화(립싱크)되는 영상을 만들 거예요. 셋째, D 트레이너 페르소나로 5~8초짜리 운동 시연 토킹헤드 영상을 9:16 세로 액자로 받을 거예요.</div>
+          </div>
+        </div>
+      </details>
+    </section>
+    <section class="slide slide-section" data-slide="3" data-diagram="hook" data-duration="120">
+      <div class="section-head">
+        <div class="section-kicker reveal">HOOK · 오프닝 훅</div>
+        <div class="section-counter reveal">03 / 05</div>
+      </div>
+      <div class="section-grid">
+        <h2 class="section-title"></h2>
+        <div class="section-visual reveal" style="transition-delay:0.3s"><svg viewBox="0 0 400 260" class="infographic">
+  <defs>
+    <radialGradient id="g3" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#e2c793" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#e2c793" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <circle cx="200" cy="130" r="80" fill="url(#g3)" stroke="#3a3730" stroke-width="1"/>
+  <circle cx="200" cy="130" r="50" fill="none" stroke="#e2c793" stroke-width="1.5"/>
+  <text x="200" y="138" text-anchor="middle" font-size="28" font-weight="900" fill="#e2c793">4/5</text>
+  <text x="200" y="220" text-anchor="middle" font-size="11" fill="#7a7666">HOOK · </text>
+  <line x1="60" y1="240" x2="340" y2="240" stroke="#3a3730" stroke-width="1"/>
+</svg></div>
+        <ul class="bullet-list"><li class="tilt-card reveal" style="transition-delay:0.00s" onclick="event.stopPropagation();"><span class="bullet-num">01</span><span class="bullet-text">💡 솔직히 · D 트레이너님이 9강 영상 만들어 보고 이런 생각 하셨</span><span class="bullet-arrow">→</span><div class="bullet-detail">D 트레이너님이 9강 영상 만들어 보고 이런 생각 하셨을 수 있어요.</div></li><li class="tilt-card reveal" style="transition-delay:0.12s" onclick="event.stopPropagation();"><span class="bullet-num">02</span><span class="bullet-text">⚡ 오늘의 시도 · 영상은 만들어졌는데, 사람이 말하는 영상은 어떻게 만</span><span class="bullet-arrow">→</span><div class="bullet-detail">&quot;영상은 만들어졌는데, 사람이 말하는 영상은 어떻게 만들어요?&quot; &quot;틱톡·인스타 보면 트레이너들이 운동 자세 설명하면서 말하는 영상 많잖아요.&quot; &quot;내가 직접 말하면서 찍기엔 부끄럽고, 시간도 없어요.&quot; 이 고민, 오늘 한 방에 풀려요.</div></li><li class="tilt-card reveal" style="transition-delay:0.24s" onclick="event.stopPropagation();"><span class="bullet-num">03</span><span class="bullet-text">🌿 부담 제로 · 힉스필드에 Seedance 2.0(시드댄스 2.0)이라</span><span class="bullet-arrow">→</span><div class="bullet-detail">힉스필드에 Seedance 2.0(시드댄스 2.0)이라는 셰프가 있어요.</div></li></ul>
+      </div>
+      <div class="section-foot">
+        <div class="audio-bars"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
+        <div class="foot-tag">HOOK</div>
+      </div>
+          <details class="teacher-note" open>
+        <summary>📝 강사 노트</summary>
+        <div class="note-body">
+          <div class="note-script">
+            <div class="note-script-text">D 트레이너님이 9강 영상 만들어 보고 이런 생각 하셨을 수 있어요. "영상은 만들어졌는데, 사람이 말하는 영상은 어떻게 만들어요?" "틱톡·인스타 보면 트레이너들이 운동 자세 설명하면서 말하는 영상 많잖아요." "내가 직접 말하면서 찍기엔 부끄럽고, 시간도 없어요." 이 고민, 오늘 한 방에 풀려요. 힉스필드에 Seedance 2.0(시드댄스 2.0)이라는 셰프가 있어요. 사람이 말하는 영상 — 토킹헤드(Talking Head) — 만드는 게 특기예요. 입 모양까지 자동으로 따라가요. 립싱크(Lip Sync · 입 모양 동기화)라고 부르는 기술이에요. 글로 대사 적어주면 셰프가 영상 + 음성 + 입 모양까지 한 번에 만들어줘요. 직접 말 안 해도, 카메라 안 봐도 운동 시연 영상 완성이에요. [CONCEPT 1] Seedance 2.0(시드댄스 2.0 · Bytedance 영상 모델)부터 짚을게요. Seedance는요. 중국 Bytedance(바이트댄스 · 틱톡 만든 회사)가 만든 영상 셰프예요. 힉스필드가 자기 주방에 모셔놨어요. 이 셰프 특기 세 가지 있어요. 첫째, 토킹헤드 영상에 강해요. 사람이 말하는 모습이 자연스러워요. 입 모양이 글에 맞춰 움직여요. 둘째, 오디오 동기화(Audio Sync). 영상과 음성을 같은 시간에 맞춰줘요. "안녕하세요" 한 번 말하는 동안 입이 정확히 그만큼 움직여요. 셋째, 4·8·12·15초 다양한 길이. 짧은 클립부터 좀 긴 영상까지 다 만들어요. 힉스필드 메인 화면 액션 카드의 "Seedance 2.0 · Most advanced video model"이 이 셰프예요. 2026년 4월 출시 신규 셰프이고, "가장 진보된 영상 모델"이라는 자체 평가가 붙어있어요. [CONCEPT 2] 오디오 동기화(립싱크 · Lip Sync) 기술을 짚을게요. 립싱크는요. 영상 속 사람의 입 모양과 음성이 정확히 맞아떨어지는 기술이에요. 영화관에서 더빙판 영화 보면 가끔 입 모양과 한국어 음성이 안 맞아서 어색할 때 있죠. 그게 립싱크 안 된 상태예요. Seedance 2.0은 글로 적은 대사를 셰프가 음성으로 변환하면서 동시에 영상 속 입 모양도 그 음성에 맞춰 만들어요. "안녕하세요"라고 적어주면 영상 속 인물이 정확히 입 모양으로 "안녕하세요" 발음해요. 손님 영상으로 더빙하는 게 아니라, 처음부터 입 모양과 음성을 같이 만드는 거예요. 그래서 자연스러워요. [CONCEPT 3] Audio(오디오) 메뉴를 살짝 짚을게요. 2강에서 글로벌 네비 15개 익혔던 거 기억나시죠. 그중 4번째 "Audio" 메뉴가 있었어요. Audio는 음성·음악 만드는 메뉴예요. Seedance 2.0과 같이 쓸 수 있어요. 오늘은요. Seedance 2.0이 토킹헤드 만들면서 자체 음성 함께 만들어주기 때문에 Audio 메뉴를 직접 들어갈 필요 없어요. "내 목소리로 더빙하고 싶다"·"배경 음악 따로 깔고 싶다" 이런 경우에는 Audio 메뉴 활용해요. 오늘은 셰프가 자동으로 만드는 음성 그대로 써볼게요. 더 깊은 활용은 나중에 본인 페이스로 시도해보세요. [CONCEPT 4] 영상 길이 4·8·12·15초 선택을 짚을게요. 9강 Kling 3.0은 5초·10초·15초 옵션이 있었어요. Seedance 2.0은 4초·8초·12초·15초 옵션이에요. 좀 더 다양해요. 어떤 길이를 골라야 하나요? 틱톡·릴스용 짧은 클립 → 4초나 8초. 좀 더 자세히 설명하는 영상 → 12초나 15초. 크레딧 차감은 길수록 더 많이 들어요. 첫 시도는 4초나 8초로 짧게 가볍게 시작하세요. D 트레이너님 운동 시연이라면요. "한 동작 보여주기 + 짧은 멘트"는 8초로 충분해요. [CONCEPT 5] 대사 작성 가이드를 알려드릴게요. 토킹헤드 영상의 대사는 영상 길이에 맞춰 짧게 써야 해요. 1초당 약 2~3 단어가 자연스러워요. 8초 영상이면 약 16~24 단어 정도예요. "안녕하세요" + 짧은 한 문장이 8초에 딱 맞아요. 긴 대사 쓰면 영상 끝나기 전에 말이 안 끝나서 어색해요. 예시: "안녕하세요. 오늘은 스쿼트 정확한 자세 알려드릴게요." (약 18 단어 · 8초 적정) 운동 시연용이라면 "동작 이름 + 한 줄 핵심" 정도가 깔끔해요.</div>
+          </div>
+        </div>
+      </details>
+    </section>
+    <section class="slide slide-section" data-slide="4" data-diagram="recap" data-duration="120">
+      <div class="section-head">
+        <div class="section-kicker reveal">RECAP · 복습</div>
+        <div class="section-counter reveal">04 / 05</div>
+      </div>
+      <div class="section-grid">
+        <h2 class="section-title"></h2>
+        <div class="section-visual reveal" style="transition-delay:0.3s"><svg viewBox="0 0 400 260" class="infographic">
+  <defs>
+    <radialGradient id="g4" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#e2c793" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#e2c793" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <circle cx="200" cy="130" r="80" fill="url(#g4)" stroke="#3a3730" stroke-width="1"/>
+  <circle cx="200" cy="130" r="50" fill="none" stroke="#e2c793" stroke-width="1.5"/>
+  <text x="200" y="138" text-anchor="middle" font-size="28" font-weight="900" fill="#e2c793">5/5</text>
+  <text x="200" y="220" text-anchor="middle" font-size="11" fill="#7a7666">RECAP · </text>
+  <line x1="60" y1="240" x2="340" y2="240" stroke="#3a3730" stroke-width="1"/>
+</svg></div>
+        <ul class="bullet-list"><li class="tilt-card reveal" style="transition-delay:0.00s" onclick="event.stopPropagation();"><span class="bullet-num">01</span><span class="bullet-text">✅ 오늘 배운 것 · 오늘 한 일 정리할게요.</span><span class="bullet-arrow">→</span><div class="bullet-detail">오늘 한 일 정리할게요.</div></li><li class="tilt-card reveal" style="transition-delay:0.12s" onclick="event.stopPropagation();"><span class="bullet-num">02</span><span class="bullet-text">📌 체크포인트 · Seedance 2.0(시드댄스 2.0)은 Byteda</span><span class="bullet-arrow">→</span><div class="bullet-detail">Seedance 2.0(시드댄스 2.0)은 Bytedance(틱톡 만든 회사)가 만든 토킹헤드(Talking Head · 사람이 말하는 영상) 전문 셰프예요.</div></li><li class="tilt-card reveal" style="transition-delay:0.24s" onclick="event.stopPropagation();"><span class="bullet-num">03</span><span class="bullet-text">💾 저장 포인트 · 입 모양 자동 동기화(립싱크) 기술로 글로 적은 대사와</span><span class="bullet-arrow">→</span><div class="bullet-detail">입 모양 자동 동기화(립싱크) 기술로 글로 적은 대사와 입 모양이 정확히 맞아요.</div></li></ul>
+      </div>
+      <div class="section-foot">
+        <div class="audio-bars"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
+        <div class="foot-tag">RECAP</div>
+      </div>
+          <details class="teacher-note" open>
+        <summary>📝 강사 노트</summary>
+        <div class="note-body">
+          <div class="note-script">
+            <div class="note-script-text">오늘 한 일 정리할게요. 첫째. Seedance 2.0(시드댄스 2.0)은 Bytedance(틱톡 만든 회사)가 만든 토킹헤드(Talking Head · 사람이 말하는 영상) 전문 셰프예요. 입 모양 자동 동기화(립싱크) 기술로 글로 적은 대사와 입 모양이 정확히 맞아요. 둘째. D 트레이너 페르소나로 한국어 프롬프트 + 대사 + 9:16 + 8초 = 토킹헤드 운동 시연 영상 1편 받았어요. 결과물 누적 7번 ✓ (영상 ACT 2번째 영상). 셋째. 대사는 영상 길이에 맞춰 짧게 — 8초 영상이면 약 16~24 단어 정도. 1초당 2~3 단어가 자연스러워요. 짧은 멘트 1~2 문장이 토킹헤드 황금 분량이에요.</div>
+          </div>
+        </div>
+      </details>
+    </section>
+    <section class="slide slide-section" data-slide="5" data-diagram="bridge" data-duration="120">
+      <div class="section-head">
+        <div class="section-kicker reveal">BRIDGE · 다음 악장</div>
+        <div class="section-counter reveal">05 / 05</div>
+      </div>
+      <div class="section-grid">
+        <h2 class="section-title"></h2>
+        <div class="section-visual reveal" style="transition-delay:0.3s"><svg viewBox="0 0 400 260" class="infographic">
+  <defs>
+    <radialGradient id="g5" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#e2c793" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#e2c793" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <circle cx="200" cy="130" r="80" fill="url(#g5)" stroke="#3a3730" stroke-width="1"/>
+  <circle cx="200" cy="130" r="50" fill="none" stroke="#e2c793" stroke-width="1.5"/>
+  <text x="200" y="138" text-anchor="middle" font-size="28" font-weight="900" fill="#e2c793">6/5</text>
+  <text x="200" y="220" text-anchor="middle" font-size="11" fill="#7a7666">BRIDGE · </text>
+  <line x1="60" y1="240" x2="340" y2="240" stroke="#3a3730" stroke-width="1"/>
+</svg></div>
+        <ul class="bullet-list"><li class="tilt-card reveal" style="transition-delay:0.00s" onclick="event.stopPropagation();"><span class="bullet-num">01</span><span class="bullet-text">🚪 다음 회차 예고 · 다음 시간엔 영화 같은 시네마틱 영상 만들어볼게요.</span><span class="bullet-arrow">→</span><div class="bullet-detail">다음 시간엔 영화 같은 시네마틱 영상 만들어볼게요.</div></li><li class="tilt-card reveal" style="transition-delay:0.12s" onclick="event.stopPropagation();"><span class="bullet-num">02</span><span class="bullet-text">🔜 연결 고리 · A 카페 사장 페르소나로 다시 돌아가요.</span><span class="bullet-arrow">→</span><div class="bullet-detail">A 카페 사장 페르소나로 다시 돌아가요.</div></li><li class="tilt-card reveal" style="transition-delay:0.24s" onclick="event.stopPropagation();"><span class="bullet-num">03</span><span class="bullet-text">🎁 미리 준비 · 카페 쇼츠 영상 영화관에서 보는 것처럼 멋지게 만들고</span><span class="bullet-arrow">→</span><div class="bullet-detail">&quot;카페 쇼츠 영상 영화관에서 보는 것처럼 멋지게 만들고 싶은데&quot; — 이 고민 다음 회차에서 풀어봐요.</div></li></ul>
+      </div>
+      <div class="section-foot">
+        <div class="audio-bars"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
+        <div class="foot-tag">BRIDGE</div>
+      </div>
+          <details class="teacher-note" open>
+        <summary>📝 강사 노트</summary>
+        <div class="note-body">
+          <div class="note-script">
+            <div class="note-script-text">다음 시간엔 영화 같은 시네마틱 영상 만들어볼게요. A 카페 사장 페르소나로 다시 돌아가요. "카페 쇼츠 영상 영화관에서 보는 것처럼 멋지게 만들고 싶은데" — 이 고민 다음 회차에서 풀어봐요. Sora 2(소라 2 · OpenAI 영상 모델)라는 셰프를 만나볼 거예요. 할리우드 영화처럼 시네마틱한 영상이 특기예요. 다만 비싼 셰프예요. 영상 1편 = 40~70크레딧 ⚠️ 들어요. 9강 Kling(6크레딧)·10강 Seedance(8~15크레딧)보다 5~10배 비싸요. 가격 차이 이해하면서 신중하게 1편 만드는 회차로 진행해요. 유튜브 쇼츠 9:16으로 시네마틱 60초 영상 받아봐요. 다음 회차에서 만나요.</div>
+          </div>
+        </div>
+      </details>
+    </section>
+    <section class="slide slide-outro" data-slide="6">
+      <div class="outro-radial"></div>
+      <div class="outro-kicker reveal">END OF PART 10</div>
+      <h2 class="outro-title reveal" style="transition-delay:0.15s">Seedance 틱톡 립싱크 마무리</h2>
+      <div class="outro-sub reveal" style="transition-delay:0.3s">NEXT · Part 11 · Sora 유튜브 쇼츠</div>
+      <div class="outro-actions reveal" style="transition-delay:0.5s">
+        <a class="btn btn-ghost" href="../index.html">← 전체 목차</a>
+        <button class="btn btn-gold" onclick="goFirst()">처음으로 ↺</button>
+        <a class="btn btn-gold" href="../../11강_Sora_2_유튜브_쇼츠/PPT/part-11.html">다음으로 →</a>
+      </div>
+    </section>
+</main>
+
+<div class="controls">
+  <button class="ctl-btn" onclick="prev()" title="이전 슬라이드">◀</button>
+  <div class="counter"><span id="counter">01</span> / <span id="total">7</span></div>
+  <button class="ctl-btn" onclick="next()" title="다음 슬라이드">▶</button>
+  <button class="ctl-btn" onclick="toggleThumbs()" title="썸네일 (T)">🎴</button>
+  <button class="ctl-btn" onclick="toggleHelp()" title="도움말 (?)">?</button>
+  <button class="ctl-btn" onclick="toggleFullscreen()" title="전체화면 (F)">⛶</button>
+</div>
+
+<div class="thumb-strip" id="thumbStrip">
+  <div class="thumb-strip-inner" id="thumbInner">
+    <div class="thumb" data-idx="0"><span class="thumb-num">01</span><span class="thumb-label">COVER</span></div><div class="thumb" data-idx="1"><span class="thumb-num">02</span><span class="thumb-label">META</span></div><div class="thumb" data-idx="2"><span class="thumb-num">03</span><span class="thumb-label">OVERVIEW</span></div><div class="thumb" data-idx="3"><span class="thumb-num">04</span><span class="thumb-label">HOOK</span></div><div class="thumb" data-idx="4"><span class="thumb-num">05</span><span class="thumb-label">RECAP</span></div><div class="thumb" data-idx="5"><span class="thumb-num">06</span><span class="thumb-label">BRIDGE</span></div><div class="thumb" data-idx="6"><span class="thumb-num">07</span><span class="thumb-label">END</span></div>
+  </div>
+</div>
+
+<div class="help-overlay" id="helpOverlay">
+  <div class="help-card">
+    <h3>키보드 단축키</h3>
+    <ul>
+      <li><kbd>←</kbd> / <kbd>→</kbd> 슬라이드 이동</li>
+      <li><kbd>Space</kbd> / <kbd>Backspace</kbd> 문장 다음/이전</li>
+      <li><kbd>F</kbd> 전체화면</li>
+      <li><kbd>T</kbd> 썸네일</li>
+      <li><kbd>N</kbd> 강사 노트 토글</li>
+      <li><kbd>?</kbd> 도움말</li>
+    </ul>
+    <button onclick="toggleHelp()">닫기</button>
+  </div>
+</div>
+
+<footer class="page-footer">© PajamaBoss · 힉스필드 풀코스 · ACT 3 · 영상</footer>
+
+<script src="../../assets/common.js"></script>
+</body>
+</html>

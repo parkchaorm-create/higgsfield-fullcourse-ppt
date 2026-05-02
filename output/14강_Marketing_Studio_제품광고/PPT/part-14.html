@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Part 14 · Marketing Studio 제품광고 — 힉스필드 풀코스</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css">
+<link rel="stylesheet" href="../../assets/common.css">
+</head>
+<body class="teacher-view" data-bg-mode="CONSTELLATION">
+
+<canvas id="bgcanvas"></canvas>
+<div class="dot-grid"></div>
+<div class="vignette"></div>
+<div class="cursor-dot" id="cursorDot"></div>
+<div class="cursor-ring" id="cursorRing"></div>
+
+<div class="topbar">
+  <div class="brand">HIGGSFIELD · 풀코스</div>
+  <div class="topbar-center">PART 14 · Marketing Studio 제품광고</div>
+  <div class="topbar-right">
+    <button id="projectorBtn" type="button" onclick="window.openProjectorWindow()" style="display:none;" title="프로젝터용 수강생 창 새로 열기">📺 프로젝터</button>
+    <a class="nav-arrow" href="../../13강_Cinema_Studio_시네마틱/PPT/part-13.html" title="이전 회차">◀ PART 13</a>
+    <a class="nav-arrow" href="../../index.html">INDEX</a>
+    <a class="nav-arrow" href="../../15강_Marketing_Studio_UGC_Hermes/PPT/part-15.html" title="다음 회차">PART 15 ▶</a>
+  </div>
+</div>
+
+<div class="progress" id="progress"></div>
+
+<main class="deck" id="deck">
+    <section class="slide slide-cover" data-slide="0" data-duration="60">
+      <div class="cover-bg-shapes">
+        <svg class="float-shape fs1" viewBox="0 0 100 100"><polygon points="50,10 90,90 10,90" fill="none" stroke="#e2c793" stroke-width="1"/></svg>
+        <svg class="float-shape fs2" viewBox="0 0 100 100"><circle cx="50" cy="50" r="40" fill="none" stroke="#e2c793" stroke-width="1"/></svg>
+        <svg class="float-shape fs3" viewBox="0 0 100 100"><rect x="10" y="10" width="80" height="80" fill="none" stroke="#e2c793" stroke-width="1" transform="rotate(15 50 50)"/></svg>
+        <svg class="float-shape fs4" viewBox="0 0 100 100"><polygon points="50,5 95,30 95,70 50,95 5,70 5,30" fill="none" stroke="#e2c793" stroke-width="1"/></svg>
+      </div>
+      <div class="cover-kicker reveal">ACT 4 · 마케팅</div>
+      <div class="cover-number reveal" style="transition-delay:0.1s">PART 14</div>
+      <h1 class="cover-title typewriter-target" data-text="Marketing Studio 제품광고">&nbsp;</h1>
+      <div class="cover-sub reveal" style="transition-delay:0.6s">Marketing Studio · 제품 URL → 30초 광고</div>
+      <div class="cover-meta reveal" style="transition-delay:0.8s">
+        <span class="meta-dot"></span>
+        <span>인터랙티브 슬라이드 · 마우스·키보드로 조작</span>
+      </div>
+      <div class="cover-hint reveal" style="transition-delay:1s">⌨ <kbd>←</kbd><kbd>→</kbd> 슬라이드 · <kbd>Space</kbd>/<kbd>Backspace</kbd> 문장 다음/이전 · <kbd>F</kbd> 전체화면 · <kbd>N</kbd> 노트</div>
+    </section>
+    <section class="slide slide-section" data-slide="1" data-diagram="meta" data-duration="120">
+      <div class="section-head">
+        <div class="section-kicker reveal">META · 파트 메타</div>
+        <div class="section-counter reveal">01 / 05</div>
+      </div>
+      <div class="section-grid">
+        <h2 class="section-title"></h2>
+        <div class="section-visual reveal" style="transition-delay:0.3s"><svg viewBox="0 0 400 260" class="infographic">
+  <defs>
+    <radialGradient id="g1" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#e2c793" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#e2c793" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <circle cx="200" cy="130" r="80" fill="url(#g1)" stroke="#3a3730" stroke-width="1"/>
+  <circle cx="200" cy="130" r="50" fill="none" stroke="#e2c793" stroke-width="1.5"/>
+  <text x="200" y="138" text-anchor="middle" font-size="28" font-weight="900" fill="#e2c793">2/5</text>
+  <text x="200" y="220" text-anchor="middle" font-size="11" fill="#7a7666">META · </text>
+  <line x1="60" y1="240" x2="340" y2="240" stroke="#3a3730" stroke-width="1"/>
+</svg></div>
+        <ul class="bullet-list"><li class="tilt-card reveal" style="transition-delay:0.00s" onclick="event.stopPropagation();"><span class="bullet-num">01</span><span class="bullet-text">🎬 파트 메타 · 이번 파트는 힉스필드 풀코스 14강.</span><span class="bullet-arrow">→</span><div class="bullet-detail">이번 파트는 힉스필드 풀코스 14강.</div></li><li class="tilt-card reveal" style="transition-delay:0.12s" onclick="event.stopPropagation();"><span class="bullet-num">02</span><span class="bullet-text">🎯 핵심 비유 · 30분 동안 진행해요.</span><span class="bullet-arrow">→</span><div class="bullet-detail">30분 동안 진행해요.</div></li><li class="tilt-card reveal" style="transition-delay:0.24s" onclick="event.stopPropagation();"><span class="bullet-num">03</span><span class="bullet-text">⏱️ 오늘의 목표 · 핵심 비유는 1인 광고 대행사(Marketing S</span><span class="bullet-arrow">→</span><div class="bullet-detail">핵심 비유는 &quot;1인 광고 대행사&quot;(Marketing Studio).</div></li></ul>
+      </div>
+      <div class="section-foot">
+        <div class="audio-bars"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
+        <div class="foot-tag">META</div>
+      </div>
+          <details class="teacher-note" open>
+        <summary>📝 강사 노트</summary>
+        <div class="note-body">
+          <div class="note-script">
+            <div class="note-script-text">이번 파트는 힉스필드 풀코스 14강. 30분 동안 진행해요. 핵심 비유는 "1인 광고 대행사"(Marketing Studio). 가상 클라이언트는 C 식당 사장님이에요. 7강에서 4K 음식 사진, 12강에서 페북 광고 영상 6초 만들었던 그 페르소나 다시 돌아와요. 오늘은 Marketing Studio 첫 만남이에요. ACT 4(14~17강) 첫 회차예요. 시작합니다.</div>
+          </div>
+        </div>
+      </details>
+    </section>
+    <section class="slide slide-section" data-slide="2" data-diagram="overview" data-duration="120">
+      <div class="section-head">
+        <div class="section-kicker reveal">OVERVIEW · 한눈 요약</div>
+        <div class="section-counter reveal">00 / 00</div>
+      </div>
+      <div class="section-grid">
+        <h2 class="section-title"></h2>
+        <div class="section-visual reveal" style="transition-delay:0.3s"><svg viewBox="0 0 400 260" class="infographic">
+  <defs>
+    <radialGradient id="g2" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#e2c793" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#e2c793" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <circle cx="200" cy="130" r="80" fill="url(#g2)" stroke="#3a3730" stroke-width="1"/>
+  <circle cx="200" cy="130" r="50" fill="none" stroke="#e2c793" stroke-width="1.5"/>
+  <text x="200" y="138" text-anchor="middle" font-size="28" font-weight="900" fill="#e2c793">3/5</text>
+  <text x="200" y="220" text-anchor="middle" font-size="11" fill="#7a7666">OVERVIEW · </text>
+  <line x1="60" y1="240" x2="340" y2="240" stroke="#3a3730" stroke-width="1"/>
+</svg></div>
+        <ul class="bullet-list"><li class="tilt-card reveal" style="transition-delay:0.00s" onclick="event.stopPropagation();"><span class="bullet-num">01</span><span class="bullet-text">📋 수업 흐름 · 오늘 만들 것 3가지예요.</span><span class="bullet-arrow">→</span><div class="bullet-detail">오늘 만들 것 3가지예요.</div></li><li class="tilt-card reveal" style="transition-delay:0.12s" onclick="event.stopPropagation();"><span class="bullet-num">02</span><span class="bullet-text">🎤 핵심 비유 · 첫째, Marketing Studio(마케팅 스튜디오)</span><span class="bullet-arrow">→</span><div class="bullet-detail">첫째, Marketing Studio(마케팅 스튜디오)가 일반 영상 셰프와 어떻게 다른지, 왜 &quot;1인 광고 대행사&quot; 비유가 정확한지 짚을 거예요.</div></li><li class="tilt-card reveal" style="transition-delay:0.24s" onclick="event.stopPropagation();"><span class="bullet-num">03</span><span class="bullet-text">🚀 결과물 목표 · 둘째, 9가지 광고 모드(TV Spot·UGC·Tuto</span><span class="bullet-arrow">→</span><div class="bullet-detail">둘째, 9가지 광고 모드(TV Spot·UGC·Tutorial·Product Review·Unboxing·UGC Virtual Try-On·Hyper Motion·Pro Virtual Try-On·Wild Card) 중에서 첫 모드 고르는 법을 알아볼 거예요.</div></li></ul>
+      </div>
+      <div class="section-foot">
+        <div class="audio-bars"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
+        <div class="foot-tag">OVERVIEW</div>
+      </div>
+          <details class="teacher-note" open>
+        <summary>📝 강사 노트</summary>
+        <div class="note-body">
+          <div class="note-script">
+            <div class="note-script-text">오늘 만들 것 3가지예요. 첫째, Marketing Studio(마케팅 스튜디오)가 일반 영상 셰프와 어떻게 다른지, 왜 "1인 광고 대행사" 비유가 정확한지 짚을 거예요. 둘째, 9가지 광고 모드(TV Spot·UGC·Tutorial·Product Review·Unboxing·UGC Virtual Try-On·Hyper Motion·Pro Virtual Try-On·Wild Card) 중에서 첫 모드 고르는 법을 알아볼 거예요. 셋째, C 식당 메뉴 URL 1개를 입력해서 30초 페북 광고 영상이 자동 생성되는 마법을 체험할 거예요.</div>
+          </div>
+        </div>
+      </details>
+    </section>
+    <section class="slide slide-section" data-slide="3" data-diagram="hook" data-duration="120">
+      <div class="section-head">
+        <div class="section-kicker reveal">HOOK · 오프닝 훅</div>
+        <div class="section-counter reveal">03 / 05</div>
+      </div>
+      <div class="section-grid">
+        <h2 class="section-title"></h2>
+        <div class="section-visual reveal" style="transition-delay:0.3s"><svg viewBox="0 0 400 260" class="infographic">
+  <defs>
+    <radialGradient id="g3" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#e2c793" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#e2c793" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <circle cx="200" cy="130" r="80" fill="url(#g3)" stroke="#3a3730" stroke-width="1"/>
+  <circle cx="200" cy="130" r="50" fill="none" stroke="#e2c793" stroke-width="1.5"/>
+  <text x="200" y="138" text-anchor="middle" font-size="28" font-weight="900" fill="#e2c793">4/5</text>
+  <text x="200" y="220" text-anchor="middle" font-size="11" fill="#7a7666">HOOK · </text>
+  <line x1="60" y1="240" x2="340" y2="240" stroke="#3a3730" stroke-width="1"/>
+</svg></div>
+        <ul class="bullet-list"><li class="tilt-card reveal" style="transition-delay:0.00s" onclick="event.stopPropagation();"><span class="bullet-num">01</span><span class="bullet-text">💡 솔직히 · C 식당 사장님이 12강에서 페북 광고 영상 6초 만들</span><span class="bullet-arrow">→</span><div class="bullet-detail">C 식당 사장님이 12강에서 페북 광고 영상 6초 만들고 이런 생각 하셨을 수 있어요.</div></li><li class="tilt-card reveal" style="transition-delay:0.12s" onclick="event.stopPropagation();"><span class="bullet-num">02</span><span class="bullet-text">⚡ 오늘의 시도 · 6초 영상은 만들었는데, 진짜 광고는 30초 정도 길</span><span class="bullet-arrow">→</span><div class="bullet-detail">&quot;6초 영상은 만들었는데, 진짜 광고는 30초 정도 길지 않나요?&quot; &quot;30초 광고는 음식 보여주기 + 가게 소개 + 문구 + 가격 표시 다 들어가야 하잖아요.&quot; &quot;이걸 다 한 번에 만들 수 있는 도구가 있나요?&quot; 이 고민, 오늘 한 방에 풀려요.</div></li><li class="tilt-card reveal" style="transition-delay:0.24s" onclick="event.stopPropagation();"><span class="bullet-num">03</span><span class="bullet-text">🌿 부담 제로 · 힉스필드에 Marketing Studio(마케팅 스튜디</span><span class="bullet-arrow">→</span><div class="bullet-detail">힉스필드에 Marketing Studio(마케팅 스튜디오)라는 메뉴가 있어요.</div></li></ul>
+      </div>
+      <div class="section-foot">
+        <div class="audio-bars"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
+        <div class="foot-tag">HOOK</div>
+      </div>
+          <details class="teacher-note" open>
+        <summary>📝 강사 노트</summary>
+        <div class="note-body">
+          <div class="note-script">
+            <div class="note-script-text">C 식당 사장님이 12강에서 페북 광고 영상 6초 만들고 이런 생각 하셨을 수 있어요. "6초 영상은 만들었는데, 진짜 광고는 30초 정도 길지 않나요?" "30초 광고는 음식 보여주기 + 가게 소개 + 문구 + 가격 표시 다 들어가야 하잖아요." "이걸 다 한 번에 만들 수 있는 도구가 있나요?" 이 고민, 오늘 한 방에 풀려요. 힉스필드에 Marketing Studio(마케팅 스튜디오)라는 메뉴가 있어요. "1인 광고 대행사"라는 비유가 정확한 메뉴예요. "내 제품 URL 줄게" 한 마디만 하면 셰프가 알아서 광고 영상부터 카피·문구까지 다 만들어줘요. 13강 Cinema Studio가 카메라 컨트롤 메뉴였다면, Marketing Studio는 광고 한 세트 자동 생성 메뉴예요. 힉스필드 메인 화면 7개 액션 카드 중 "Marketing Studio · Launch full campaigns from one prompt" 카드 봤었죠. 그 메뉴예요. "New" 배지가 붙어있어요. 2026년 4월 신규 출시된 메뉴이고, 광고 자동화의 미래를 보는 회차예요. [CONCEPT 1] Marketing Studio(마케팅 스튜디오 · 광고 자동 생성 메뉴)부터 짚을게요. Marketing Studio는요. 힉스필드 자체에서 만든 광고 자동화 메뉴예요. 일반 영상 셰프(9~13강)와 어떻게 다르냐면요. 일반 셰프는 "프롬프트 한 줄 → 영상 1편" 방식이었어요. 영상 1편이 결과물이에요. Marketing Studio는 "제품 URL 1개 → 광고 캠페인 한 세트" 방식이에요. 광고 영상 + 광고 카피 + 광고 문구 + 종횡비별 변형까지 한 번에 나와요. "1인 광고 대행사"라는 비유가 그래서 정확해요. 제품 URL만 던져주면 광고 대행사 한 명이 다 처리해주는 거예요. 힉스필드 글로벌 네비 9번째 메뉴이고, "New" 배지가 붙어있어요. 2026년 4월 출시된 신규 메뉴예요. [CONCEPT 2] 좌측 9번 메뉴 클릭부터 짚을게요. 2강에서 글로벌 네비 15개 익혔던 거 기억나시죠. 그중 9번째 메뉴가 "Marketing Studio · New"였어요. 오늘 그 메뉴를 처음으로 직접 들어가보는 거예요. "New" 배지는 신규 출시된 기능이라는 뜻이에요. 힉스필드는 빠르게 발전 중이라 "New" 배지 붙은 메뉴들이 종종 추가돼요. Marketing Studio·Canvas·MCP 3개 메뉴가 현재 "New" 배지를 갖고 있어요. 이 메뉴들은 사용법이 자주 바뀔 수 있으니 한 번 익혀놓고 6개월 정도 후에 다시 확인하는 습관이 좋아요. [CONCEPT 3] 9가지 광고 모드를 짚을게요. Marketing Studio에 들어가면 9가지 광고 모드가 보여요. 첫째, TV Spot(TV 스팟 · 30초 TV 광고 형식). 임팩트 강한 광고용. 둘째, UGC(UGC · 친구가 직접 써본 후기 분위기). 광고 같지 않은 광고용. 셋째, Tutorial(튜토리얼 · 사용법 설명 광고). 도구·앱 광고용. 넷째, Product Review(프로덕트 리뷰 · 제품 후기 광고). 비교·리뷰 분위기용. 다섯째, Unboxing(언박싱 · 개봉기 광고). 패키지 강조 광고용. 여섯째, UGC Virtual Try-On(UGC 가상 착용). 의류·뷰티용. 일곱째, Hyper Motion(하이퍼 모션 · 역동적 영상). 스포츠·액션용. 여덟째, Pro Virtual Try-On(프로 가상 착용 · 16강에서 깊이 다룸). 의류·뷰티 전문용. 아홉째, Wild Card(와일드 카드 · 자유 모드). 위 8가지에 안 맞을 때. 오늘은 C 식당 메뉴 광고용으로 첫 모드 고를 거예요. 9가지 중 가장 무난한 건 "TV Spot" 또는 "Product Review"예요. [CONCEPT 4] 제품 URL 입력 → 자동 분석 흐름을 짚을게요. Marketing Studio 핵심 마법이 여기에 있어요. URL 1개 입력하면 셰프가 자동으로 4가지 일을 해요. 첫째, URL에 들어가서 페이지 자동 분석. 제품 이름·가격·설명·이미지 다 가져와요. 둘째, 광고 콘셉트 자동 추천. 제품 특성에 맞는 광고 분위기 제안해요. 셋째, 광고 영상 + 카피 동시 생성. 영상과 글이 같이 나와요. 넷째, 종횡비별 변형. 4:5(페북 광고)·9:16(인스타 릴스)·1:1(인스타 피드) 동시 변형. URL이 없는 경우엔요. 직접 제품 사진·설명 텍스트 입력해도 비슷하게 작동해요. C 식당 사장님은 카카오톡 채널·네이버 블로그·네이버 플레이스에 메뉴 정보 올려놓은 페이지가 있을 거예요. 그 URL 1개를 활용해요. [CONCEPT 5] 30초 광고 자동 생성 흐름을 짚을게요. URL 분석 → 콘셉트 추천 → 영상 + 카피 생성까지 약 5~10분 걸려요. 30초 광고 영상은 일반 영상 셰프 1편과 비교하면 약 2배 시간 더 걸려요. 크레딧도 일반 영상보다 좀 더 들어요. 약 50~100크레딧 정도예요. 근데 결과물이 영상 1편 + 광고 카피 3가지 + 종횡비 3가지 = 총 7개 결과물이에요. 1편당 평균 7~14크레딧이라 합리적이에요. 3강 크레딧 가계부 다시 떠올려봐요. Plus 정기권 1,000크레딧으로 한 달에 약 10~20개 광고 캠페인 만들 수 있다는 뜻이에요. 매주 1~2회 광고 캠페인 만드는 페이스라면 충분해요.</div>
+          </div>
+        </div>
+      </details>
+    </section>
+    <section class="slide slide-section" data-slide="4" data-diagram="recap" data-duration="120">
+      <div class="section-head">
+        <div class="section-kicker reveal">RECAP · 복습</div>
+        <div class="section-counter reveal">04 / 05</div>
+      </div>
+      <div class="section-grid">
+        <h2 class="section-title"></h2>
+        <div class="section-visual reveal" style="transition-delay:0.3s"><svg viewBox="0 0 400 260" class="infographic">
+  <defs>
+    <radialGradient id="g4" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#e2c793" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#e2c793" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <circle cx="200" cy="130" r="80" fill="url(#g4)" stroke="#3a3730" stroke-width="1"/>
+  <circle cx="200" cy="130" r="50" fill="none" stroke="#e2c793" stroke-width="1.5"/>
+  <text x="200" y="138" text-anchor="middle" font-size="28" font-weight="900" fill="#e2c793">5/5</text>
+  <text x="200" y="220" text-anchor="middle" font-size="11" fill="#7a7666">RECAP · </text>
+  <line x1="60" y1="240" x2="340" y2="240" stroke="#3a3730" stroke-width="1"/>
+</svg></div>
+        <ul class="bullet-list"><li class="tilt-card reveal" style="transition-delay:0.00s" onclick="event.stopPropagation();"><span class="bullet-num">01</span><span class="bullet-text">✅ 오늘 배운 것 · 오늘 한 일 정리할게요.</span><span class="bullet-arrow">→</span><div class="bullet-detail">오늘 한 일 정리할게요.</div></li><li class="tilt-card reveal" style="transition-delay:0.12s" onclick="event.stopPropagation();"><span class="bullet-num">02</span><span class="bullet-text">📌 체크포인트 · Marketing Studio(마케팅 스튜디오)는 힉스</span><span class="bullet-arrow">→</span><div class="bullet-detail">Marketing Studio(마케팅 스튜디오)는 힉스필드 자체 광고 자동 생성 메뉴예요.</div></li><li class="tilt-card reveal" style="transition-delay:0.24s" onclick="event.stopPropagation();"><span class="bullet-num">03</span><span class="bullet-text">💾 저장 포인트 · 1인 광고 대행사 비유가 정확해요.</span><span class="bullet-arrow">→</span><div class="bullet-detail">&quot;1인 광고 대행사&quot; 비유가 정확해요.</div></li></ul>
+      </div>
+      <div class="section-foot">
+        <div class="audio-bars"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
+        <div class="foot-tag">RECAP</div>
+      </div>
+          <details class="teacher-note" open>
+        <summary>📝 강사 노트</summary>
+        <div class="note-body">
+          <div class="note-script">
+            <div class="note-script-text">오늘 한 일 정리할게요. 첫째. Marketing Studio(마케팅 스튜디오)는 힉스필드 자체 광고 자동 생성 메뉴예요. "1인 광고 대행사" 비유가 정확해요. 일반 영상 셰프(9~13강)는 "프롬프트 → 영상 1편" 방식이었지만 Marketing Studio는 "URL 1개 → 광고 영상 + 카피 + 종횡비 변형" 한 세트 방식이에요. 글로벌 네비 9번째 메뉴, "New" 배지 붙어있어요. 둘째. 9가지 광고 모드(TV Spot·UGC·Tutorial·Product Review·Unboxing·UGC Virtual Try-On·Hyper Motion·Pro Virtual Try-On·Wild Card) 중에서 첫 모드는 Product Review가 무난해요. UGC는 15강, Pro Virtual Try-On은 16강, TV Spot은 17강에서 더 깊이 다룰 거예요. 셋째. C 식당 메뉴 URL 입력 + Product Review 모드 + 4:5 + 30초 = 광고 영상 + 카피 3가지 + 종횡비 3가지 = 총 7개 결과물 한 번에 받았어요. 결과물 누적 11번 ✓ (Marketing Studio ACT 1번째 작품). 약 50~100크레딧 들어요. Plus 정기권으로 한 달 약 10~20 캠페인 가능해요.</div>
+          </div>
+        </div>
+      </details>
+    </section>
+    <section class="slide slide-section" data-slide="5" data-diagram="bridge" data-duration="120">
+      <div class="section-head">
+        <div class="section-kicker reveal">BRIDGE · 다음 악장</div>
+        <div class="section-counter reveal">05 / 05</div>
+      </div>
+      <div class="section-grid">
+        <h2 class="section-title"></h2>
+        <div class="section-visual reveal" style="transition-delay:0.3s"><svg viewBox="0 0 400 260" class="infographic">
+  <defs>
+    <radialGradient id="g5" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#e2c793" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#e2c793" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <circle cx="200" cy="130" r="80" fill="url(#g5)" stroke="#3a3730" stroke-width="1"/>
+  <circle cx="200" cy="130" r="50" fill="none" stroke="#e2c793" stroke-width="1.5"/>
+  <text x="200" y="138" text-anchor="middle" font-size="28" font-weight="900" fill="#e2c793">6/5</text>
+  <text x="200" y="220" text-anchor="middle" font-size="11" fill="#7a7666">BRIDGE · </text>
+  <line x1="60" y1="240" x2="340" y2="240" stroke="#3a3730" stroke-width="1"/>
+</svg></div>
+        <ul class="bullet-list"><li class="tilt-card reveal" style="transition-delay:0.00s" onclick="event.stopPropagation();"><span class="bullet-num">01</span><span class="bullet-text">🚪 다음 회차 예고 · 다음 시간엔 광고 같지 않은 광고 만들어볼게요.</span><span class="bullet-arrow">→</span><div class="bullet-detail">다음 시간엔 광고 같지 않은 광고 만들어볼게요.</div></li><li class="tilt-card reveal" style="transition-delay:0.12s" onclick="event.stopPropagation();"><span class="bullet-num">02</span><span class="bullet-text">🔜 연결 고리 · D 트레이너 페르소나로 다시 돌아가요.</span><span class="bullet-arrow">→</span><div class="bullet-detail">D 트레이너 페르소나로 다시 돌아가요.</div></li><li class="tilt-card reveal" style="transition-delay:0.24s" onclick="event.stopPropagation();"><span class="bullet-num">03</span><span class="bullet-text">🎁 미리 준비 · 5강 Soul ID·10강 Seedance에서 만난 그</span><span class="bullet-arrow">→</span><div class="bullet-detail">5강 Soul ID·10강 Seedance에서 만난 그 페르소나예요.</div></li></ul>
+      </div>
+      <div class="section-foot">
+        <div class="audio-bars"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
+        <div class="foot-tag">BRIDGE</div>
+      </div>
+          <details class="teacher-note" open>
+        <summary>📝 강사 노트</summary>
+        <div class="note-body">
+          <div class="note-script">
+            <div class="note-script-text">다음 시간엔 광고 같지 않은 광고 만들어볼게요. D 트레이너 페르소나로 다시 돌아가요. 5강 Soul ID·10강 Seedance에서 만난 그 페르소나예요. "광고 같이 안 보이는 광고가 더 효과 좋다는데, 어떻게 만들어요?" — 이 마법, 다음 회차에서 풀어봐요. UGC(User Generated Content · 사용자가 직접 만든 듯한 콘텐츠) 모드와 Hermes Agent(헤르메스 에이전트 · UGC 트렌드 자동 분석)를 만나볼 거예요. Hermes Agent는 2026년 4월에 출시된 신규 기능이에요. 틱톡·인스타 트렌드를 매일 스캔해서 알려주는 트렌드 헌터예요. 틱톡 9:16 액자로 트레이너 UGC 광고 1편 받아봐요. 다음 회차에서 만나요.</div>
+          </div>
+        </div>
+      </details>
+    </section>
+    <section class="slide slide-outro" data-slide="6">
+      <div class="outro-radial"></div>
+      <div class="outro-kicker reveal">END OF PART 14</div>
+      <h2 class="outro-title reveal" style="transition-delay:0.15s">Marketing Studio 제품광고 마무리</h2>
+      <div class="outro-sub reveal" style="transition-delay:0.3s">NEXT · Part 15 · Marketing Studio UGC</div>
+      <div class="outro-actions reveal" style="transition-delay:0.5s">
+        <a class="btn btn-ghost" href="../index.html">← 전체 목차</a>
+        <button class="btn btn-gold" onclick="goFirst()">처음으로 ↺</button>
+        <a class="btn btn-gold" href="../../15강_Marketing_Studio_UGC_Hermes/PPT/part-15.html">다음으로 →</a>
+      </div>
+    </section>
+</main>
+
+<div class="controls">
+  <button class="ctl-btn" onclick="prev()" title="이전 슬라이드">◀</button>
+  <div class="counter"><span id="counter">01</span> / <span id="total">7</span></div>
+  <button class="ctl-btn" onclick="next()" title="다음 슬라이드">▶</button>
+  <button class="ctl-btn" onclick="toggleThumbs()" title="썸네일 (T)">🎴</button>
+  <button class="ctl-btn" onclick="toggleHelp()" title="도움말 (?)">?</button>
+  <button class="ctl-btn" onclick="toggleFullscreen()" title="전체화면 (F)">⛶</button>
+</div>
+
+<div class="thumb-strip" id="thumbStrip">
+  <div class="thumb-strip-inner" id="thumbInner">
+    <div class="thumb" data-idx="0"><span class="thumb-num">01</span><span class="thumb-label">COVER</span></div><div class="thumb" data-idx="1"><span class="thumb-num">02</span><span class="thumb-label">META</span></div><div class="thumb" data-idx="2"><span class="thumb-num">03</span><span class="thumb-label">OVERVIEW</span></div><div class="thumb" data-idx="3"><span class="thumb-num">04</span><span class="thumb-label">HOOK</span></div><div class="thumb" data-idx="4"><span class="thumb-num">05</span><span class="thumb-label">RECAP</span></div><div class="thumb" data-idx="5"><span class="thumb-num">06</span><span class="thumb-label">BRIDGE</span></div><div class="thumb" data-idx="6"><span class="thumb-num">07</span><span class="thumb-label">END</span></div>
+  </div>
+</div>
+
+<div class="help-overlay" id="helpOverlay">
+  <div class="help-card">
+    <h3>키보드 단축키</h3>
+    <ul>
+      <li><kbd>←</kbd> / <kbd>→</kbd> 슬라이드 이동</li>
+      <li><kbd>Space</kbd> / <kbd>Backspace</kbd> 문장 다음/이전</li>
+      <li><kbd>F</kbd> 전체화면</li>
+      <li><kbd>T</kbd> 썸네일</li>
+      <li><kbd>N</kbd> 강사 노트 토글</li>
+      <li><kbd>?</kbd> 도움말</li>
+    </ul>
+    <button onclick="toggleHelp()">닫기</button>
+  </div>
+</div>
+
+<footer class="page-footer">© PajamaBoss · 힉스필드 풀코스 · ACT 4 · 마케팅</footer>
+
+<script src="../../assets/common.js"></script>
+</body>
+</html>
