@@ -147,22 +147,153 @@ function makeBullets(section, sessionShort) {
   return bullets;
 }
 
-// 회차별 단순 SVG (배경 모드별 변형)
-function makeSvg(section, idx, total) {
-  const colors = ['#e2c793', '#F7F0DF', '#7a7666', '#3a3730'];
-  const num = idx + 1;
+// 회차별 SVG · 섹션 타입별 5종 차별화 (META=동심원·HOOK=비교·CONCEPT=플로우·RECAP=체크·BRIDGE=화살표)
+function makeSvg(section, idx, total, sessionShort = '') {
+  const tag = (section.title || '').substring(0, 36).replace(/&/g, '&amp;').replace(/</g, '&lt;');
+  switch (section.diagram) {
+    case 'meta':
+    case 'overview':
+      return svgMeta(idx, tag, sessionShort);
+    case 'hook':
+      return svgHook(idx, tag);
+    case 'concept':
+      return svgConcept(idx, tag);
+    case 'recap':
+      return svgRecap(idx, tag);
+    case 'bridge':
+      return svgBridge(idx, tag);
+    default:
+      return svgConcept(idx, tag);
+  }
+}
+
+// META · 동심원 + 4코너 메타박스 (시간·도구·목표·결과)
+function svgMeta(idx, tag, sessionShort) {
   return `<svg viewBox="0 0 400 260" class="infographic">
   <defs>
-    <radialGradient id="g${idx}" cx="50%" cy="50%" r="50%">
-      <stop offset="0%" stop-color="#e2c793" stop-opacity="0.3"/>
+    <radialGradient id="m${idx}" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#e2c793" stop-opacity="0.25"/>
       <stop offset="100%" stop-color="#e2c793" stop-opacity="0"/>
     </radialGradient>
   </defs>
-  <circle cx="200" cy="130" r="80" fill="url(#g${idx})" stroke="#3a3730" stroke-width="1"/>
-  <circle cx="200" cy="130" r="50" fill="none" stroke="#e2c793" stroke-width="1.5"/>
-  <text x="200" y="138" text-anchor="middle" font-size="28" font-weight="900" fill="#e2c793">${num}/${total}</text>
-  <text x="200" y="220" text-anchor="middle" font-size="11" fill="#7a7666">${section.diagram.toUpperCase()} · ${section.title.substring(0, 40)}</text>
-  <line x1="60" y1="240" x2="340" y2="240" stroke="#3a3730" stroke-width="1"/>
+  <circle cx="200" cy="130" r="70" fill="url(#m${idx})" stroke="#e2c793" stroke-width="1.2"/>
+  <circle cx="200" cy="130" r="42" fill="none" stroke="#3a3730" stroke-width="1" stroke-dasharray="2 3"/>
+  <text x="200" y="125" text-anchor="middle" font-size="13" font-weight="900" fill="#e2c793">${(sessionShort || '회차').substring(0, 14)}</text>
+  <text x="200" y="142" text-anchor="middle" font-size="10" fill="#F7F0DF">META · 30분</text>
+  <g font-size="10" fill="#F7F0DF">
+    <rect x="20" y="22" width="98" height="32" rx="4" fill="none" stroke="#3a3730"/>
+    <text x="30" y="42">⏱️ 시간 · 30분</text>
+    <rect x="282" y="22" width="98" height="32" rx="4" fill="none" stroke="#3a3730"/>
+    <text x="292" y="42">🎯 목표 · 1결과물</text>
+    <rect x="20" y="206" width="98" height="32" rx="4" fill="none" stroke="#3a3730"/>
+    <text x="30" y="226">🛠️ 도구 · 힉스필드</text>
+    <rect x="282" y="206" width="98" height="32" rx="4" fill="none" stroke="#3a3730"/>
+    <text x="292" y="226">📍 ${tag.substring(0, 6)}</text>
+  </g>
+</svg>`;
+}
+
+// HOOK · Before vs After 대비
+function svgHook(idx, tag) {
+  return `<svg viewBox="0 0 400 260" class="infographic">
+  <g transform="translate(80,90)">
+    <rect x="-50" y="-40" width="100" height="80" rx="6" fill="none" stroke="#7a7666" stroke-width="1.2"/>
+    <text x="0" y="-10" text-anchor="middle" font-size="11" fill="#7a7666">BEFORE</text>
+    <text x="0" y="14" text-anchor="middle" font-size="22">😵</text>
+    <text x="0" y="35" text-anchor="middle" font-size="9" fill="#7a7666">막막·복잡</text>
+  </g>
+  <g transform="translate(200,90)">
+    <text x="0" y="6" text-anchor="middle" font-size="32" fill="#e2c793" font-weight="900">→</text>
+  </g>
+  <g transform="translate(320,90)">
+    <rect x="-50" y="-40" width="100" height="80" rx="6" fill="#e2c793" fill-opacity="0.08" stroke="#e2c793" stroke-width="1.5"/>
+    <text x="0" y="-10" text-anchor="middle" font-size="11" fill="#e2c793">AFTER</text>
+    <text x="0" y="14" text-anchor="middle" font-size="22">✨</text>
+    <text x="0" y="35" text-anchor="middle" font-size="9" fill="#F7F0DF">한 번에 끝</text>
+  </g>
+  <line x1="50" y1="180" x2="350" y2="180" stroke="#3a3730" stroke-width="1"/>
+  <text x="200" y="210" text-anchor="middle" font-size="12" fill="#e2c793" font-weight="700">${tag}</text>
+  <text x="200" y="232" text-anchor="middle" font-size="10" fill="#7a7666">HOOK · 오프닝 훅</text>
+</svg>`;
+}
+
+// CONCEPT · 3단 플로우
+function svgConcept(idx, tag) {
+  return `<svg viewBox="0 0 400 260" class="infographic">
+  <g font-size="11" fill="#F7F0DF">
+    <g transform="translate(75,120)">
+      <circle r="32" fill="none" stroke="#e2c793" stroke-width="1.5"/>
+      <text y="-4" text-anchor="middle" font-size="16">📥</text>
+      <text y="14" text-anchor="middle" font-size="10">입력</text>
+    </g>
+    <g transform="translate(200,120)">
+      <circle r="36" fill="#e2c793" fill-opacity="0.1" stroke="#e2c793" stroke-width="2"/>
+      <text y="-2" text-anchor="middle" font-size="18">⚙️</text>
+      <text y="16" text-anchor="middle" font-size="10">변환</text>
+    </g>
+    <g transform="translate(325,120)">
+      <circle r="32" fill="none" stroke="#e2c793" stroke-width="1.5"/>
+      <text y="-4" text-anchor="middle" font-size="16">📤</text>
+      <text y="14" text-anchor="middle" font-size="10">결과</text>
+    </g>
+  </g>
+  <path d="M107 120 L164 120 M236 120 L293 120" stroke="#e2c793" stroke-width="1" stroke-dasharray="3 3"/>
+  <text x="200" y="60" text-anchor="middle" font-size="13" fill="#e2c793" font-weight="700">${tag}</text>
+  <text x="200" y="200" text-anchor="middle" font-size="10" fill="#7a7666">CONCEPT · 3단계 흐름</text>
+  <line x1="50" y1="220" x2="350" y2="220" stroke="#3a3730" stroke-width="1"/>
+</svg>`;
+}
+
+// RECAP · 체크리스트 4개
+function svgRecap(idx, tag) {
+  return `<svg viewBox="0 0 400 260" class="infographic">
+  <g font-size="11" fill="#F7F0DF">
+    <g transform="translate(60,60)">
+      <circle r="14" fill="#e2c793" fill-opacity="0.15" stroke="#e2c793" stroke-width="1.5"/>
+      <text y="5" text-anchor="middle" font-size="14" fill="#e2c793">✓</text>
+    </g>
+    <text x="84" y="65" font-size="11">핵심 1 · 도구 이해</text>
+    <g transform="translate(60,110)">
+      <circle r="14" fill="#e2c793" fill-opacity="0.15" stroke="#e2c793" stroke-width="1.5"/>
+      <text y="5" text-anchor="middle" font-size="14" fill="#e2c793">✓</text>
+    </g>
+    <text x="84" y="115" font-size="11">핵심 2 · 메뉴 위치</text>
+    <g transform="translate(60,160)">
+      <circle r="14" fill="#e2c793" fill-opacity="0.15" stroke="#e2c793" stroke-width="1.5"/>
+      <text y="5" text-anchor="middle" font-size="14" fill="#e2c793">✓</text>
+    </g>
+    <text x="84" y="165" font-size="11">핵심 3 · 첫 결과물</text>
+    <g transform="translate(60,210)">
+      <circle r="14" fill="none" stroke="#7a7666" stroke-width="1.5" stroke-dasharray="2 2"/>
+      <text y="5" text-anchor="middle" font-size="11" fill="#7a7666">→</text>
+    </g>
+    <text x="84" y="215" font-size="11" fill="#7a7666">다음 회차 · 응용</text>
+  </g>
+  <text x="200" y="30" text-anchor="middle" font-size="13" fill="#e2c793" font-weight="700">${tag}</text>
+  <text x="320" y="30" text-anchor="middle" font-size="10" fill="#7a7666">RECAP</text>
+</svg>`;
+}
+
+// BRIDGE · 다음 파트로 이어지는 화살표
+function svgBridge(idx, tag) {
+  return `<svg viewBox="0 0 400 260" class="infographic">
+  <g transform="translate(70,130)">
+    <rect x="-40" y="-30" width="80" height="60" rx="6" fill="none" stroke="#e2c793" stroke-width="1.5"/>
+    <text x="0" y="-8" text-anchor="middle" font-size="10" fill="#e2c793">현재</text>
+    <text x="0" y="12" text-anchor="middle" font-size="14">📍</text>
+    <text x="0" y="26" text-anchor="middle" font-size="9" fill="#F7F0DF">완주</text>
+  </g>
+  <path d="M120 130 Q200 90 280 130" stroke="#e2c793" stroke-width="2" fill="none" stroke-dasharray="6 4"/>
+  <text x="200" y="80" text-anchor="middle" font-size="11" fill="#e2c793">다음 무대</text>
+  <g transform="translate(330,130)">
+    <rect x="-40" y="-30" width="80" height="60" rx="6" fill="#e2c793" fill-opacity="0.15" stroke="#e2c793" stroke-width="2"/>
+    <text x="0" y="-8" text-anchor="middle" font-size="10" fill="#e2c793">다음</text>
+    <text x="0" y="12" text-anchor="middle" font-size="14">🚪</text>
+    <text x="0" y="26" text-anchor="middle" font-size="9" fill="#F7F0DF">시작</text>
+  </g>
+  <text x="200" y="200" text-anchor="middle" font-size="12" fill="#F7F0DF" font-weight="700">${tag}</text>
+  <text x="200" y="222" text-anchor="middle" font-size="10" fill="#7a7666">BRIDGE · 다음 악장</text>
+  <line x1="50" y1="240" x2="350" y2="240" stroke="#3a3730" stroke-width="1"/>
 </svg>`;
 }
 
@@ -187,10 +318,10 @@ function makeCoverSlide(session) {
     </section>`;
 }
 
-function makeSectionSlide(section, idx, total, slideIdx) {
+function makeSectionSlide(section, idx, total, slideIdx, sessionShort) {
   const bullets = makeBullets(section, section.title);
   const counter = section.diagram === 'overview' ? '00 / 00' : `${String(idx).padStart(2, '0')} / ${String(total).padStart(2, '0')}`;
-  const svg = makeSvg(section, idx, total);
+  const svg = makeSvg(section, idx, total, sessionShort);
   const bulletsHtml = bullets.map((b, i) =>
     `<li class="tilt-card reveal" style="transition-delay:${(i * 0.12).toFixed(2)}s" onclick="event.stopPropagation();"><span class="bullet-num">${b.num}</span><span class="bullet-text">${escapeHtml(b.text)}</span><span class="bullet-arrow">→</span><div class="bullet-detail">${escapeHtml(b.detail)}</div></li>`
   ).join('');
@@ -261,7 +392,7 @@ function buildHtml(session, sections) {
   let slideIdx = 1;
   const totalSections = sections.length;
   sections.forEach((sec, i) => {
-    slides.push(makeSectionSlide(sec, i + 1, totalSections, slideIdx));
+    slides.push(makeSectionSlide(sec, i + 1, totalSections, slideIdx, session.short));
     slideIdx++;
   });
   slides.push(makeOutroSlide(session, slideIdx));
