@@ -1,0 +1,62 @@
+{
+  "version": "1.0",
+  "locked_at": "2026-05-02",
+  "locked_by": "Phase 0-2 사전 설계 (8종 산출물)",
+  "policy": "1번 강의(claudecode-fullcourse)의 골든 디자인을 100% 복제. 불변 1·2·3·4 + bgcanvas + cursor + typewriter + 책갈피 단독 토글 + ?view 자동 전파 모두 그대로. 추후 수정 시 본 파일 재계산 + visual-language-meeting 재서명 + commit hash 기록 의무.",
+  "design_inheritance": {
+    "source": "1번 강의 (claudecode-fullcourse) 골든 산출물",
+    "common_assets_path": "starter/output/assets/common.css + common.js (단일 진실 공급원)",
+    "asset_prefix_for_new_lecture": "../../assets (lectures/힉스필드 풀코스/output/<NN>강_*/PPT/part-XX.html 기준)",
+    "rationale": "왕왕초보 강의이지만 디자인 시스템은 검증된 1번 강의 그대로. 차이는 콘텐츠 밀도(density-budget)와 톤(audience-tone) 만."
+  },
+  "files": [
+    {
+      "path": "starter/.claude/templates/part-01-golden/part-01.html",
+      "sha256": "44188001b9321b3bdcaacee80ce0a371d53cf650b8d1f78a4940a9b96a8975f6",
+      "size": 84965,
+      "role": "PPT 골든 템플릿 (구조 100% 복제 대상)"
+    },
+    {
+      "path": "starter/.claude/templates/index-golden/index.html",
+      "sha256": "46f2839a9711bc39b1dcd46a63d5fed363978b17527586c3c26ac6c51590feda",
+      "size": 41099,
+      "role": "index.html 골든 (859줄+ hero/card-grid/bgcanvas 패턴)"
+    },
+    {
+      "path": "starter/output/assets/common.css",
+      "sha256": "224e7c465a3053cdc8739b0f7392be4e456236dd1514d5fd4d6d8e02f06fb7bc",
+      "size": 40527,
+      "role": "공통 CSS (디자인 토큰·layout 토큰·강사 노트 v4)"
+    },
+    {
+      "path": "starter/output/assets/common.js",
+      "sha256": "70f3ca575b2363deeb4192520980acf8c83796da2b4151db3d2bf8bb03e19a8a",
+      "size": 33360,
+      "role": "공통 JS (불변 1·2·4 박제·노래방·4중 채널 동기화)"
+    },
+    {
+      "path": "starter/output/01강_클로드코드란/PPT/part-01.html",
+      "sha256": "4f0c4bd064d201eff0356f92a4eb3c7a818efa554a229ad556a2a1b1fb9593c1",
+      "size": 61314,
+      "role": "실전 사용 part-01.html (link 방식 슬림 템플릿)"
+    }
+  ],
+  "live_design_standard": {
+    "url": "https://parkchaorm-create.github.io/aiMarketer-ppt/02%EA%B0%95_%EC%95%84%EC%9D%B4%EB%8D%B4%ED%8B%B0%ED%8B%B0%EC%99%80_%EC%8A%A4%ED%86%A0%EB%A6%AC/part-01.html?view=teacher",
+    "verified_at": "2026-05-02",
+    "verified_components": [
+      "8 슬라이드 골든 (cover→overview→hook→concept×N→recap→bridge→outro)",
+      "📝 강사 노트 v4 상단 가로 띠 (top:0, width clamp 540~990px, height clamp 80~110px)",
+      "📺 프로젝터 버튼 + 4중 채널 동기화 (BroadcastChannel + postMessage + localStorage + MutationObserver)",
+      "← → F T ? N Space Backspace 키보드 단축키",
+      "© PajamaBoss footer",
+      "한글 폴더 GitHub Pages URL 인코딩 정상",
+      "?view=teacher / ?view=student 자동 전파 (불변 2)",
+      "Space 키 focus-button 자동 차단 (불변 1)",
+      "typewriter 폭 고정 opacity reveal (불변 3)",
+      "책갈피 토글 common.js 단독 (불변 4)"
+    ]
+  },
+  "verification_command": "cd starter && shasum -a 256 .claude/templates/part-01-golden/part-01.html .claude/templates/index-golden/index.html output/assets/common.css output/assets/common.js output/01강_클로드코드란/PPT/part-01.html | diff - <(jq -r '.files[] | \"\\(.sha256)  \\(.path | sub(\"^starter/\"; \"\"))\"' lectures/힉스필드\\ 풀코스/_design/reference-lock.json)",
+  "next_review": "2026-08-02 (3개월 또는 starter 골든 변경 시)"
+}

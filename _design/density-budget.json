@@ -1,0 +1,65 @@
+{
+  "purpose": "왕왕초보 강의용 슬라이드 타입별 정보 밀도 상한. bullet-writer / svg-designer는 상한 초과 시 실패 처리.",
+  "locked_at": "2026-05-02",
+  "audience": "왕왕초보 (50대 자영업자·1인 SNS 운영자·40대 마케터)",
+  "vs_lecture_1": "1번 강의 대비 bullet/svg-text 모두 1~2개 축소. 왕왕초보 인지부하 우선.",
+  "by_slide_type": {
+    "cover": {
+      "max_bullets": 0,
+      "max_svg_texts": 0,
+      "notes": "타이틀 + kicker + 부제 + meta 한 줄. typewriter Cover title 필수."
+    },
+    "overview": {
+      "max_bullets": 3,
+      "max_svg_texts": 6,
+      "notes": "오늘 만들 것 정확히 3줄. 결과물 채널·가상 클라이언트 명시. 4개+ 인지부하."
+    },
+    "metadata": {
+      "max_bullets": 0,
+      "max_svg_texts": 6,
+      "notes": "회차 메타 (시간·난이도·전제조건·결과물·핵심기능·가상클라). 텍스트 카드만."
+    },
+    "hook": {
+      "max_bullets": 2,
+      "max_svg_texts": 4,
+      "notes": "왕왕초보 max 2 (1번 강의 3에서 축소). 질문형 1개+ 필수. before/after 단순 시각."
+    },
+    "concept": {
+      "max_bullets": 2,
+      "max_svg_texts": 5,
+      "notes": "왕왕초보 max 2 · SVG text max 5 (1번 강의 4/8에서 축소). 한 슬라이드 = 한 핵심. 영어 메뉴명 첫 등장 시 한글 풀이 의무."
+    },
+    "recap": {
+      "max_bullets": 3,
+      "max_svg_texts": 3,
+      "notes": "성취감 위주. SVG는 카드 3개 가로 정렬 정도."
+    },
+    "bridge": {
+      "max_bullets": 1,
+      "max_svg_texts": 3,
+      "notes": "다음 회차 한 줄 예고 + 진행률(20회 중 N)만."
+    },
+    "outro": {
+      "max_bullets": 0,
+      "max_svg_texts": 4,
+      "notes": "타이틀 + 다음 파트 힌트 + 버튼 3개"
+    }
+  },
+  "global_constraints": {
+    "max_total_slides_per_part": 12,
+    "min_total_slides_per_part": 7,
+    "svg_viewbox": "0 0 400 260",
+    "svg_min_font_size": 11,
+    "svg_max_text_elements": 6,
+    "bullet_text_chars_min": 18,
+    "bullet_text_chars_max": 28,
+    "emoji_per_part_max": 8,
+    "english_in_svg": "단독 노출 금지 — 반드시 한글 병기"
+  },
+  "rationale": {
+    "왜 bullet 2": "왕왕초보는 동시 인지 가능 항목 2개. 3개부터 '읽다 까먹음' 발생 (박왕초 페르소나).",
+    "왜 SVG text 5": "GUI 도구 슬라이드는 메뉴명·아이콘·라벨이 자연 누적. 5 이상이면 시선 분산.",
+    "왜 emoji 8": "1번 강의는 회차 12분. 본 강의는 30분이지만 콘텐츠 단위 슬라이드는 더 작게 분할 → 부분당 동일.",
+    "왜 영어 단독 금지": "메뉴풀이사전 50개로 보강하지만 SVG는 시선이 즉각 — 한글 풀이 없으면 '뭔지 모르고 지나감'."
+  }
+}
