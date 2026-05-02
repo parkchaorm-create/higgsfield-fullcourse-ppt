@@ -3,6 +3,25 @@
   "name": "힉스필드 풀코스",
   "brand": "pajamaboss",
   "type": "유튜브 풀코스",
+  "delivery_channel": "유튜브 풀코스 롱폼 + 노션 자료실 + GitHub Pages 인덱스",
+  "is_public_institution": false,
+  "tone_policy": {
+    "is_public_institution": false,
+    "rationale": "공공기관 강의 X · 유튜브 시청자 대상 (자율 톤). public-lecture-writer agent 호출 금지 (공공 강의 톤이 박힘). 결과 약속·연령 호명·임팩트 표현 OK · 정보통신망법 안내 불필요.",
+    "allowed": [
+      "임팩트·자극적 표현 (호기심 유도)",
+      "결과 약속 가능 (\"이것만 알면 끝\" 등)",
+      "연령·성별·직업 타겟팅 호명 OK (\"40대 여성도\")",
+      "본인 브랜드·내 가게 표현 OK (시청자 대상)",
+      "추측 어휘 OK (\"보통\", \"일반적으로\")"
+    ],
+    "still_forbidden": [
+      "허위 사실 단정",
+      "특정 도구·서비스 비방",
+      "민감 개인정보 노출",
+      "Higgsfield 결과물 갤러리 자동 생성 (사용자 2026-05-02 강력 금지)"
+    ]
+  },
   "deploy_repo": "https://github.com/parkchaorm-create/higgsfield-fullcourse-ppt.git",
   "github_pages_base": "https://parkchaorm-create.github.io/higgsfield-fullcourse-ppt",
   "notion_parent_page_id": "354a2ad9cef080f9877ff0adc2f2a09a",
