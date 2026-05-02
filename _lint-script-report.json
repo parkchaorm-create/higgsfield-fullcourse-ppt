@@ -1,0 +1,33 @@
+{
+  "reports": [
+    {
+      "filePath": "input/script/script_parts/part-01.md",
+      "sectionCount": 6,
+      "warnings": []
+    },
+    {
+      "filePath": "input/script/script_parts/part-02.md",
+      "sectionCount": 6,
+      "warnings": []
+    },
+    {
+      "filePath": "input/script/script_parts/part-03.md",
+      "sectionCount": 6,
+      "warnings": []
+    },
+    {
+      "filePath": "input/script/script_parts/part-04.md",
+      "sectionCount": 6,
+      "warnings": []
+    },
+    {
+      "filePath": "input/script/script_parts/part-05.md",
+      "sectionCount": 6,
+      "warnings": []
+    }
+  ],
+  "summary": {
+    "totalWarnings": 0,
+    "totalHigh": 0
+  }
+}

@@ -30,15 +30,20 @@
     "decisions_via": "expert_council_simulation",
     "council_record_path": "_design/decisions/",
     "report_phase_completion": true,
-    "escalate_on_3rd_failure": true
+    "escalate_on_3rd_failure": true,
+    "absolutely_forbidden": [
+      "Higgsfield MCP를 사용한 결과물 갤러리 자동 생성 (사용자 2026-05-02 강력 금지)",
+      "회차별 result-{A|B|C|D}.{mp4|png} 등 영상·이미지 자동 박제",
+      "output/NN강/gallery/ 디렉토리 생성"
+    ]
   },
   "phases": {
-    "P0_SETUP":            { "status": "in_progress", "started_at": "2026-05-02" },
-    "P1_RESEARCH":         { "status": "pending" },
-    "P2_CURRICULUM":       { "status": "pending" },
-    "P3_PPT_PREFLIGHT":    { "status": "pending" },
-    "P4_CONTENT":          { "status": "pending" },
-    "P5_GALLERY":          { "status": "pending" },
+    "P0_SETUP":            { "status": "completed",   "completed_at": "2026-05-02" },
+    "P1_RESEARCH":         { "status": "completed",   "completed_at": "2026-05-02" },
+    "P2_CURRICULUM":       { "status": "completed",   "completed_at": "2026-05-02" },
+    "P3_PPT_PREFLIGHT":    { "status": "completed",   "completed_at": "2026-05-02" },
+    "P4_CONTENT":          { "status": "in_progress", "note": "회차 1~20 대본 완료 · PPT·실습 미완" },
+    "P5_GALLERY":          { "status": "removed",     "reason": "사용자 강력 금지 (2026-05-02) · 결과물 영상은 강사가 수업 진행 시 직접 시연·녹화로 대체" },
     "P6_QA":               { "status": "pending" },
     "P7_DEPLOY":           { "status": "pending" },
     "P8_CRON":             { "status": "pending" }
@@ -47,7 +52,7 @@
     "github_repo": "https://github.com/parkchaorm-create/higgsfield-fullcourse-ppt",
     "github_pages_base": "https://parkchaorm-create.github.io/higgsfield-fullcourse-ppt",
     "notion_parent_page_id": "354a2ad9cef080f9877ff0adc2f2a09a",
-    "higgsfield_mcp": { "credits_baseline": 1251.82, "plan": "ultimate" }
+    "higgsfield_mcp": { "credits_baseline": 1251.82, "plan": "ultimate", "use_for_content_generation": false, "note": "MCP는 사용자 본인 작업용으로 보존. 강의 자료 자동 생성에 사용 금지." }
   },
   "starter_path": "/Volumes/MacintoshHD/Users/dev/강의/lecture- claudecode",
   "lecture_path": "/Volumes/MacintoshHD/Users/dev/강의/lectures/힉스필드 풀코스",
