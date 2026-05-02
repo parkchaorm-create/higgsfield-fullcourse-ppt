@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "name": "힉스필드 풀코스",
+  "brand": "pajamaboss",
+  "type": "유튜브 풀코스",
+  "deploy_repo": "https://github.com/parkchaorm-create/higgsfield-fullcourse-ppt.git",
+  "github_pages_base": "https://parkchaorm-create.github.io/higgsfield-fullcourse-ppt",
+  "notion_parent_page_id": "354a2ad9cef080f9877ff0adc2f2a09a",
+  "session_count": 20,
+  "created_at": "2026-05-02",
+  "audience": {
+    "level": "왕왕초보",
+    "description": "컴퓨터·영어 둘 다 익숙하지 않음. AI 도구 경험 거의 없음. SNS는 보기만 함.",
+    "tone_principles": [
+      "비유 우선: 모든 개념은 일상 비유로 먼저 설명 (오케스트라·요리·택시·운전 등)",
+      "클릭 가이드: 실습은 '여기 누르세요 → 이 화면 나옴 → 다음 누르세요' 단계별",
+      "용어 풀이: 모든 영어 메뉴명·전문 용어 첫 등장 시 한글 풀이 괄호 병기",
+      "스크린샷 OK: 1번 강의(텍스트 위주)와 달리 GUI 도구라 스크린샷 적극 활용 (tutorial-screenshot-requirement.md v2 예외 적용)",
+      "한 번에 한 동작: 한 단계에 동작 1개만. '이거 누르고 저거 누르세요' 묶음 금지",
+      "왜 하는지 설명: 단계마다 '왜 이 버튼?' 1줄 이유 동반"
+    ],
+    "deliverables_focus": [
+      "인스타그램 릴스",
+      "틱톡",
+      "유튜브 쇼츠",
+      "페이스북·X 영상",
+      "마케팅 광고 영상 (페이스북·인스타 광고용)"
+    ]
+  }
+}

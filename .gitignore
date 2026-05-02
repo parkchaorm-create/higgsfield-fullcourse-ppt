@@ -1,0 +1,30 @@
+# 환경 변수 · 비밀 (절대 commit 금지)
+.env
+.env.local
+.claude/secrets/
+
+# 시스템
+.DS_Store
+node_modules/
+package-lock.json
+
+# Playwright 산출물 (재생성 가능)
+_viz_review/
+
+# input 민감 자료 (자료 위치만 commit · 본문은 로컬)
+input/materials/*
+!input/materials/.gitkeep
+input/script/script_parts/*.bak
+
+# _skill-state 일부 (자동 갱신 · state.json은 commit · 백업·로그는 ignore)
+_skill-state/state.json.bak
+_skill-state/checkpoints/
+_skill-state/logs/
+
+# T1·T2·T3 raw 캐시 (재생성 가능 · 요약본 _design/*.md만 commit)
+_design/raw/
+
+# 임시
+*.tmp
+*.log
+*.bak

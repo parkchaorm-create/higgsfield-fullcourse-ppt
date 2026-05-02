@@ -1,0 +1,55 @@
+{
+  "lecture_name": "힉스필드 풀코스",
+  "schema_version": 1,
+  "preset": "youtube-full-course",
+  "preset_overrides": {
+    "audience_level": "왕왕초보",
+    "tone_principles": [
+      "비유 우선",
+      "클릭 가이드 단계별",
+      "용어 풀이 (영어 메뉴 한글 병기)",
+      "스크린샷 적극 (GUI 도구)",
+      "한 단계 한 동작",
+      "왜 하는지 1줄 설명"
+    ],
+    "session_duration_minutes": 30,
+    "session_count": 20,
+    "scenario": {
+      "type": "가상 클라이언트 4종",
+      "clients": [
+        { "id": "A", "label": "동네 카페 사장", "persona": "40대 여성·SNS 운영 미숙·근처 손님 유치 목적" },
+        { "id": "B", "label": "옷가게 셀러", "persona": "20대 패션 셀러·인스타 위주·릴스 시도" },
+        { "id": "C", "label": "1인 식당", "persona": "50대 사장·페북 광고 시도 중·메뉴 사진" },
+        { "id": "D", "label": "헬스 트레이너", "persona": "30대 남성·릴스 활용·운동 시연 영상" }
+      ]
+    }
+  },
+  "automation_mode": "fully_autonomous",
+  "automation_policy": {
+    "user_questions": "disabled",
+    "decisions_via": "expert_council_simulation",
+    "council_record_path": "_design/decisions/",
+    "report_phase_completion": true,
+    "escalate_on_3rd_failure": true
+  },
+  "phases": {
+    "P0_SETUP":            { "status": "in_progress", "started_at": "2026-05-02" },
+    "P1_RESEARCH":         { "status": "pending" },
+    "P2_CURRICULUM":       { "status": "pending" },
+    "P3_PPT_PREFLIGHT":    { "status": "pending" },
+    "P4_CONTENT":          { "status": "pending" },
+    "P5_GALLERY":          { "status": "pending" },
+    "P6_QA":               { "status": "pending" },
+    "P7_DEPLOY":           { "status": "pending" },
+    "P8_CRON":             { "status": "pending" }
+  },
+  "external_resources": {
+    "github_repo": "https://github.com/parkchaorm-create/higgsfield-fullcourse-ppt",
+    "github_pages_base": "https://parkchaorm-create.github.io/higgsfield-fullcourse-ppt",
+    "notion_parent_page_id": "354a2ad9cef080f9877ff0adc2f2a09a",
+    "higgsfield_mcp": { "credits_baseline": 1251.82, "plan": "ultimate" }
+  },
+  "starter_path": "/Volumes/MacintoshHD/Users/dev/강의/lecture- claudecode",
+  "lecture_path": "/Volumes/MacintoshHD/Users/dev/강의/lectures/힉스필드 풀코스",
+  "created_at": "2026-05-02"
+}
